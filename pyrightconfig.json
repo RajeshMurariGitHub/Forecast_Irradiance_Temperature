@@ -1,0 +1,38 @@
+{
+  "typeCheckingMode": "basic",
+  "pythonVersion": "3.13",
+  "pythonPlatform": "Windows",
+  "include": [
+    "scripts",
+    "tests",
+    "notebooks"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".git",
+    ".venv",
+    "venv"
+  ],
+  "extraPaths": [
+    "${workspaceRoot}/scripts",
+    "${workspaceRoot}/scripts/utils"
+  ],
+  "reportGeneralTypeIssues": "warning",
+  "reportOptionalMemberAccess": "warning",
+  "reportOptionalSubscript": "warning",
+  "reportConstantRedefinition": "warning",
+  "reportArgumentType": "warning",
+  "reportAttributeAccessIssue": "warning",
+  "reportCallIssue": "warning",
+  "reportReturnType": "warning",
+  "reportIndexIssue": "warning",
+  "reportIncompatibleMethodOverride": "warning",
+  "reportIncompatibleVariableOverride": "warning",
+  "reportInconsistentConstructor": "warning",
+  "reportUnusedImport": "warning",
+  "reportUnusedClass": "warning",
+  "reportUnusedFunction": "warning",
+  "reportUnusedVariable": "warning",
+  "reportMissingTypeStubs": "none"
+}

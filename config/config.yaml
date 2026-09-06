@@ -1,0 +1,312 @@
+# Project Configuration
+# Location: Hyderabad, India
+
+project:
+  name: "Solar Irradiance & Temperature Forecast - Hyderabad"
+  description: "Forecasting GHI and Temperature for 1-30 days ahead"
+  version: "1.0.0"
+  author: "Data Science Team"
+  created: "2026-08-31"
+
+location:
+  name: "Hyderabad"
+  country: "India"
+  latitude: 17.3850
+  longitude: 78.4867
+  elevation: 500.0  # meters
+  timezone: "Asia/Kolkata"
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  raw_filename: "hyderabad_nasa_Jan_2020_July_2026_hourly_new.csv"
+  processed_filename: "hyderabad_cleaned.csv"
+  forecast_dataset_filename: "forecast_dataset.csv"
+  
+  # Data source
+  source: "NASA POWER API"
+  api_url: "https://power.larc.nasa.gov/api/temporal/hourly/point"
+  
+  # Date ranges for data collection
+  collection:
+    start: "2020-01-01"
+    end: "2026-07-31"
+
+# Data Split Configuration
+data_split:
+  training:
+    start: "2020-01-01"
+    end: "2024-12-31"
+    label: "TRAINING"
+  
+  testing:
+    start: "2025-01-01"
+    end: "2025-12-31"
+    label: "TESTING"
+  
+  validation:
+    start: "2026-01-01"
+    end: "2026-04-30"
+    label: "VALIDATION"
+  
+  prospective:
+    start: "2026-05-01"
+    end: "2026-05-31"
+    label: "PROSPECTIVE / FUTURE TEST"
+
+# Forecast Configuration
+forecast:
+  # Target variables
+  targets:
+    - "GHI"
+    - "temperature"
+  
+  # Forecast horizons (days ahead)
+  horizons: [1, 2, 3, 5, 7, 10, 14, 30]
+  
+  # Frequency
+  frequency: "hourly"
+  
+  # Daily aggregation for comparison (if needed)
+  daily_aggregation: "mean"
+
+# Feature Engineering
+features:
+  # Temporal features
+  temporal:
+    - hour
+    - day
+    - month
+    - quarter
+    - year
+    - week
+    - dayofweek
+    - is_weekend
+    - is_holiday
+    - season
+  
+  # Lag features (hours back)
+  lags: [1, 3, 6, 12, 24, 48, 168]  # 1h, 3h, 6h, 12h, 24h, 48h, 7-day
+  
+  # Rolling window features (hours)
+  rolling_windows: [6, 12, 24, 48, 168]
+  rolling_stats: ["mean", "std", "min", "max"]
+  
+  # Solar geometry features
+  solar_geometry:
+    - solar_elevation
+    - solar_zenith
+    - solar_azimuth
+    - declination
+    - hour_angle
+  
+  # Clear-sky features
+  clear_sky:
+    - clear_sky_ghi
+    - clear_sky_dni
+    - clear_sky_dhi
+    - clearness_index_kt
+    - attenuation_index_kd
+  
+  # Physical/domain features
+  domain:
+    - sunrise_flag
+    - sunset_flag
+    - daylight_flag
+
+# NASA POWER Raw Features Mapping
+nasa_power_features:
+  T2M: "temperature"
+  T2MDEW: "dew_point"
+  RH2M: "humidity"
+  CLOUD_AMT: "cloud_cover"
+  WS10M: "wind_speed"
+  PRECTOTCORR: "precipitation"
+  PS: "pressure"
+  ALLSKY_SFC_SW_DWN: "GHI_energy"
+  ALLSKY_SFC_SW_DNI: "DNI"
+  ALLSKY_SFC_SW_DIFF: "DHI"
+  GHI_W_m2: "GHI"
+
+# Rename mapping (raw → processed)
+column_rename:
+  timestamp: "timestamp"
+  T2M: "temperature"
+  T2MDEW: "dew_point"
+  RH2M: "humidity"
+  CLOUD_AMT: "cloud_cover"
+  WS10M: "wind_speed"
+  PRECTOTCORR: "precipitation"
+  PS: "pressure"
+  ALLSKY_SFC_SW_DWN: "GHI_energy"
+  ALLSKY_SFC_SW_DNI: "DNI"
+  ALLSKY_SFC_SW_DIFF: "DHI"
+  GHI_W_m2: "GHI"
+
+# Physical Range Validation (for QA)
+physical_ranges:
+  temperature:
+    min: -20  # °C
+    max: 60
+  
+  dew_point:
+    min: -40  # °C
+    max: 50
+  
+  humidity:
+    min: 0  # %
+    max: 100
+  
+  cloud_cover:
+    min: 0  # %
+    max: 100
+  
+  wind_speed:
+    min: 0  # m/s
+    max: 50
+  
+  precipitation:
+    min: 0  # mm/hour
+    max: 500
+  
+  pressure:
+    min: 900  # hPa
+    max: 1050
+  
+  GHI:
+    min: 0  # W/m²
+    max: 1400  # theoretical max ~1361
+  
+  DNI:
+    min: 0  # W/m²
+    max: 1100
+
+  DHI:
+    min: 0  # W/m²
+    max: 700
+
+# Model Configuration
+models:
+  - name: "Ridge"
+    type: "linear"
+    package: "sklearn"
+    enabled: true
+  
+  - name: "RandomForest"
+    type: "tree"
+    package: "sklearn"
+    enabled: true
+    params:
+      n_estimators: 100
+      max_depth: 15
+      min_samples_split: 5
+  
+  - name: "ExtraTrees"
+    type: "tree"
+    package: "sklearn"
+    enabled: true
+    params:
+      n_estimators: 100
+      max_depth: 15
+  
+  - name: "GradientBoosting"
+    type: "boosting"
+    package: "sklearn"
+    enabled: true
+    params:
+      n_estimators: 100
+      learning_rate: 0.1
+      max_depth: 5
+  
+  - name: "XGBoost"
+    type: "boosting"
+    package: "xgboost"
+    enabled: true
+    params:
+      n_estimators: 100
+      learning_rate: 0.1
+      max_depth: 6
+      subsample: 0.8
+  
+  - name: "LightGBM"
+    type: "boosting"
+    package: "lightgbm"
+    enabled: true
+    params:
+      n_estimators: 100
+      learning_rate: 0.05
+      max_depth: 7
+      num_leaves: 31
+  
+  - name: "CatBoost"
+    type: "boosting"
+    package: "catboost"
+    enabled: true
+    params:
+      iterations: 400
+      depth: 6
+      learning_rate: 0.1
+
+  - name: "LSTM"
+    type: "deep_learning"
+    package: "tensorflow"
+    enabled: false  # not implemented in scripts/train_models.py
+    params:
+      layers: 2
+      units: 64
+      dropout: 0.2
+      epochs: 50
+      batch_size: 32
+
+# Evaluation Metrics
+metrics:
+  regression:
+    - "mae"
+    - "rmse"
+    - "mape"
+    - "r2"
+    - "mean_bias_error"
+  
+  normalized:
+    - "nmae"  # normalized MAE
+    - "nrmse"  # normalized RMSE
+
+# Logging
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  log_file: "forecast.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Dashboard Configuration
+dashboard:
+  title: "Solar Irradiance & Temperature Forecast"
+  theme: "light"
+  port: 8501
+  refresh_interval: 3600  # seconds
+  
+  features:
+    - "Historical data visualization"
+    - "Real-time forecasts"
+    - "Model comparison"
+    - "Metrics dashboard"
+    - "Data quality report"
+
+# API Configuration (FastAPI)
+api:
+  title: "Solar Forecast API"
+  version: "1.0.0"
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+
+# Docker Configuration
+docker:
+  image_name: "solar-forecast:latest"
+  registry: "local"
+  
+  services:
+    - name: "api"
+      port: 8000
+    - name: "dashboard"
+      port: 8501

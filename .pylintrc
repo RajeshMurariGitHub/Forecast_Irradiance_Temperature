@@ -1,0 +1,70 @@
+[MASTER]
+jobs = 4
+persistent = yes
+extension-pkg-allow-list = numpy,pandas,cv2
+ignore-patterns = test_
+unsafe-load-any-extension = no
+
+[MESSAGES CONTROL]
+disable = 
+    C0330,
+    C0326,
+    R0913,
+    R0914,
+    W0212,
+    C0103,
+    R0801,
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+
+[FORMAT]
+max-line-length = 100
+indent-string = '    '
+indent-after-paren = 4
+
+[BASIC]
+good-names = 
+    i,j,k,
+    ex,
+    Run,
+    _,
+    x,y,
+    df,
+    ax,
+    fig,
+    a,b,c
+
+[VARIABLES]
+init-import = no
+
+[DESIGN]
+max-args = 10
+max-attributes = 10
+max-bool-expr = 5
+max-branches = 15
+max-locals = 15
+max-parents = 7
+max-public-methods = 20
+min-public-methods = 2
+max-returns = 6
+max-statements = 50
+max-positional-arguments = 10
+
+[SIMILARITIES]
+min-similarity-lines = 5
+ignore-comments = yes
+ignore-docstrings = yes
+ignore-imports = yes
+
+[LOGGING]
+# Codebase uses lazy %-style logging (logger.info("x %s", y)).
+logging-format-style = old
+
+[TYPECHECK]
+extension-pkg-allow-list = 
+    numpy,
+    pandas,
+    sklearn,
+    scipy,
+    pvlib,

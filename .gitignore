@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+!**/notebooks/*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data (large files)
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/*.csv
+data/processed/*.parquet
+*.h5
+*.pkl
+*.pickle
+
+# Models: ignore binary artifacts + derived tables, keep the JSON metadata of record
+#   (training_results.json, best_models.json, feature_importance.json)
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.joblib
+*.joblib
+models/*_pivot.csv
+models/importance_*.csv
+models/feature_importance_matrix.csv
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Coverage
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# CatBoost training logs
+catboost_info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Dashboard/API artifacts
+dashboard/.streamlit/
+dashboard/cache/
+dashboard/.cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Results/outputs
+results/
+output/
+*.xlsx
