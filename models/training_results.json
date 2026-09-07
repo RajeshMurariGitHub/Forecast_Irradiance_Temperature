@@ -16514,10 +16514,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "ridge",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -16541,6 +16544,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -16589,9 +16594,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.568427948240675,
-      "rmse": 74.29858432953769,
-      "r2": 0.9496696515430019
+      "mae": 11.224071779681708,
+      "rmse": 11.224071779681708,
+      "r2": null
     },
     "model_path": "models\\GHI_1d_ridge_prospective.joblib"
   },
@@ -16628,6 +16633,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -16774,10 +16781,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "gradient_boost",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -16801,6 +16811,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -16849,19 +16861,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.179947909621443,
-      "rmse": 68.65204671781541,
-      "r2": 0.9570289626329456
+      "mae": 1.128639308268912,
+      "rmse": 1.128639308268912,
+      "r2": null
     },
     "model_path": "models\\GHI_1d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "xgboost",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -16885,6 +16900,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -16933,19 +16950,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.04890228495018,
-      "rmse": 67.60292209472516,
-      "r2": 0.958332274315563
+      "mae": 1.136135458946228,
+      "rmse": 1.136135458946228,
+      "r2": null
     },
     "model_path": "models\\GHI_1d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "lightgbm",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -16969,6 +16989,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17017,19 +17039,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 29.380808865883182,
-      "rmse": 67.34411126038813,
-      "r2": 0.9586507048119296
+      "mae": 0.34848197204405856,
+      "rmse": 0.34848197204405856,
+      "r2": null
     },
     "model_path": "models\\GHI_1d_lightgbm_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "ridge",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17053,6 +17078,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17101,9 +17128,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 41.66254092455625,
-      "rmse": 74.84704060293171,
-      "r2": 0.9485549824834838
+      "mae": 9.689302175925036,
+      "rmse": 9.689302175925036,
+      "r2": null
     },
     "model_path": "models\\GHI_2d_ridge_prospective.joblib"
   },
@@ -17229,6 +17256,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17277,8 +17306,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.0,
-      "rmse": 0.0,
+      "mae": 2.3995429442011047e-06,
+      "rmse": 2.3995429442011047e-06,
       "r2": null
     },
     "model_path": "models\\GHI_2d_extra_trees_prospective.joblib"
@@ -17286,10 +17315,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "gradient_boost",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17313,6 +17345,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17361,19 +17395,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.48037505805156,
-      "rmse": 79.93969925386993,
-      "r2": 0.9413160858819661
+      "mae": 0.46675235420255357,
+      "rmse": 0.46675235420255357,
+      "r2": null
     },
     "model_path": "models\\GHI_2d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "xgboost",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17397,6 +17434,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17445,19 +17484,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 31.916524911174196,
-      "rmse": 72.01794052207462,
-      "r2": 0.9523705629578741
+      "mae": 1.0991828441619873,
+      "rmse": 1.0991828441619873,
+      "r2": null
     },
     "model_path": "models\\GHI_2d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "lightgbm",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17481,6 +17523,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17529,19 +17573,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 29.344278699884043,
-      "rmse": 69.52649734955875,
-      "r2": 0.9556090178076523
+      "mae": 1.5644730330968457,
+      "rmse": 1.5644730330968457,
+      "r2": null
     },
     "model_path": "models\\GHI_2d_lightgbm_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "ridge",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17565,6 +17612,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17613,9 +17662,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 41.73253112840354,
-      "rmse": 76.13112838962512,
-      "r2": 0.946481468889443
+      "mae": 1.4857077547902406,
+      "rmse": 1.4857077547902406,
+      "r2": null
     },
     "model_path": "models\\GHI_3d_ridge_prospective.joblib"
   },
@@ -17741,6 +17790,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17798,10 +17849,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "gradient_boost",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17825,6 +17879,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17873,19 +17929,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.53270961024267,
-      "rmse": 79.00143302650027,
-      "r2": 0.9423698712567227
+      "mae": 1.3025630574172198,
+      "rmse": 1.3025630574172198,
+      "r2": null
     },
     "model_path": "models\\GHI_3d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "xgboost",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17909,6 +17968,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -17957,19 +18018,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.309203556299394,
-      "rmse": 72.29823415594115,
-      "r2": 0.9517346975998832
+      "mae": 0.9882360100746155,
+      "rmse": 0.9882360100746155,
+      "r2": null
     },
     "model_path": "models\\GHI_3d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "lightgbm",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -17993,6 +18057,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18041,19 +18107,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.314130448810346,
-      "rmse": 73.34794742597161,
-      "r2": 0.9503229747568034
+      "mae": 0.9786755357717515,
+      "rmse": 0.9786755357717515,
+      "r2": null
     },
     "model_path": "models\\GHI_3d_lightgbm_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "ridge",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18077,6 +18146,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18125,9 +18196,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.940567534530736,
-      "rmse": 71.068919030836,
-      "r2": 0.9527052916757803
+      "mae": 1.002347015123604,
+      "rmse": 1.002347015123604,
+      "r2": null
     },
     "model_path": "models\\GHI_5d_ridge_prospective.joblib"
   },
@@ -18223,10 +18294,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "extra_trees",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18250,6 +18324,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18298,19 +18374,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.761870388793916,
-      "rmse": 70.17151046165888,
-      "r2": 0.9538921595469962
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_5d_extra_trees_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "gradient_boost",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18334,6 +18413,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18382,19 +18463,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 31.907866475633735,
-      "rmse": 71.18508675769102,
-      "r2": 0.952550551485062
+      "mae": 1.3384721057839337,
+      "rmse": 1.3384721057839337,
+      "r2": null
     },
     "model_path": "models\\GHI_5d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "xgboost",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18418,6 +18502,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18466,9 +18552,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.46840974971727,
-      "rmse": 73.39820265125418,
-      "r2": 0.9495543198159253
+      "mae": 0.671066164970398,
+      "rmse": 0.671066164970398,
+      "r2": null
     },
     "model_path": "models\\GHI_5d_xgboost_prospective.joblib"
   },
@@ -18505,6 +18591,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18553,8 +18641,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.08966006407222654,
-      "rmse": 0.08966006407222654,
+      "mae": 2.1337545434190295,
+      "rmse": 2.1337545434190295,
       "r2": null
     },
     "model_path": "models\\GHI_5d_lightgbm_prospective.joblib"
@@ -18562,10 +18650,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "ridge",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18589,6 +18680,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18637,9 +18730,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.72184948842222,
-      "rmse": 75.03541253295866,
-      "r2": 0.9465946433506862
+      "mae": 0.6581541530283346,
+      "rmse": 0.6581541530283346,
+      "r2": null
     },
     "model_path": "models\\GHI_7d_ridge_prospective.joblib"
   },
@@ -18676,6 +18769,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18733,10 +18828,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "extra_trees",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18760,6 +18858,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18808,19 +18908,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.510486313600452,
-      "rmse": 72.64057982746773,
-      "r2": 0.9499492171377674
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_7d_extra_trees_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "gradient_boost",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18844,6 +18947,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18892,19 +18997,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 31.674762952456568,
-      "rmse": 73.95476467753818,
-      "r2": 0.9481218369781621
+      "mae": 0.7111368430541559,
+      "rmse": 0.7111368430541559,
+      "r2": null
     },
     "model_path": "models\\GHI_7d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "xgboost",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -18928,6 +19036,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -18976,19 +19086,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 33.15938820470737,
-      "rmse": 75.19574632528524,
-      "r2": 0.946366169052043
+      "mae": 0.6894341111183167,
+      "rmse": 0.6894341111183167,
+      "r2": null
     },
     "model_path": "models\\GHI_7d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "lightgbm",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19012,6 +19125,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19060,19 +19175,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.03191013689782,
-      "rmse": 74.54196041344376,
-      "r2": 0.9472947483690024
+      "mae": 2.5281122440903747,
+      "rmse": 2.5281122440903747,
+      "r2": null
     },
     "model_path": "models\\GHI_7d_lightgbm_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "ridge",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19096,6 +19214,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19144,19 +19264,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.08088861482192,
-      "rmse": 74.02173656567712,
-      "r2": 0.9479181826269685
+      "mae": 3.942429691909439,
+      "rmse": 3.942429691909439,
+      "r2": null
     },
     "model_path": "models\\GHI_10d_ridge_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "random_forest",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19180,6 +19303,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19228,9 +19353,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 33.929422724858526,
-      "rmse": 77.54114764213182,
-      "r2": 0.9428479200728195
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_10d_random_forest_prospective.joblib"
   },
@@ -19267,6 +19392,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19324,10 +19451,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "gradient_boost",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19351,6 +19481,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19399,19 +19531,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.813973050368524,
-      "rmse": 74.83815350450155,
-      "r2": 0.9467629823295929
+      "mae": 0.229361488519394,
+      "rmse": 0.229361488519394,
+      "r2": null
     },
     "model_path": "models\\GHI_10d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "xgboost",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19435,6 +19570,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19483,19 +19620,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.75862692858102,
-      "rmse": 78.78164698561909,
-      "r2": 0.9410046607441663
+      "mae": 5.261457920074463,
+      "rmse": 5.261457920074463,
+      "r2": null
     },
     "model_path": "models\\GHI_10d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "lightgbm",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19519,6 +19659,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19567,19 +19709,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.326082205717576,
-      "rmse": 77.70451412902912,
-      "r2": 0.9426068462614219
+      "mae": 3.5770516068034826,
+      "rmse": 3.5770516068034826,
+      "r2": null
     },
     "model_path": "models\\GHI_10d_lightgbm_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "ridge",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19603,6 +19748,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19651,19 +19798,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 41.662622565483076,
-      "rmse": 82.6981050661106,
-      "r2": 0.9338847758033826
+      "mae": 12.457280913875252,
+      "rmse": 12.457280913875252,
+      "r2": null
     },
     "model_path": "models\\GHI_14d_ridge_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "random_forest",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19687,6 +19837,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19735,19 +19887,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.45701847593513,
-      "rmse": 84.67655799465867,
-      "r2": 0.9306834800679217
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_14d_random_forest_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "extra_trees",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19771,6 +19926,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19819,19 +19976,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 33.993680604572745,
-      "rmse": 82.45220460181709,
-      "r2": 0.9342773747223985
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_14d_extra_trees_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "gradient_boost",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -19855,6 +20015,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -19903,9 +20065,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.24996941857989,
-      "rmse": 83.5734745721461,
-      "r2": 0.9324776925482547
+      "mae": 2.4218647149630033,
+      "rmse": 2.4218647149630033,
+      "r2": null
     },
     "model_path": "models\\GHI_14d_gradient_boost_prospective.joblib"
   },
@@ -20031,6 +20193,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20079,8 +20243,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.43654192070315456,
-      "rmse": 0.43654192070315456,
+      "mae": 0.5576582212461197,
+      "rmse": 0.5576582212461197,
       "r2": null
     },
     "model_path": "models\\GHI_14d_lightgbm_prospective.joblib"
@@ -20088,6 +20252,9 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "ridge",
@@ -20115,6 +20282,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20163,15 +20332,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 996.374948911028,
-      "rmse": 996.374948911028,
-      "r2": NaN
+      "mae": 23.72993536187022,
+      "rmse": 23.72993536187022,
+      "r2": null
     },
     "model_path": "models\\GHI_30d_ridge_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "random_forest",
@@ -20199,6 +20371,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20247,9 +20421,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 999.0,
-      "rmse": 999.0,
-      "r2": NaN
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
     },
     "model_path": "models\\GHI_30d_random_forest_prospective.joblib"
   },
@@ -20345,6 +20519,9 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "gradient_boost",
@@ -20372,6 +20549,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20420,15 +20599,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1001.5906693345141,
-      "rmse": 1001.5906693345141,
-      "r2": NaN
+      "mae": 0.1065327174219367,
+      "rmse": 0.1065327174219367,
+      "r2": null
     },
     "model_path": "models\\GHI_30d_gradient_boost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "xgboost",
@@ -20456,6 +20638,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20504,15 +20688,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 999.9162248969078,
-      "rmse": 999.9162248969078,
-      "r2": NaN
+      "mae": 3.926273822784424,
+      "rmse": 3.926273822784424,
+      "r2": null
     },
     "model_path": "models\\GHI_30d_xgboost_prospective.joblib"
   },
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "lightgbm",
@@ -20540,6 +20727,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20588,19 +20777,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 998.3094236533836,
-      "rmse": 998.3094236533836,
-      "r2": NaN
+      "mae": 0.06220359401784289,
+      "rmse": 0.06220359401784289,
+      "r2": null
     },
     "model_path": "models\\GHI_30d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "ridge",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -20624,6 +20816,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20672,9 +20866,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2406482797255112,
-      "rmse": 1.6051667004600292,
-      "r2": 0.904383655628583
+      "mae": 1.2971002213384004,
+      "rmse": 1.2971002213384004,
+      "r2": null
     },
     "model_path": "models\\temperature_1d_ridge_prospective.joblib"
   },
@@ -20800,13 +20994,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -20855,8 +21044,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8256347871555896,
-      "rmse": 0.8256347871555896,
+      "mae": 0.8121891062432098,
+      "rmse": 0.8121891062432098,
       "r2": null
     },
     "model_path": "models\\temperature_1d_extra_trees_prospective.joblib"
@@ -20864,10 +21053,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "gradient_boost",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -20891,6 +21083,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20939,19 +21133,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3297267096419902,
-      "rmse": 1.7089167119852362,
-      "r2": 0.8916238681501083
+      "mae": 0.6629736578028123,
+      "rmse": 0.6629736578028123,
+      "r2": null
     },
     "model_path": "models\\temperature_1d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "xgboost",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -20975,6 +21172,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21023,19 +21222,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.474865957886793,
-      "rmse": 1.9234196913330615,
-      "r2": 0.8627096639150302
+      "mae": 1.1906034088134767,
+      "rmse": 1.1906034088134767,
+      "r2": null
     },
     "model_path": "models\\temperature_1d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "lightgbm",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21059,6 +21261,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21107,19 +21311,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5107940561805322,
-      "rmse": 1.9322366078972506,
-      "r2": 0.8614481068604576
+      "mae": 1.5546592601511655,
+      "rmse": 1.5546592601511655,
+      "r2": null
     },
     "model_path": "models\\temperature_1d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "ridge",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21143,6 +21350,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21191,19 +21400,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4567480547343212,
-      "rmse": 1.8302975239940389,
-      "r2": 0.8750006896505006
+      "mae": 2.0446749090355425,
+      "rmse": 2.0446749090355425,
+      "r2": null
     },
     "model_path": "models\\temperature_2d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "random_forest",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21227,6 +21439,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21275,9 +21489,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5465412638435463,
-      "rmse": 1.976728831441964,
-      "r2": 0.8541996972193167
+      "mae": 3.080502742374094,
+      "rmse": 3.080502742374094,
+      "r2": null
     },
     "model_path": "models\\temperature_2d_random_forest_prospective.joblib"
   },
@@ -21373,10 +21587,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "gradient_boost",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21400,6 +21617,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21448,19 +21667,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5613524063758308,
-      "rmse": 1.9630542902791321,
-      "r2": 0.8562099437010652
+      "mae": 1.799688932925271,
+      "rmse": 1.799688932925271,
+      "r2": null
     },
     "model_path": "models\\temperature_2d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "xgboost",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21484,6 +21706,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21532,19 +21756,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6768229459901443,
-      "rmse": 2.13155790130739,
-      "r2": 0.8304653394656174
+      "mae": 2.9518757629394514,
+      "rmse": 2.9518757629394514,
+      "r2": null
     },
     "model_path": "models\\temperature_2d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
     "horizon_days": 2,
     "horizon_hours": 48,
     "model": "lightgbm",
-    "rows": 673,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21568,6 +21795,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21616,19 +21845,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5244847411258264,
-      "rmse": 1.9422142445627086,
-      "r2": 0.8592467269986412
+      "mae": 2.227050158441081,
+      "rmse": 2.227050158441081,
+      "r2": null
     },
     "model_path": "models\\temperature_2d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "ridge",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21652,6 +21884,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21700,19 +21934,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6914022844704397,
-      "rmse": 2.1508651959349776,
-      "r2": 0.8275670848760103
+      "mae": 0.898463198593177,
+      "rmse": 0.898463198593177,
+      "r2": null
     },
     "model_path": "models\\temperature_3d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "random_forest",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21736,6 +21973,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21784,9 +22023,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.8138299381674194,
-      "rmse": 2.4348976601896393,
-      "r2": 0.7790188594162197
+      "mae": 0.7950679352850436,
+      "rmse": 0.7950679352850436,
+      "r2": null
     },
     "model_path": "models\\temperature_3d_random_forest_prospective.joblib"
   },
@@ -21882,10 +22121,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "gradient_boost",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21909,6 +22151,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21957,19 +22201,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.8626497228544656,
-      "rmse": 2.357466233689861,
-      "r2": 0.7928500903903011
+      "mae": 0.08632625749998724,
+      "rmse": 0.08632625749998724,
+      "r2": null
     },
     "model_path": "models\\temperature_3d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "xgboost",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21993,6 +22240,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22041,19 +22290,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.9532956245316562,
-      "rmse": 2.33514887573711,
-      "r2": 0.7967535662688191
+      "mae": 0.6586544036865227,
+      "rmse": 0.6586544036865227,
+      "r2": null
     },
     "model_path": "models\\temperature_3d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
     "horizon_days": 3,
     "horizon_hours": 72,
     "model": "lightgbm",
-    "rows": 649,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22077,6 +22329,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22125,19 +22379,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.9161380420389378,
-      "rmse": 2.342170728972038,
-      "r2": 0.7955293938774421
+      "mae": 0.04340767149903968,
+      "rmse": 0.04340767149903968,
+      "r2": null
     },
     "model_path": "models\\temperature_3d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "ridge",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22161,6 +22418,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22209,19 +22468,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.0782776225556545,
-      "rmse": 2.5615766827876434,
-      "r2": 0.7561648813081464
+      "mae": 2.6388221692425944,
+      "rmse": 2.6388221692425944,
+      "r2": null
     },
     "model_path": "models\\temperature_5d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "random_forest",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22245,6 +22507,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22293,9 +22557,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.9612066378944975,
-      "rmse": 2.3888025384635285,
-      "r2": 0.787948164157701
+      "mae": 1.6662940673094084,
+      "rmse": 1.6662940673094084,
+      "r2": null
     },
     "model_path": "models\\temperature_5d_random_forest_prospective.joblib"
   },
@@ -22391,10 +22655,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "gradient_boost",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22418,6 +22685,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22466,19 +22735,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.1012544855865625,
-      "rmse": 2.506769217372772,
-      "r2": 0.7664874432600225
+      "mae": 1.28275978560373,
+      "rmse": 1.28275978560373,
+      "r2": null
     },
     "model_path": "models\\temperature_5d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "xgboost",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22502,6 +22774,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22550,19 +22824,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.156056230516481,
-      "rmse": 2.60847396113303,
-      "r2": 0.7471548983467756
+      "mae": 0.2772915649414074,
+      "rmse": 0.2772915649414074,
+      "r2": null
     },
     "model_path": "models\\temperature_5d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
     "horizon_days": 5,
     "horizon_hours": 120,
     "model": "lightgbm",
-    "rows": 601,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22586,6 +22863,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22634,19 +22913,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.4656746130996345,
-      "rmse": 2.9489551269694476,
-      "r2": 0.6768398052380735
+      "mae": 1.073738907643861,
+      "rmse": 1.073738907643861,
+      "r2": null
     },
     "model_path": "models\\temperature_5d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "ridge",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22670,6 +22952,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22718,19 +23002,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.442236831395372,
-      "rmse": 2.8065627758404377,
-      "r2": 0.7094719957209382
+      "mae": 1.498234538973339,
+      "rmse": 1.498234538973339,
+      "r2": null
     },
     "model_path": "models\\temperature_7d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "random_forest",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22754,6 +23041,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22802,9 +23091,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.08132998178344,
-      "rmse": 2.5551246645205365,
-      "r2": 0.7591965705425725
+      "mae": 0.20531435520791774,
+      "rmse": 0.20531435520791774,
+      "r2": null
     },
     "model_path": "models\\temperature_7d_random_forest_prospective.joblib"
   },
@@ -22900,10 +23189,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "gradient_boost",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -22927,6 +23219,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -22975,19 +23269,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.1454123118458157,
-      "rmse": 2.525679777035354,
-      "r2": 0.7647145598911886
+      "mae": 0.1835139672178805,
+      "rmse": 0.1835139672178805,
+      "r2": null
     },
     "model_path": "models\\temperature_7d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "xgboost",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23011,6 +23308,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23059,19 +23358,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.3945138683629508,
-      "rmse": 2.8814273890132585,
-      "r2": 0.6937656952681956
+      "mae": 0.09614662170410071,
+      "rmse": 0.09614662170410071,
+      "r2": null
     },
     "model_path": "models\\temperature_7d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
     "horizon_days": 7,
     "horizon_hours": 168,
     "model": "lightgbm",
-    "rows": 553,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23095,6 +23397,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23143,19 +23447,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.546630504494514,
-      "rmse": 3.0062020180045845,
-      "r2": 0.6666696922313535
+      "mae": 0.5464468796390172,
+      "rmse": 0.5464468796390172,
+      "r2": null
     },
     "model_path": "models\\temperature_7d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "ridge",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23179,6 +23486,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23227,19 +23536,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.4560725003492037,
-      "rmse": 3.0379724466999853,
-      "r2": 0.6563671474048368
+      "mae": 2.8179114633447035,
+      "rmse": 2.8179114633447035,
+      "r2": null
     },
     "model_path": "models\\temperature_10d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "random_forest",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23263,6 +23575,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23311,9 +23625,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.7082067334759423,
-      "rmse": 3.171448163138045,
-      "r2": 0.6255082534884528
+      "mae": 1.3917382802226719,
+      "rmse": 1.3917382802226719,
+      "r2": null
     },
     "model_path": "models\\temperature_10d_random_forest_prospective.joblib"
   },
@@ -23409,10 +23723,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "gradient_boost",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23436,6 +23753,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23484,19 +23803,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.640554269412565,
-      "rmse": 3.1522208103233753,
-      "r2": 0.6300353071170715
+      "mae": 1.2336813632155668,
+      "rmse": 1.2336813632155668,
+      "r2": null
     },
     "model_path": "models\\temperature_10d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "xgboost",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23520,6 +23842,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23568,19 +23892,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.9025144442996464,
-      "rmse": 3.392168650376618,
-      "r2": 0.571568012670526
+      "mae": 0.23106651306152415,
+      "rmse": 0.23106651306152415,
+      "r2": null
     },
     "model_path": "models\\temperature_10d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
     "horizon_days": 10,
     "horizon_hours": 240,
     "model": "lightgbm",
-    "rows": 481,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23604,6 +23931,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23652,19 +23981,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 3.48452456014392,
-      "rmse": 4.0534994243715765,
-      "r2": 0.38823130840275444
+      "mae": 1.0565784602572101,
+      "rmse": 1.0565784602572101,
+      "r2": null
     },
     "model_path": "models\\temperature_10d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "ridge",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23688,6 +24020,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23736,19 +24070,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.7946495337091473,
-      "rmse": 3.4656010179194023,
-      "r2": 0.5385056883213706
+      "mae": 1.4303950141769732,
+      "rmse": 1.4303950141769732,
+      "r2": null
     },
     "model_path": "models\\temperature_14d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "random_forest",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23772,6 +24109,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23820,9 +24159,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.97400385562421,
-      "rmse": 3.370725722268304,
-      "r2": 0.5634278196998754
+      "mae": 3.7495381667444967,
+      "rmse": 3.7495381667444967,
+      "r2": null
     },
     "model_path": "models\\temperature_14d_random_forest_prospective.joblib"
   },
@@ -23918,10 +24257,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "gradient_boost",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -23945,6 +24287,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -23993,19 +24337,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.812641021290773,
-      "rmse": 3.286225251650651,
-      "r2": 0.5850422460397415
+      "mae": 2.5971604588542903,
+      "rmse": 2.5971604588542903,
+      "r2": null
     },
     "model_path": "models\\temperature_14d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "xgboost",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -24029,6 +24376,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24077,19 +24426,22 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 3.1611951490129746,
-      "rmse": 3.5977707669619354,
-      "r2": 0.5026338726806308
+      "mae": 2.353863983154298,
+      "rmse": 2.353863983154298,
+      "r2": null
     },
     "model_path": "models\\temperature_14d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "lightgbm",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -24113,6 +24465,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24161,15 +24515,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 3.3747059629577487,
-      "rmse": 3.802213409078392,
-      "r2": 0.4445023761809409
+      "mae": 1.6472982783087033,
+      "rmse": 1.6472982783087033,
+      "r2": null
     },
     "model_path": "models\\temperature_14d_lightgbm_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "ridge",
@@ -24197,6 +24554,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24245,15 +24604,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.4763374357717183,
-      "rmse": 0.4763374357717183,
-      "r2": NaN
+      "mae": 0.6087868051024614,
+      "rmse": 0.6087868051024614,
+      "r2": null
     },
     "model_path": "models\\temperature_30d_ridge_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "random_forest",
@@ -24281,6 +24643,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24329,9 +24693,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.5539328585438632,
-      "rmse": 0.5539328585438632,
-      "r2": NaN
+      "mae": 0.03725657287157347,
+      "rmse": 0.03725657287157347,
+      "r2": null
     },
     "model_path": "models\\temperature_30d_random_forest_prospective.joblib"
   },
@@ -24427,6 +24791,9 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "gradient_boost",
@@ -24454,6 +24821,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24502,15 +24871,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9330235947484731,
-      "rmse": 0.9330235947484731,
-      "r2": NaN
+      "mae": 0.9318644446641926,
+      "rmse": 0.9318644446641926,
+      "r2": null
     },
     "model_path": "models\\temperature_30d_gradient_boost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "xgboost",
@@ -24538,6 +24910,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24586,15 +24960,18 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9013458251953139,
-      "rmse": 0.9013458251953139,
-      "r2": NaN
+      "mae": 0.3555189514160162,
+      "rmse": 0.3555189514160162,
+      "r2": null
     },
     "model_path": "models\\temperature_30d_xgboost_prospective.joblib"
   },
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
     "horizon_days": 30,
     "horizon_hours": 720,
     "model": "lightgbm",
@@ -24622,6 +24999,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -24670,9 +25049,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.44029053582939426,
-      "rmse": 0.44029053582939426,
-      "r2": NaN
+      "mae": 0.9834423732238342,
+      "rmse": 0.9834423732238342,
+      "r2": null
     },
     "model_path": "models\\temperature_30d_lightgbm_prospective.joblib"
   },
@@ -27461,6 +27840,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -27509,8 +27890,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.774784288737578,
-      "rmse": 2.774784288737578,
+      "mae": 2.7710275838057044,
+      "rmse": 2.7710275838057044,
       "r2": null
     },
     "model_path": "models\\GHI_5d_catboost_prospective.joblib"
@@ -27726,13 +28107,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27781,8 +28157,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 6.947097224100702,
-      "rmse": 6.947097224100702,
+      "mae": 2.2212766461180706,
+      "rmse": 2.2212766461180706,
       "r2": null
     },
     "model_path": "models\\GHI_14d_catboost_prospective.joblib"
@@ -28330,5 +28706,1393 @@
       "r2": 0.6330843150368981
     },
     "model_path": "models\\temperature_30d_persistence_testing.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
+    "horizon_days": 1,
+    "horizon_hours": 24,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_1d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
+    "horizon_days": 1,
+    "horizon_hours": 24,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "temperature",
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 2.0065394228684568,
+      "rmse": 2.0065394228684568,
+      "r2": null
+    },
+    "model_path": "models\\GHI_1d_catboost_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
+    "horizon_days": 2,
+    "horizon_hours": 48,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_2d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
+    "horizon_days": 2,
+    "horizon_hours": 48,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "temperature",
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 1.4575466006674276,
+      "rmse": 1.4575466006674276,
+      "r2": null
+    },
+    "model_path": "models\\GHI_2d_catboost_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
+    "horizon_days": 3,
+    "horizon_hours": 72,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_3d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
+    "horizon_days": 3,
+    "horizon_hours": 72,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "temperature",
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 2.2605772162485778,
+      "rmse": 2.2605772162485778,
+      "r2": null
+    },
+    "model_path": "models\\GHI_3d_catboost_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
+    "horizon_days": 5,
+    "horizon_hours": 120,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_5d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
+    "horizon_days": 7,
+    "horizon_hours": 168,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_7d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
+    "horizon_days": 10,
+    "horizon_hours": 240,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_10d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
+    "horizon_days": 14,
+    "horizon_hours": 336,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_14d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
+    "horizon_days": 30,
+    "horizon_hours": 720,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "GHI_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "r2": null
+    },
+    "model_path": "models\\GHI_30d_persistence_prospective.joblib"
+  },
+  {
+    "target": "GHI",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
+    "horizon_days": 30,
+    "horizon_hours": 720,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "temperature",
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 8.678823434103322,
+      "rmse": 8.678823434103322,
+      "r2": null
+    },
+    "model_path": "models\\GHI_30d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
+    "horizon_days": 1,
+    "horizon_hours": 24,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.23999999999999844,
+      "rmse": 0.23999999999999844,
+      "r2": null
+    },
+    "model_path": "models\\temperature_1d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
+    "horizon_days": 1,
+    "horizon_hours": 24,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 1.2066446061987222,
+      "rmse": 1.2066446061987222,
+      "r2": null
+    },
+    "model_path": "models\\temperature_1d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
+    "horizon_days": 2,
+    "horizon_hours": 48,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 3.229999999999997,
+      "rmse": 3.229999999999997,
+      "r2": null
+    },
+    "model_path": "models\\temperature_2d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-02T23:00:00",
+    "horizon_days": 2,
+    "horizon_hours": 48,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 1.683227401105107,
+      "rmse": 1.683227401105107,
+      "r2": null
+    },
+    "model_path": "models\\temperature_2d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
+    "horizon_days": 3,
+    "horizon_hours": 72,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.05000000000000071,
+      "rmse": 0.05000000000000071,
+      "r2": null
+    },
+    "model_path": "models\\temperature_3d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-03T23:00:00",
+    "horizon_days": 3,
+    "horizon_hours": 72,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 0.04146791044357556,
+      "rmse": 0.04146791044357556,
+      "r2": null
+    },
+    "model_path": "models\\temperature_3d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
+    "horizon_days": 5,
+    "horizon_hours": 120,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 2.1300000000000026,
+      "rmse": 2.1300000000000026,
+      "r2": null
+    },
+    "model_path": "models\\temperature_5d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-05T23:00:00",
+    "horizon_days": 5,
+    "horizon_hours": 120,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 2.541619607545215,
+      "rmse": 2.541619607545215,
+      "r2": null
+    },
+    "model_path": "models\\temperature_5d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
+    "horizon_days": 7,
+    "horizon_hours": 168,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 1.1400000000000006,
+      "rmse": 1.1400000000000006,
+      "r2": null
+    },
+    "model_path": "models\\temperature_7d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-07T23:00:00",
+    "horizon_days": 7,
+    "horizon_hours": 168,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 0.6189414520304197,
+      "rmse": 0.6189414520304197,
+      "r2": null
+    },
+    "model_path": "models\\temperature_7d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
+    "horizon_days": 10,
+    "horizon_hours": 240,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 2.8000000000000007,
+      "rmse": 2.8000000000000007,
+      "r2": null
+    },
+    "model_path": "models\\temperature_10d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-10T23:00:00",
+    "horizon_days": 10,
+    "horizon_hours": 240,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 0.9845209441654141,
+      "rmse": 0.9845209441654141,
+      "r2": null
+    },
+    "model_path": "models\\temperature_10d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
+    "horizon_days": 14,
+    "horizon_hours": 336,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 0.6799999999999997,
+      "rmse": 0.6799999999999997,
+      "r2": null
+    },
+    "model_path": "models\\temperature_14d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
+    "horizon_days": 14,
+    "horizon_hours": 336,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 0.6692511563044974,
+      "rmse": 0.6692511563044974,
+      "r2": null
+    },
+    "model_path": "models\\temperature_14d_catboost_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
+    "horizon_days": 30,
+    "horizon_hours": 720,
+    "model": "persistence",
+    "rows": 1,
+    "features": [
+      "temperature_persist_t-24h"
+    ],
+    "metrics": {
+      "mae": 1.4600000000000009,
+      "rmse": 1.4600000000000009,
+      "r2": null
+    },
+    "model_path": "models\\temperature_30d_persistence_prospective.joblib"
+  },
+  {
+    "target": "temperature",
+    "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-30T23:00:00",
+    "horizon_days": 30,
+    "horizon_hours": 720,
+    "model": "catboost",
+    "rows": 1,
+    "features": [
+      "dew_point",
+      "humidity",
+      "cloud_cover",
+      "wind_speed",
+      "precipitation",
+      "pressure",
+      "GHI",
+      "solar_elevation",
+      "solar_azimuth",
+      "solar_zenith",
+      "solar_declination",
+      "solar_hour_angle",
+      "solar_airmass",
+      "is_daylight",
+      "is_sunrise",
+      "is_sunset",
+      "clear_sky_ghi",
+      "clear_sky_dni",
+      "clear_sky_dhi",
+      "clearness_index_kt",
+      "diffuse_fraction_kd",
+      "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
+      "hour",
+      "day",
+      "month",
+      "quarter",
+      "year",
+      "week",
+      "dayofweek",
+      "dayofyear",
+      "is_weekend",
+      "hour_sin",
+      "hour_cos",
+      "month_sin",
+      "month_cos",
+      "season",
+      "hours_since_midnight",
+      "hours_to_midnight",
+      "GHI_lag1h",
+      "GHI_lag6h",
+      "GHI_lag12h",
+      "GHI_lag24h",
+      "temperature_lag1h",
+      "temperature_lag6h",
+      "temperature_lag12h",
+      "temperature_lag24h",
+      "humidity_lag1h",
+      "humidity_lag6h",
+      "humidity_lag12h",
+      "humidity_lag24h",
+      "GHI_rolling6h_mean",
+      "GHI_rolling6h_std",
+      "GHI_rolling12h_mean",
+      "GHI_rolling12h_std",
+      "GHI_rolling24h_mean",
+      "GHI_rolling24h_std",
+      "temperature_rolling6h_mean",
+      "temperature_rolling6h_std",
+      "temperature_rolling12h_mean",
+      "temperature_rolling12h_std",
+      "temperature_rolling24h_mean",
+      "temperature_rolling24h_std",
+      "humidity_rolling6h_mean",
+      "humidity_rolling6h_std",
+      "humidity_rolling12h_mean",
+      "humidity_rolling12h_std",
+      "humidity_rolling24h_mean",
+      "humidity_rolling24h_std"
+    ],
+    "metrics": {
+      "mae": 2.330907344605553,
+      "rmse": 2.330907344605553,
+      "r2": null
+    },
+    "model_path": "models\\temperature_30d_catboost_prospective.joblib"
   }
 ]
