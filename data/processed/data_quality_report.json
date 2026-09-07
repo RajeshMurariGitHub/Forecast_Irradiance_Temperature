@@ -1,23 +1,23 @@
 {
   "rows": 57696,
-  "start": "2020-01-01T00:00:00",
-  "end": "2026-07-31T23:00:00",
+  "start": "2020-01-01T05:00:00",
+  "end": "2026-08-01T04:00:00",
   "duplicate_timestamps_removed": 0,
   "missing_timestamps_inserted": 0,
-  "fill_values_replaced": 7440,
+  "fill_values_replaced": 7320,
   "values_interpolated": 0,
   "missing_values": {
     "temperature": 0,
     "dew_point": 0,
     "humidity": 0,
-    "cloud_cover": 1488,
+    "cloud_cover": 1464,
     "wind_speed": 0,
     "precipitation": 0,
     "pressure": 0,
-    "GHI_energy": 1488,
-    "DNI": 1488,
-    "DHI": 1488,
-    "GHI": 1488
+    "GHI_energy": 1464,
+    "DNI": 1464,
+    "DHI": 1464,
+    "GHI": 1464
   },
   "physical_range_violations": {
     "temperature": 0,
