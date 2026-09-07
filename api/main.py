@@ -21,7 +21,10 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Solar Irradiance & Temperature Forecast API",
-    description="Serves trained model metrics, feature importance, and forecasts for the Hyderabad solar project.",
+    description=(
+        "Serves trained model metrics, feature importance, and forecasts "
+        "for the Hyderabad solar project."
+    ),
     version="1.0.0",
 )
 

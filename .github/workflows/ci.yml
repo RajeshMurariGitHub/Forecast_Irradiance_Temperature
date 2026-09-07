@@ -30,9 +30,8 @@ jobs:
           pip install -r requirements-ci.txt
 
       - name: Lint (pylint)
-        # Maintained modules score ~10/10; the floor guards against large
-        # regressions while the legacy utils modules are cleaned up.
-        run: pylint --fail-under=8.0 scripts api dashboard
+        # Repo is at 10/10; the floor leaves a small margin for minor additions.
+        run: pylint --fail-under=9.5 scripts api dashboard
 
       - name: Type check (pyright)
         run: pyright --project pyrightconfig.json

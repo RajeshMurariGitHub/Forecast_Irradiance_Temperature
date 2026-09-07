@@ -5,14 +5,15 @@ Computes clear-sky GHI, DNI, DHI using Ineichen & Perez model.
 Essential for creating clearness indices and understanding attenuation.
 """
 
-import pandas as pd
-import numpy as np
 import logging
-from typing import Tuple
+
+import numpy as np
+import pandas as pd
 
 try:
     from pvlib import clearsky, location, solarposition
-except ImportError:
+except ImportError:  # pragma: no cover - optional dependency
+    clearsky = location = solarposition = None
     print("Warning: pvlib not installed. Install with: pip install pvlib")
 
 logger = logging.getLogger(__name__)
@@ -20,12 +21,12 @@ logger = logging.getLogger(__name__)
 
 class ClearSkyModel:
     """Calculate clear-sky irradiance"""
-    
-    def __init__(self, latitude: float, longitude: float, elevation: float = 0, 
+
+    def __init__(self, latitude: float, longitude: float, elevation: float = 0,
                  timezone: str = "UTC", model: str = "ineichen"):
         """
         Initialize clear-sky model
-        
+
         Parameters
         ----------
         latitude : float
@@ -44,75 +45,76 @@ class ClearSkyModel:
         self.elevation = elevation
         self.timezone = timezone
         self.model = model
-        
+
         self.location = location.Location(
             latitude=latitude,
             longitude=longitude,
             altitude=elevation,
             tz=timezone
         )
-        
-        logger.info(f"Initialized ClearSkyModel ({model}) for ({latitude:.4f}°N, {longitude:.4f}°E)")
-    
-    def calculate_clearsky(self, times: pd.DatetimeIndex, 
-                          linke_turbidity: float = 3.0) -> pd.DataFrame:
+
+        logger.info(
+            "Initialized ClearSkyModel (%s) for (%.4f N, %.4f E)", model, latitude, longitude
+        )
+
+    def calculate_clearsky(
+        self, times: pd.DatetimeIndex, linke_turbidity: float = 3.0
+    ) -> pd.DataFrame:
         """
         Calculate clear-sky irradiance
-        
+
         Parameters
         ----------
         times : pd.DatetimeIndex
             Times for calculation
         linke_turbidity : float, optional
             Linke turbidity factor (1-7, default 3.0 for clear skies)
-        
+
         Returns
         -------
         pd.DataFrame
             DataFrame with columns: cs_ghi, cs_dni, cs_dhi
         """
-        logger.info(f"Calculating clear-sky irradiance ({self.model} model) for {len(times)} timestamps")
-        
-        if self.model == 'ineichen':
-            solar_pos = solarposition.get_solarposition(
-                times,
-                latitude=self.latitude,
-                longitude=self.longitude,
-                altitude=self.elevation,
-                method='nrel_numba',
-            )
-            zenith = solar_pos['apparent_zenith'].to_numpy()
+        logger.info(
+            "Calculating clear-sky irradiance (%s model) for %d timestamps", self.model, len(times)
+        )
+
+        solar_pos = solarposition.get_solarposition(
+            times,
+            latitude=self.latitude,
+            longitude=self.longitude,
+            altitude=self.elevation,
+            method="nrel_numba",
+        )
+        zenith = solar_pos["apparent_zenith"].to_numpy()
+
+        if self.model == "ineichen":
             airmass = location.Location(
                 latitude=self.latitude,
                 longitude=self.longitude,
                 altitude=self.elevation,
                 tz=self.timezone,
-            ).get_airmass(times=times)['airmass_absolute'].to_numpy()
-            cs = clearsky.ineichen(
-                zenith,
-                airmass,
-                linke_turbidity,
-                altitude=self.elevation,
-            )
-        elif self.model == 'haurwitz':
-            cs = clearsky.haurwitz(times, self.latitude, self.longitude)
+            ).get_airmass(times=times)["airmass_absolute"].to_numpy()
+            cs = clearsky.ineichen(zenith, airmass, linke_turbidity, altitude=self.elevation)
+        elif self.model == "haurwitz":
+            cs = clearsky.haurwitz(zenith)
         else:
             raise ValueError(f"Unknown model: {self.model}")
-        
+
         # Ensure night values are 0
         result = pd.DataFrame(index=times)
         result['clear_sky_ghi'] = pd.Series(cs['ghi'], index=times).clip(lower=0)
         result['clear_sky_dni'] = pd.Series(cs.get('dni', 0), index=times).clip(lower=0)
         result['clear_sky_dhi'] = pd.Series(cs.get('dhi', 0), index=times).clip(lower=0)
-        
+
         return result
-    
-    def calculate_clearness_indices(self, df: pd.DataFrame, 
+
+    def calculate_clearness_indices(self, df: pd.DataFrame,
                                    ghi_col: str = 'GHI',
                                    cs_ghi_col: str = 'clear_sky_ghi') -> pd.DataFrame:
         """
         Calculate clearness indices (Kt, Kd)
-        
+
         Parameters
         ----------
         df : pd.DataFrame
@@ -121,40 +123,40 @@ class ClearSkyModel:
             Name of GHI column
         cs_ghi_col : str
             Name of clear-sky GHI column
-        
+
         Returns
         -------
         pd.DataFrame
             DataFrame with clearness indices
         """
         result = pd.DataFrame(index=df.index)
-        
+
         # Clearness index (Kt) = GHI / clear-sky GHI
         # Only valid during daylight (clear_sky_ghi > 50 W/m²)
         daytime = df[cs_ghi_col] > 50
-        
+
         result['clearness_index_kt'] = np.nan
         result.loc[daytime, 'clearness_index_kt'] = (
             df.loc[daytime, ghi_col] / df.loc[daytime, cs_ghi_col]
         ).clip(0, 1.2)  # Clip at 1.2 for overcast conditions
-        
+
         # Diffuse fraction (Kd) = DHI / GHI
         if 'DHI' in df.columns:
             result['diffuse_fraction_kd'] = np.nan
             result.loc[daytime, 'diffuse_fraction_kd'] = (
                 df.loc[daytime, 'DHI'] / df.loc[daytime, ghi_col]
             ).clip(0, 1)
-        
-        logger.info(f"Calculated clearness indices for {daytime.sum():,} daytime hours")
-        
+
+        logger.info("Calculated clearness indices for %s daytime hours", daytime.sum())
+
         return result
-    
-    def add_clearsky_features(self, df: pd.DataFrame, 
+
+    def add_clearsky_features(self, df: pd.DataFrame,
                              ghi_col: str = 'GHI',
                              linke_turbidity: float = 3.0) -> pd.DataFrame:
         """
         Add all clear-sky features to DataFrame
-        
+
         Parameters
         ----------
         df : pd.DataFrame
@@ -163,31 +165,31 @@ class ClearSkyModel:
             Name of GHI column
         linke_turbidity : float, optional
             Linke turbidity factor
-        
+
         Returns
         -------
         pd.DataFrame
             DataFrame with clear-sky features added
         """
         logger.info("Adding clear-sky features")
-        
+
         times = df.index
-        
+
         # Calculate clear-sky irradiance
         cs = self.calculate_clearsky(times, linke_turbidity)
         df = pd.concat([df, cs], axis=1)
-        
+
         # Calculate clearness indices
         indices = self.calculate_clearness_indices(df, ghi_col)
         df = pd.concat([df, indices], axis=1)
-        
+
         # Calculate attenuation factor (actual / clear-sky)
         df['attenuation_factor'] = np.nan
         daytime = df['clear_sky_ghi'] > 50
         df.loc[daytime, 'attenuation_factor'] = (
             df.loc[daytime, ghi_col] / df.loc[daytime, 'clear_sky_ghi']
         ).clip(0, 1)
-        
+
         return df
 
 
@@ -195,48 +197,30 @@ class ClearSkyModel:
 def classify_sky_condition(kt: float) -> str:
     """
     Classify sky condition based on clearness index
-    
+
     Parameters
     ----------
     kt : float
         Clearness index
-    
+
     Returns
     -------
     str
         Sky condition: 'clear', 'partly_cloudy', 'overcast'
     """
     if kt < 0.3:
-        return 'overcast'
-    elif kt < 0.7:
-        return 'partly_cloudy'
-    else:
-        return 'clear'
+        return "overcast"
+    if kt < 0.7:
+        return "partly_cloudy"
+    return "clear"
 
 
-def add_sky_condition(df: pd.DataFrame, kt_col: str = 'clearness_index_kt') -> pd.DataFrame:
+def add_sky_condition(df: pd.DataFrame, kt_col: str = "clearness_index_kt") -> pd.DataFrame:
     """Add sky condition classification"""
-    df['sky_condition'] = df[kt_col].apply(lambda x: classify_sky_condition(x) if not np.isnan(x) else 'night')
+    df["sky_condition"] = df[kt_col].apply(
+        lambda x: "night" if np.isnan(x) else classify_sky_condition(x)
+    )
     return df
 
 
 # Example usage
-if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-    
-    # Create model
-    csm = ClearSkyModel(latitude=17.385, longitude=78.487, elevation=500, timezone="Asia/Kolkata")
-    
-    # Calculate for a day
-    times = pd.date_range('2024-01-15', periods=24, freq='H', tz='Asia/Kolkata')
-    cs = csm.calculate_clearsky(times, linke_turbidity=3.0)
-    
-    # Plot
-    fig, ax = plt.subplots(figsize=(12, 5))
-    ax.plot(times.hour, cs['clear_sky_ghi'], label='Clear-sky GHI', marker='o')
-    ax.set_xlabel('Hour of Day')
-    ax.set_ylabel('Irradiance (W/m²)')
-    ax.set_title('Clear-Sky GHI Profile - Hyderabad')
-    ax.legend()
-    ax.grid(True)
-    plt.show()

@@ -6,7 +6,6 @@ import argparse
 import json
 import logging
 from pathlib import Path
-from typing import Iterable
 
 import joblib
 import numpy as np
@@ -115,7 +114,8 @@ def model_artifact_path(
     return model_dir / f"{target}_{horizon_days}d_{model_name}_{split_name}.joblib"
 
 
-def build_model(model_name: str):
+def build_model(model_name: str):  # pylint: disable=too-many-return-statements
+    """Return an unfitted estimator pipeline for the named model."""
     model_name = model_name.lower()
     if model_name == "ridge":
         return Pipeline(
@@ -213,7 +213,8 @@ def build_model(model_name: str):
             ]
         )
     if model_name == "catboost":
-        from catboost import CatBoostRegressor
+        # Imported lazily: catboost is a large, optional dependency.
+        from catboost import CatBoostRegressor  # pylint: disable=import-outside-toplevel
 
         return Pipeline(
             steps=[
@@ -415,7 +416,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--select-best",
         action="store_true",
-        help="For prospective evaluation, refit only the highest-validation-R2 model per target and horizon.",
+        help=(
+            "For prospective evaluation, refit only the highest-validation-R2 "
+            "model per target and horizon."
+        ),
     )
     return parser.parse_args()
 
@@ -500,16 +504,13 @@ def main() -> None:
         results.append(result)
 
     # Replace matching evaluations so dashboard metrics cannot remain stale after retraining.
+    def result_key(item: dict) -> tuple:
+        return (item["target"], item["split"], item["horizon_hours"], item["model"])
+
     all_results = results
     if output.exists():
         with open(output, "r", encoding="utf-8") as fh:
             existing = json.load(fh)
-        result_key = lambda item: (
-            item["target"],
-            item["split"],
-            item["horizon_hours"],
-            item["model"],
-        )
         updated = {result_key(item): item for item in existing}
         updated.update({result_key(item): item for item in results})
         all_results = list(updated.values())

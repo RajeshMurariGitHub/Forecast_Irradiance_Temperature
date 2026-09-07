@@ -5,14 +5,15 @@ Computes solar position (elevation, azimuth, zenith) using pvlib and ephem libra
 Critical for understanding GHI patterns throughout the year.
 """
 
-import pandas as pd
-import numpy as np
 import logging
-from typing import Tuple, Dict
+
+import numpy as np
+import pandas as pd
 
 try:
     from pvlib import location, solarposition
-except ImportError:
+except ImportError:  # pragma: no cover - optional dependency
+    location = solarposition = None
     print("Warning: pvlib not installed. Install with: pip install pvlib")
 
 logger = logging.getLogger(__name__)
@@ -49,8 +50,8 @@ class SolarGeometry:
         )
 
         logger.info(
-            f"Initialized SolarGeometry for ({latitude:.4f}°N, {longitude:.4f}°E), "
-            f"elevation={elevation}m, tz={timezone}"
+            "Initialized SolarGeometry for (%.4f N, %.4f E), elevation=%sm, tz=%s",
+            latitude, longitude, elevation, timezone,
         )
 
     def calculate_solar_position(self, times: pd.DatetimeIndex) -> pd.DataFrame:
@@ -67,7 +68,7 @@ class SolarGeometry:
         pd.DataFrame
             DataFrame with columns: elevation, azimuth, zenith
         """
-        logger.info(f"Calculating solar position for {len(times)} timestamps")
+        logger.info("Calculating solar position for %s timestamps", len(times))
 
         # Use pvlib's solar position calculation
         solar_pos = solarposition.get_solarposition(
@@ -192,7 +193,7 @@ class SolarGeometry:
         df["is_sunrise"] = df["is_sunrise"].fillna(False)
         df["is_sunset"] = df["is_sunset"].fillna(False)
 
-        logger.info(f"Added solar features. Daylight hours: {df['is_daylight'].sum():,}")
+        logger.info("Added solar features. Daylight hours: %s", df['is_daylight'].sum())
 
         return df
 
@@ -205,21 +206,3 @@ def get_solar_geometry(
 
 
 # Example usage
-if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-
-    # Hyderabad coordinates
-    sg = SolarGeometry(latitude=17.385, longitude=78.487, elevation=500, timezone="Asia/Kolkata")
-
-    # Create sample data (one day)
-    times = pd.date_range("2024-01-15", periods=24, freq="H", tz="Asia/Kolkata")
-    solar_pos = sg.calculate_solar_position(times)
-
-    # Plot
-    fig, ax = plt.subplots(figsize=(12, 5))
-    ax.plot(times.hour, solar_pos["solar_elevation"], marker="o")
-    ax.set_xlabel("Hour of Day")
-    ax.set_ylabel("Solar Elevation (°)")
-    ax.set_title("Solar Elevation Profile - Hyderabad")
-    ax.grid(True)
-    plt.show()

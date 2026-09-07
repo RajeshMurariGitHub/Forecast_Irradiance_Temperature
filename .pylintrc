@@ -1,6 +1,8 @@
 [MASTER]
 jobs = 4
 persistent = yes
+# scripts/ holds runnable modules that import each other by bare name.
+init-hook = 'import sys; sys.path.insert(0, "scripts")'
 extension-pkg-allow-list = numpy,pandas,cv2
 ignore-patterns = test_
 unsafe-load-any-extension = no

@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import json
-import sys
-from pathlib import Path
 
 import pandas as pd
 
@@ -16,9 +14,6 @@ from analyze_models import (
     validation_comparison_frame,
     write_best_model_metadata,
 )
-
-if sys.stdout.encoding is None or sys.stdout.encoding.lower() != "utf-8":
-    sys.stdout.reconfigure(encoding="utf-8")
 
 
 def load_results(results_file: str = "models/training_results.json") -> list[dict]:
@@ -42,31 +37,31 @@ def create_comparison_table(results: list[dict]) -> pd.DataFrame:
             "R²": result["metrics"]["r2"],
         }
         rows.append(row)
-    
+
     return pd.DataFrame(rows)
 
 
 def print_comparison_by_split(results: list[dict]) -> None:
     """Print model comparison organized by split and target."""
     df = create_comparison_table(results)
-    
+
     print("=" * 140)
     print("COMPREHENSIVE MODEL EVALUATION REPORT")
     print("=" * 140)
-    
+
     for split in sorted(df["Split"].unique()):
         print(f"\n{'=' * 140}")
         print(f"SPLIT: {split}")
         print(f"{'=' * 140}\n")
-        
+
         split_df = df[df["Split"] == split].copy()
-        
+
         for target in sorted(split_df["Target"].unique()):
             target_df = split_df[split_df["Target"] == target].sort_values("Horizon")
-            
+
             print(f"\nTarget: {target}")
             print("-" * 140)
-            
+
             # Format output nicely
             display_df = target_df.copy()
             display_df["MAE"] = display_df["MAE"].apply(lambda x: f"{x:.2f}")
@@ -74,73 +69,77 @@ def print_comparison_by_split(results: list[dict]) -> None:
             display_df["R²"] = display_df["R²"].apply(
                 lambda x: "n/a" if x is None or pd.isna(x) else f"{x:.4f}"
             )
-            
-            print(display_df[["Horizon", "Model", "Rows", "MAE", "RMSE", "R²"]].to_string(index=False))
+
+            columns = ["Horizon", "Model", "Rows", "MAE", "RMSE", "R²"]
+            print(display_df[columns].to_string(index=False))
 
 
 def print_model_ranking(results: list[dict]) -> None:
     """Print best performing models by target and horizon."""
     df = create_comparison_table(results)
-    
+
     print("\n\n" + "=" * 140)
     print("BEST MODEL BY TARGET & HORIZON (Validation Split)")
     print("=" * 140)
-    
+
     validation_df = df[df["Split"] == "Validation"].copy()
-    
+
     for target in sorted(validation_df["Target"].unique()):
         print(f"\n{target}:")
         print("-" * 60)
-        
+
         target_df = validation_df[validation_df["Target"] == target].copy()
-        
+
         for horizon in sorted(target_df["Horizon"].unique()):
             horizon_df = target_df[target_df["Horizon"] == horizon].copy()
             best_row = horizon_df.loc[horizon_df["R²"].idxmax()]
-            
+
             model = best_row["Model"]
             r2 = best_row["R²"]
             mae = best_row["MAE"]
             rmse = best_row["RMSE"]
-            
-            print(f"  {horizon:3}d -> {model:20} | R² = {r2:.4f} | MAE = {mae:.2f} | RMSE = {rmse:.2f}")
+
+            print(
+                f"  {horizon:3}d -> {model:20} | "
+                f"R2 = {r2:.4f} | MAE = {mae:.2f} | RMSE = {rmse:.2f}"
+            )
 
 
 def print_generalization_gap(results: list[dict]) -> None:
     """Compare validation and testing performance."""
     df = create_comparison_table(results)
-    
+
     # Pivot to compare splits
     val_df = df[df["Split"] == "Validation"].set_index(["Target", "Horizon", "Model"])
     test_df = df[df["Split"] == "Testing"].set_index(["Target", "Horizon", "Model"])
-    
+
     print("\n\n" + "=" * 140)
-    print("GENERALIZATION GAP ANALYSIS (Validation vs Testing - R² Score)")
+    print("GENERALIZATION GAP ANALYSIS (Validation vs Testing - R2 Score)")
     print("=" * 140)
     print()
-    
+
     rows = []
     for idx in sorted(val_df.index):
         if idx in test_df.index:
             val_r2 = val_df.loc[idx, "R²"]
             test_r2 = test_df.loc[idx, "R²"]
             gap = val_r2 - test_r2
-            
+
             target, horizon, model = idx
             rows.append({
                 "Target": target,
                 "Horizon": horizon,
                 "Model": model,
-                "Val R²": f"{val_r2:.4f}",
-                "Test R²": f"{test_r2:.4f}",
+                "Val R2": f"{val_r2:.4f}",
+                "Test R2": f"{test_r2:.4f}",
                 "Gap": f"{gap:.4f}",
-                "Status": "✓ Good" if gap < 0.01 else "⚠ Moderate" if gap < 0.05 else "✗ High"
+                "Status": "good" if gap < 0.01 else "moderate" if gap < 0.05 else "high",
             })
-    
+
     if rows:
         result_df = pd.DataFrame(rows)
         print(result_df.to_string(index=False))
-        
+
         # Summary statistics
         gap_values = [float(r["Gap"]) for r in rows]
         print(f"\nMean generalization gap: {pd.Series(gap_values).mean():.4f}")
@@ -181,7 +180,7 @@ def select_and_save_best_model(results: list[dict]) -> None:
     selection = select_best_models(frame)
     print_markdown_comparison(frame, selection)
     meta_path = write_best_model_metadata(selection)
-    print(f"\n✓ Saved best-model metadata to {meta_path}")
+    print(f"\n[ok] Saved best-model metadata to {meta_path}")
     for target, info in selection["best_overall"].items():
         label = TARGET_LABELS.get(target, target)
         print(f"  best {label}: {info['model']} (mean validation RMSE {info['mean_rmse']})")

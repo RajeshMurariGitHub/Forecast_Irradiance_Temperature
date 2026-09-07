@@ -151,7 +151,9 @@ def render_production(target: str, horizon: int) -> None:
 def render_overview(split: str, target: str, horizon: int) -> None:
     st.subheader(f"Model comparison — {target}, {horizon}h horizon, {split} split")
 
-    results = api_get("/api/results", params={"target": target, "split": split, "horizon_hours": horizon})
+    results = api_get(
+        "/api/results", params={"target": target, "split": split, "horizon_hours": horizon}
+    )
     if not results:
         st.warning("No results found for this combination.")
         return
@@ -216,17 +218,23 @@ def render_forecast(target: str, horizon: int) -> None:
     try:
         data = api_get(
             "/api/forecast",
-            params={"target": target, "horizon_hours": horizon, "model": model, "split": split, "limit": limit},
+            params={
+                "target": target, "horizon_hours": horizon,
+                "model": model, "split": split, "limit": limit,
+            },
         )
     except requests.exceptions.HTTPError as exc:
         st.warning(f"No forecast available for this combination: {exc}")
         return
 
+    pretty_model = model.replace("_", " ").title()
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=data["timestamps"], y=data["actual"], name="Actual", mode="lines"))
-    fig.add_trace(go.Scatter(x=data["timestamps"], y=data["predicted"], name="Predicted", mode="lines"))
+    fig.add_trace(
+        go.Scatter(x=data["timestamps"], y=data["predicted"], name="Predicted", mode="lines")
+    )
     fig.update_layout(
-        title=f"{target} — Actual vs Predicted ({model.replace('_', ' ').title()}, {horizon}h ahead)",
+        title=f"{target} — Actual vs Predicted ({pretty_model}, {horizon}h ahead)",
         xaxis_title="Timestamp",
         yaxis_title=target,
         legend_title="Series",
@@ -289,7 +297,12 @@ def render_generalization_gap(target: str) -> None:
     st.plotly_chart(fig, width="stretch")
 
     display_df = df[["Model", "horizon_hours", "val_r2", "test_r2", "gap"]].rename(
-        columns={"horizon_hours": "Horizon (h)", "val_r2": "Val R²", "test_r2": "Test R²", "gap": "Gap"}
+        columns={
+            "horizon_hours": "Horizon (h)",
+            "val_r2": "Val R²",
+            "test_r2": "Test R²",
+            "gap": "Gap",
+        }
     )
     st.dataframe(display_df.sort_values(["Horizon (h)", "Gap"]), width="stretch", hide_index=True)
 
