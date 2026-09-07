@@ -175,6 +175,83 @@ def fetch_nasa_power_data(
     return df
 
 
+# Open-Meteo hourly variable -> project column (names match the NASA POWER set,
+# with the extra low/mid/high cloud layers that NASA POWER does not provide).
+OPEN_METEO_HOURLY = {
+    "temperature_2m": "temperature",
+    "dew_point_2m": "dew_point",
+    "relative_humidity_2m": "humidity",
+    "cloud_cover": "cloud_cover",
+    "cloud_cover_low": "cloud_cover_low",
+    "cloud_cover_mid": "cloud_cover_mid",
+    "cloud_cover_high": "cloud_cover_high",
+    "wind_speed_10m": "wind_speed",
+    "precipitation": "precipitation",
+    "surface_pressure": "pressure",
+    "shortwave_radiation": "GHI",
+    "direct_normal_irradiance": "DNI",
+    "diffuse_radiation": "DHI",
+}
+
+
+def _parse_open_meteo_response(payload: dict) -> pd.DataFrame:
+    hourly = payload.get("hourly")
+    if not hourly or "time" not in hourly:
+        raise ValueError(f"Unexpected Open-Meteo response. Keys: {list(payload.keys())}")
+
+    df = pd.DataFrame(hourly)
+    df["time"] = pd.to_datetime(df["time"])
+    df = df.set_index("time").sort_index()
+    df.index.name = "timestamp"
+    keep = {src: dst for src, dst in OPEN_METEO_HOURLY.items() if src in df.columns}
+    return df[list(keep)].rename(columns=keep)
+
+
+def fetch_open_meteo_data(
+    config: dict,
+    output_path: str | Path,
+    start_date: str | None = None,
+    end_date: str | None = None,
+) -> pd.DataFrame:
+    """Fetch the ERA5 hourly archive from Open-Meteo onto the project's local grid."""
+    data_cfg = config["data"]
+    location = config["location"]
+    om_cfg = data_cfg["open_meteo"]
+    start_date = start_date or data_cfg["collection"]["start"]
+    end_date = end_date or data_cfg["collection"]["end"]
+
+    logger.info(
+        "Requesting Open-Meteo ERA5 archive for %s, %s from %s to %s",
+        location["name"],
+        (location["latitude"], location["longitude"]),
+        start_date,
+        end_date,
+    )
+    params = {
+        "latitude": location["latitude"],
+        "longitude": location["longitude"],
+        "start_date": pd.Timestamp(start_date).strftime("%Y-%m-%d"),
+        "end_date": pd.Timestamp(end_date).strftime("%Y-%m-%d"),
+        "hourly": ",".join(OPEN_METEO_HOURLY),
+        "wind_speed_unit": "ms",
+        "timezone": "GMT",
+    }
+    response = requests.get(om_cfg["archive_url"], params=params, timeout=300)
+    response.raise_for_status()
+    df = _parse_open_meteo_response(response.json())
+
+    # Requested as GMT; put it on the same whole-hour local grid as NASA POWER.
+    offset = local_offset_hours(location["longitude"])
+    df.index = df.index + pd.Timedelta(hours=offset)
+    df.index.name = "timestamp"
+
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(output_path)
+    logger.info("Saved %s rows to %s", len(df), output_path)
+    return df
+
+
 # NASA POWER encodes missing observations as -999. Treat anything at or below
 # this threshold as missing so the sentinels never reach features or targets.
 NASA_POWER_FILL_VALUE = -999.0
@@ -391,6 +468,8 @@ ALL_MODELS = (
 
 # Stages that run the full sequence after data prep.
 _COLLECT = {"collect", "all"}
+_COLLECT_OPENMETEO = {"collect-openmeteo", "compare-sources"}
+_COMPARE_SOURCES = {"compare-sources"}
 _CLEAN = {"clean", "all", "full"}
 _FEATURES = {"features", "forecast", "all", "full"}
 _TRAIN = {"train", "all", "full"}
@@ -426,6 +505,11 @@ def generate_diagnostics() -> None:
     _run_script("model_diagnostics.py")
 
 
+def compare_sources() -> None:
+    """NASA POWER vs Open-Meteo per-variable agreement report."""
+    _run_script("compare_sources.py")
+
+
 def run_stage(
     stage: str,
     config_path: str = "config/config.yaml",
@@ -437,11 +521,18 @@ def run_stage(
     raw_dir = Path(data_cfg["raw_dir"])
     processed_dir = Path(data_cfg["processed_dir"])
     raw_path = raw_dir / data_cfg["raw_filename"]
+    openmeteo_path = raw_dir / data_cfg["open_meteo"]["raw_filename"]
     processed_path = processed_dir / data_cfg["processed_filename"]
     forecast_path = processed_dir / data_cfg["forecast_dataset_filename"]
 
     if stage in _COLLECT:
         fetch_nasa_power_data(config, raw_path, start_date=start_date, end_date=end_date)
+
+    if stage in _COLLECT_OPENMETEO:
+        fetch_open_meteo_data(config, openmeteo_path, start_date=start_date, end_date=end_date)
+
+    if stage in _COMPARE_SOURCES:
+        compare_sources()
 
     if stage in _CLEAN:
         clean_and_freeze_data(raw_path, processed_path, config)
@@ -467,13 +558,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--stage",
         choices=[
-            "collect", "clean", "features", "forecast",
-            "train", "evaluate", "diagnostics", "full", "all",
+            "collect", "collect-openmeteo", "compare-sources", "clean", "features",
+            "forecast", "train", "evaluate", "diagnostics", "full", "all",
         ],
         default="all",
         help=(
             "Stage to run. 'full' = clean -> features -> train -> evaluate -> "
-            "diagnostics; 'all' additionally re-collects raw NASA POWER data first."
+            "diagnostics; 'all' additionally re-collects raw NASA POWER data first. "
+            "'compare-sources' fetches the Open-Meteo archive and reports agreement."
         ),
     )
     parser.add_argument("--config", default="config/config.yaml", help="Path to YAML config.")

@@ -18,7 +18,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from api import services  # noqa: E402
 from scripts import analyze_models, model_diagnostics  # noqa: E402
-from scripts.pipeline import local_offset_hours, local_tz_name  # noqa: E402
+from scripts import compare_sources  # noqa: E402
+from scripts.pipeline import (  # noqa: E402
+    OPEN_METEO_HOURLY,
+    _parse_open_meteo_response,
+    local_offset_hours,
+    local_tz_name,
+)
 from scripts.utils.solar_geometry import SolarGeometry  # noqa: E402
 from scripts.train_models import (  # noqa: E402
     evaluate_model,
@@ -271,6 +277,42 @@ def test_solar_position_is_localized_not_treated_as_utc():
     peak_hour = int(elevation.to_numpy().argmax())
     assert 11 <= peak_hour <= 13
     assert elevation.iloc[2] < 0  # 02:00 local is night
+
+
+# --------------------------------------------------------------------------- #
+# Open-Meteo ingest + source comparison (scripts/pipeline.py, compare_sources.py)
+# --------------------------------------------------------------------------- #
+def test_parse_open_meteo_response_maps_and_keeps_extra_cloud_layers():
+    payload = {
+        "hourly": {
+            "time": ["2025-06-15T00:00", "2025-06-15T01:00"],
+            "temperature_2m": [25.5, 24.9],
+            "shortwave_radiation": [0.0, 0.0],
+            "cloud_cover_low": [1, 0],
+            "surface_pressure": [953.1, 953.2],
+        }
+    }
+    df = _parse_open_meteo_response(payload)
+
+    assert list(df.columns) == ["temperature", "cloud_cover_low", "pressure", "GHI"]
+    assert df.index[0] == pd.Timestamp("2025-06-15 00:00")
+    assert "shortwave_radiation" in OPEN_METEO_HOURLY and OPEN_METEO_HOURLY["shortwave_radiation"] == "GHI"
+
+
+def test_pair_stats_and_best_lag():
+    rng = np.random.default_rng(1)
+    base = rng.normal(300, 80, 500)
+    nasa = base + rng.normal(0, 5, 500)
+    other = base + 20.0  # constant +20 bias, otherwise identical
+
+    stats = compare_sources._pair_stats(nasa, other)
+    assert stats["n"] == 500
+    assert stats["pearson_r"] > 0.99
+    assert stats["bias_nasa_minus_openmeteo"] == pytest.approx(-20, abs=2)
+
+    idx = pd.date_range("2025-01-01", periods=500, freq="h")
+    lag = compare_sources._best_lag(pd.Series(base, index=idx), pd.Series(base, index=idx).shift(-1))
+    assert lag["best_lag_hours"] == 1  # other is 1h early -> shift +1 realigns
 
 
 # --------------------------------------------------------------------------- #

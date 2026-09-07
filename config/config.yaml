@@ -26,7 +26,13 @@ data:
   # Data source
   source: "NASA POWER API"
   api_url: "https://power.larc.nasa.gov/api/temporal/hourly/point"
-  
+
+  # Secondary source for cross-comparison (ERA5 reanalysis via Open-Meteo)
+  open_meteo:
+    archive_url: "https://archive-api.open-meteo.com/v1/archive"
+    raw_filename: "hyderabad_openmeteo_hourly.csv"
+    comparison_filename: "source_comparison.json"
+
   # Date ranges for data collection
   collection:
     start: "2020-01-01"

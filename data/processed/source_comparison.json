@@ -1,0 +1,121 @@
+{
+  "overlap_start": "2020-01-01T05:00:00",
+  "overlap_end": "2026-08-01T04:00:00",
+  "overlap_hours": 57696,
+  "variables": {
+    "temperature": {
+      "n": 57696,
+      "pearson_r": 0.9248,
+      "bias_nasa_minus_openmeteo": -0.0502,
+      "mae": 1.8363,
+      "rmse": 2.414,
+      "nrmse_pct": 9.32
+    },
+    "dew_point": {
+      "n": 57696,
+      "pearson_r": 0.8747,
+      "bias_nasa_minus_openmeteo": -0.0526,
+      "mae": 1.9085,
+      "rmse": 2.6564,
+      "nrmse_pct": 15.5
+    },
+    "humidity": {
+      "n": 57696,
+      "pearson_r": 0.8494,
+      "bias_nasa_minus_openmeteo": 1.9596,
+      "mae": 10.2562,
+      "rmse": 13.5525,
+      "nrmse_pct": 20.89
+    },
+    "cloud_cover": {
+      "n": 56232,
+      "pearson_r": 0.7018,
+      "bias_nasa_minus_openmeteo": -1.798,
+      "mae": 20.1378,
+      "rmse": 32.0163,
+      "nrmse_pct": 61.94
+    },
+    "wind_speed": {
+      "n": 57696,
+      "pearson_r": 0.7639,
+      "bias_nasa_minus_openmeteo": 0.8442,
+      "mae": 1.1527,
+      "rmse": 1.5212,
+      "nrmse_pct": 42.28
+    },
+    "precipitation": {
+      "n": 57696,
+      "pearson_r": 0.3181,
+      "bias_nasa_minus_openmeteo": 2.646,
+      "mae": 2.6816,
+      "rmse": 8.9623,
+      "nrmse_pct": 325.49
+    },
+    "pressure": {
+      "n": 57696,
+      "pearson_r": 0.973,
+      "bias_nasa_minus_openmeteo": -0.0659,
+      "mae": 0.7961,
+      "rmse": 1.0066,
+      "nrmse_pct": 0.11
+    },
+    "GHI": {
+      "n": 56232,
+      "pearson_r": 0.9195,
+      "bias_nasa_minus_openmeteo": -10.1734,
+      "mae": 72.692,
+      "rmse": 117.8109,
+      "nrmse_pct": 56.01,
+      "daytime": {
+        "n": 28415,
+        "pearson_r": 0.833,
+        "bias_nasa_minus_openmeteo": -15.3909,
+        "mae": 139.0183,
+        "rmse": 164.6838,
+        "nrmse_pct": 39.57
+      },
+      "timing_check": {
+        "best_lag_hours": -1,
+        "r_at_best_lag": 0.974,
+        "r_at_zero_lag": 0.9195
+      }
+    },
+    "DNI": {
+      "n": 56232,
+      "pearson_r": 0.8443,
+      "bias_nasa_minus_openmeteo": -87.7587,
+      "mae": 107.0809,
+      "rmse": 185.9743,
+      "nrmse_pct": 142.42,
+      "daytime": {
+        "n": 28415,
+        "pearson_r": 0.7425,
+        "bias_nasa_minus_openmeteo": -161.5422,
+        "mae": 199.7721,
+        "rmse": 256.1674,
+        "nrmse_pct": 99.13
+      }
+    },
+    "DHI": {
+      "n": 56232,
+      "pearson_r": 0.8477,
+      "bias_nasa_minus_openmeteo": 26.7604,
+      "mae": 44.3731,
+      "rmse": 73.1992,
+      "nrmse_pct": 72.87,
+      "daytime": {
+        "n": 28415,
+        "pearson_r": 0.6569,
+        "bias_nasa_minus_openmeteo": 55.792,
+        "mae": 84.8405,
+        "rmse": 102.4013,
+        "nrmse_pct": 51.55
+      }
+    }
+  },
+  "openmeteo_only_columns": [
+    "cloud_cover_high",
+    "cloud_cover_low",
+    "cloud_cover_mid"
+  ]
+}

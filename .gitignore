@@ -44,6 +44,7 @@ data/raw/*.csv
 data/raw/*.parquet
 data/processed/*.csv
 data/processed/*.parquet
+data/processed/*.png
 *.h5
 *.pkl
 *.pickle

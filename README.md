@@ -95,8 +95,15 @@ Forecast_Irradiance_Temperature/
 ## 🔧 Key Phases
 
 ### Phase 1: Data Collection ✓
-- Collect hourly weather data from NASA POWER API
-- File: `notebooks/01_data_collection.ipynb`
+- Collect hourly weather data from **NASA POWER** (`--stage collect`), requested
+  in UTC and shifted to whole-hour local time (UTC+5) so timestamps and pvlib
+  solar geometry stay consistent.
+- Optional secondary source: **Open-Meteo** ERA5 archive (`--stage collect-openmeteo`)
+  for cross-comparison — `--stage compare-sources` writes
+  `data/processed/source_comparison.json` (per-variable correlation, bias, RMSE,
+  and a GHI timing check). Open-Meteo also carries low/mid/high cloud layers that
+  NASA POWER lacks.
+- File: `scripts/pipeline.py`
 
 ### Phase 2: Data Cleaning & Quality Assurance 🔄
 - Check missing values, duplicates, continuity
@@ -285,6 +292,7 @@ model = joblib.load(best["best_per_horizon"]["GHI"]["7"]["model_path"])  # CatBo
 ## 📚 References
 
 - **NASA POWER API:** https://power.larc.nasa.gov/docs/
+- **Open-Meteo Historical Weather API (ERA5):** https://open-meteo.com/en/docs/historical-weather-api
 - **Solar Geometry:** Duffie & Beckman (2013)
 - **Clear-Sky Models:** Ineichen & Perez (2002)
 - **ML Frameworks:** XGBoost, LightGBM, scikit-learn, TensorFlow/Keras
