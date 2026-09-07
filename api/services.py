@@ -199,8 +199,28 @@ def load_feature_importance(
     return pd.read_csv(csv_path)
 
 
+def model_feature_names(model) -> list[str] | None:
+    """The exact columns a fitted model/pipeline was trained on (ground truth).
+
+    Preferred over ``training_results.json`` because ``--select-best`` only
+    refreshes the winning prospective rows, leaving the others' feature lists
+    stale after a dataset change.
+    """
+    if hasattr(model, "named_steps"):
+        for step in model.named_steps.values():
+            names = getattr(step, "feature_names_in_", None)
+            if names is not None:
+                return [str(name) for name in names]
+    estimator = model.named_steps.get("model", model) if hasattr(model, "named_steps") else model
+    for attr in ("feature_names_", "feature_names_in_"):
+        names = getattr(estimator, attr, None)
+        if names is not None and len(names):
+            return [str(name) for name in names]
+    return None
+
+
 def _prospective_feature_cols(target: str, horizon_hours: int) -> list[str]:
-    """Feature contract the prospective models for this target/horizon were fit on."""
+    """Fallback feature contract from the persisted prospective training record."""
     for result in load_results():
         if (
             result["target"] == target
@@ -268,15 +288,16 @@ def production_forecast(
     period_end: str = PRODUCTION_PERIOD[1],
     limit: int | None = None,
 ) -> dict:
-    """Hourly forward forecast for May 2026 from the winning prospective model.
+    """Hourly forward forecast for May 2026 from a prospective model.
 
     Defaults to the CatBoost prospective artifact; a missing artifact falls back
-    through :func:`resolve_forecast_model` (report best, then Random Forest).
+    through :func:`resolve_forecast_model` (report best, then Random Forest). The
+    feature contract is read from the fitted model, not from run metadata.
     """
     effective_model, model = resolve_forecast_model(
         target, horizon_hours, PRODUCTION_SPLIT, model_name
     )
-    feature_cols = _prospective_feature_cols(target, horizon_hours)
+    feature_cols = model_feature_names(model) or _prospective_feature_cols(target, horizon_hours)
     features, actual = ingest_history_window(
         target, horizon_hours, feature_cols, period_start, period_end
     )

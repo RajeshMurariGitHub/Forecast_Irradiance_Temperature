@@ -521,14 +521,16 @@ def _run_script(script: str, *args: str) -> None:
 
 
 def train_all_models(config_path: str) -> None:
-    """Benchmark every model on validation and testing, then lock the prospective winners."""
-    for split in ("validation", "testing"):
+    """Benchmark every model on every split.
+
+    Prospective is trained for all models (not ``--select-best``) so every
+    ``*_prospective.joblib`` stays consistent with the current feature set and
+    the production endpoint can serve any of them.
+    """
+    for split in ("validation", "testing", "prospective"):
         _run_script(
             "train_models.py", "--config", config_path, "--models", ALL_MODELS, "--split", split
         )
-    _run_script(
-        "train_models.py", "--config", config_path, "--split", "prospective", "--select-best"
-    )
 
 
 def evaluate_models() -> None:

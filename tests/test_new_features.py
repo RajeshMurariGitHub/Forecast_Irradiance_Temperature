@@ -128,6 +128,9 @@ def test_write_best_model_metadata_round_trips(tmp_path):
 # Model resolution + fallback (api/services.py)
 # --------------------------------------------------------------------------- #
 class _Stub:
+    def fit(self, x, y=None):  # noqa: D401
+        return self
+
     def predict(self, x):  # noqa: D401
         return np.zeros(len(x))
 
@@ -201,6 +204,34 @@ def test_ingest_history_window_aligns_origin_to_target_minus_horizon(monkeypatch
     assert len(features) == 744  # full hourly May
     assert features.index[0] == pd.Timestamp("2026-05-01 00:00")
     assert actual.iloc[0] == frame.loc["2026-05-01 00:00", "GHI"]
+
+
+def test_model_feature_names_reads_the_fitted_pipeline(tmp_path):
+    frame = pd.DataFrame({"alpha": [1.0, 2, 3, 4], "beta": [4.0, 3, 2, 1]})
+    pipe = Pipeline([("imputer", SimpleImputer()), ("model", RandomForestRegressor(n_estimators=3))])
+    pipe.fit(frame, pd.Series([1.0, 2, 3, 4]))
+
+    assert services.model_feature_names(pipe) == ["alpha", "beta"]
+    assert services.model_feature_names({"type": "persistence"}) is None
+
+
+class _NamedStub(_Stub):
+    feature_names_in_ = ["feat"]
+
+
+def test_production_forecast_uses_the_model_feature_contract(monkeypatch):
+    """A stale training_results.json must not drive the feature set."""
+    idx = pd.date_range("2026-04-01", "2026-05-31 23:00", freq="h")
+    frame = pd.DataFrame({"GHI": np.arange(len(idx), dtype=float), "feat": 3.0}, index=idx)
+    monkeypatch.setattr(services, "load_forecast_frame", lambda: frame)
+    monkeypatch.setattr(services, "resolve_forecast_model", lambda *a: ("catboost", _NamedStub()))
+
+    def _boom(*_a):
+        raise AssertionError("_prospective_feature_cols should not be reached")
+
+    monkeypatch.setattr(services, "_prospective_feature_cols", _boom)
+    out = services.production_forecast("GHI", 24, "catboost", limit=5)
+    assert len(out["predicted"]) == 5
 
 
 def test_production_forecast_predicts_744_hours_with_metrics(monkeypatch):

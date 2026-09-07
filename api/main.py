@@ -220,7 +220,8 @@ def get_forecast(
 
     df = services.load_forecast_frame()
     split_df = services.get_split_frame(df, split)
-    X, y = services.prepare_horizon_dataset(split_df, target, horizon_hours, result["features"])
+    features = services.model_feature_names(trained_model) or result["features"]
+    X, y = services.prepare_horizon_dataset(split_df, target, horizon_hours, features)
 
     preds = trained_model.predict(X)
     tail_index = X.index[-limit:]

@@ -427,7 +427,10 @@ def parse_args() -> argparse.Namespace:
 def select_best_validation_models(
     results_path: Path, targets: list[str], horizons: list[int]
 ) -> list[tuple[str, int, str]]:
-    """Select one model per target/horizon using the persisted validation results."""
+    """Select the lowest-RMSE model per target/horizon from the validation results.
+
+    Uses RMSE to stay consistent with ``models/best_models.json`` (analyze_models).
+    """
     if not results_path.exists():
         raise FileNotFoundError(
             f"Validation results are required for --select-best: {results_path}"
@@ -441,7 +444,7 @@ def select_best_validation_models(
         key = (result["target"], result["horizon_days"])
         if result["split"] != "validation" or key not in requested:
             continue
-        if key not in best or result["metrics"]["r2"] > best[key]["metrics"]["r2"]:
+        if key not in best or result["metrics"]["rmse"] < best[key]["metrics"]["rmse"]:
             best[key] = result
 
     missing = requested.difference(best)
