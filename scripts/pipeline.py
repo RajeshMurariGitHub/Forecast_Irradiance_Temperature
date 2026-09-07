@@ -392,8 +392,48 @@ def clean_and_freeze_data(
     return df
 
 
+def add_open_meteo_features(df: pd.DataFrame, openmeteo_path: Path) -> pd.DataFrame:
+    """Merge Open-Meteo (ERA5) cross-source features aligned to ``df``'s index.
+
+    Radiation channels are shifted -1 h to match NASA POWER's hour-labeling
+    (see scripts/compare_sources.py); cloud layers keep their native timestamp.
+    """
+    if not openmeteo_path.exists():
+        logger.warning(
+            "Open-Meteo file missing; skipping cross-source features: %s", openmeteo_path
+        )
+        return df
+
+    other = pd.read_csv(openmeteo_path, index_col=0)
+    other.index = pd.to_datetime(other.index)
+    other = other.sort_index()
+    other = other[~other.index.duplicated(keep="last")].reindex(df.index)
+
+    for src, dst in (("cloud_cover_low", "om_cloud_low"),
+                     ("cloud_cover_mid", "om_cloud_mid"),
+                     ("cloud_cover_high", "om_cloud_high")):
+        if src in other.columns:
+            df[dst] = other[src]
+
+    for src, dst in (("GHI", "om_ghi"), ("DNI", "om_dni"), ("DHI", "om_dhi")):
+        if src in other.columns:
+            df[dst] = other[src].shift(-1)
+
+    if "om_ghi" in df.columns and "GHI" in df.columns:
+        daytime = df["GHI"] > 5
+        ratio = df["GHI"] / df["om_ghi"].where(df["om_ghi"] > 5)
+        df["om_ghi_ratio"] = ratio.where(daytime).clip(0, 3)
+
+    merged = sum(c.startswith("om_") for c in df.columns)
+    logger.info("Merged %d Open-Meteo cross-source features", merged)
+    return df
+
+
 def build_forecast_dataset(
-    config: dict, input_path: str | Path, output_path: str | Path
+    config: dict,
+    input_path: str | Path,
+    output_path: str | Path,
+    openmeteo_path: str | Path | None = None,
 ) -> pd.DataFrame:
     df = pd.read_csv(input_path, index_col=0)
     df.index = pd.to_datetime(df.index)
@@ -427,6 +467,10 @@ def build_forecast_dataset(
             timezone=solar_tz,
         )
         df = clear_sky.add_clearsky_features(df, ghi_col="GHI")
+
+    om_cfg = config["data"].get("open_meteo", {})
+    if openmeteo_path is not None and om_cfg.get("merge_features", True):
+        df = add_open_meteo_features(df, Path(openmeteo_path))
 
     df = (
         FeatureEngineer(df)
@@ -539,7 +583,7 @@ def run_stage(
 
     frame: pd.DataFrame | None = None
     if stage in _FEATURES:
-        frame = build_forecast_dataset(config, processed_path, forecast_path)
+        frame = build_forecast_dataset(config, processed_path, forecast_path, openmeteo_path)
 
     if stage in _TRAIN:
         train_all_models(config_path)

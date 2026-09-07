@@ -22,6 +22,7 @@ from scripts import compare_sources  # noqa: E402
 from scripts.pipeline import (  # noqa: E402
     OPEN_METEO_HOURLY,
     _parse_open_meteo_response,
+    add_open_meteo_features,
     local_offset_hours,
     local_tz_name,
 )
@@ -297,6 +298,32 @@ def test_parse_open_meteo_response_maps_and_keeps_extra_cloud_layers():
     assert list(df.columns) == ["temperature", "cloud_cover_low", "pressure", "GHI"]
     assert df.index[0] == pd.Timestamp("2025-06-15 00:00")
     assert "shortwave_radiation" in OPEN_METEO_HOURLY and OPEN_METEO_HOURLY["shortwave_radiation"] == "GHI"
+
+
+def test_add_open_meteo_features_shifts_radiation_and_builds_ratio(tmp_path):
+    idx = pd.date_range("2025-06-15 00:00", periods=6, freq="h")
+    nasa = pd.DataFrame({"GHI": [0.0, 0.0, 50.0, 100.0, 200.0, 300.0]}, index=idx)
+
+    om_path = tmp_path / "om.csv"
+    pd.DataFrame(
+        {"GHI": [0.0, 10.0, 60.0, 120.0, 240.0, 360.0], "cloud_cover_low": [90, 80, 70, 60, 50, 40]},
+        index=idx,
+    ).to_csv(om_path)
+
+    out = add_open_meteo_features(nasa.copy(), om_path)
+
+    # radiation shifted -1h: om_ghi[t] == raw om GHI[t+1]
+    assert out["om_ghi"].tolist()[:5] == [10.0, 60.0, 120.0, 240.0, 360.0]
+    assert out["om_cloud_low"].tolist() == [90, 80, 70, 60, 50, 40]  # cloud not shifted
+    # ratio = NASA GHI / shifted om_ghi, daytime only. At 03:00 that is 100 / 240.
+    assert out.loc[idx[3], "om_ghi_ratio"] == pytest.approx(100.0 / 240.0, rel=1e-6)
+    assert pd.isna(out.loc[idx[0], "om_ghi_ratio"])  # night
+
+
+def test_add_open_meteo_features_no_file_is_a_noop(tmp_path):
+    nasa = pd.DataFrame({"GHI": [1.0, 2.0]}, index=pd.date_range("2025-01-01", periods=2, freq="h"))
+    out = add_open_meteo_features(nasa.copy(), tmp_path / "missing.csv")
+    assert list(out.columns) == ["GHI"]
 
 
 def test_pair_stats_and_best_lag():
