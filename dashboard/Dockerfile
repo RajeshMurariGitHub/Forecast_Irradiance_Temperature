@@ -10,6 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY dashboard ./dashboard
 
+RUN useradd --system --create-home --uid 10001 appuser && chown -R appuser /app
+USER appuser
+
 EXPOSE 8501
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \

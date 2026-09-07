@@ -11,6 +11,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY api ./api
 COPY config ./config
 
+# Drop privileges: the container only reads mounted models/ and data/.
+RUN useradd --system --create-home --uid 10001 appuser && chown -R appuser /app
+USER appuser
+
 EXPOSE 8000
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \

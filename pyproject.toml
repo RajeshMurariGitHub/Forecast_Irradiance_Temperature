@@ -117,6 +117,10 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
 addopts = "-v --cov=scripts --cov-report=term-missing"
+filterwarnings = [
+    # starlette TestClient <-> httpx version drift; not our code
+    "ignore:Using `httpx` with `starlette.testclient`:Warning",
+]
 
 [tool.pylint.messages_control]
 disable = [

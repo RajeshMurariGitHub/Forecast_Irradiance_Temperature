@@ -3,11 +3,18 @@
 from __future__ import annotations
 
 import logging
+import os
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from api import services
+
+# Comma-separated origins; defaults to "*" for the local demo. Set
+# CORS_ALLOW_ORIGINS to a real allow-list before exposing the API publicly.
+_CORS_ORIGINS = [
+    o.strip() for o in os.environ.get("CORS_ALLOW_ORIGINS", "*").split(",") if o.strip()
+]
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -20,8 +27,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=_CORS_ORIGINS,
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 
@@ -145,7 +152,10 @@ def get_feature_importance(
     model: str,
     top_n: int = Query(default=10, ge=1, le=100),
 ) -> list[dict]:
-    df = services.load_feature_importance(target, horizon_hours, model)
+    try:
+        df = services.load_feature_importance(target, horizon_hours, model)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
     if df is None:
         raise HTTPException(
             status_code=404, detail="Feature importance not found for this combination."
@@ -173,7 +183,9 @@ def get_production_forecast(
         return services.production_forecast(
             target, horizon_hours, model, period_start, period_end, limit
         )
-    except (FileNotFoundError, ValueError) as exc:
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except FileNotFoundError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
@@ -194,7 +206,9 @@ def get_forecast(
         effective_model, trained_model = services.resolve_forecast_model(
             target, horizon_hours, split, model
         )
-    except (FileNotFoundError, ValueError) as exc:
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except FileNotFoundError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     result = services.find_result(target, horizon_hours, effective_model, split)

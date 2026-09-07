@@ -250,6 +250,51 @@ def test_extract_feature_importance_returns_empty_for_persistence_dict(tmp_path)
     assert model_diagnostics.extract_feature_importance(path) == {}
 
 
+# --------------------------------------------------------------------------- #
+# Input validation / path-traversal hardening (api/services.py + api/main.py)
+# --------------------------------------------------------------------------- #
+@pytest.mark.parametrize(
+    "kwargs",
+    [
+        {"target": "../../etc/passwd"},
+        {"model_name": "../../../models/x"},
+        {"split_name": "../.."},
+    ],
+)
+def test_validate_identifiers_rejects_path_traversal(kwargs):
+    with pytest.raises(ValueError):
+        services.validate_identifiers(**kwargs)
+
+
+def test_validate_identifiers_accepts_known_values():
+    services.validate_identifiers(target="GHI", model_name="catboost", split_name="validation")
+
+
+def test_ingest_history_window_rejects_oversized_window(monkeypatch):
+    monkeypatch.setattr(services, "load_forecast_frame", lambda: pd.DataFrame())
+    with pytest.raises(ValueError, match="exceeds"):
+        services.ingest_history_window("GHI", 24, ["feat"], "2026-01-01", "2030-01-01")
+
+
+def test_api_rejects_traversal_and_dos_params():
+    from fastapi.testclient import TestClient
+
+    from api.main import app
+
+    client = TestClient(app)
+    assert client.get(
+        "/api/forecast", params={"target": "GHI", "horizon_hours": 120, "model": "../x"}
+    ).status_code == 400
+    assert client.get(
+        "/api/forecast/production",
+        params={"target": "GHI", "horizon_hours": 120, "period_end": "2099-01-01"},
+    ).status_code == 400
+    assert client.get(
+        "/api/feature-importance",
+        params={"target": "../s", "horizon_hours": 168, "model": "catboost"},
+    ).status_code == 400
+
+
 def test_catboost_feature_names_are_recovered(tmp_path):
     catboost = pytest.importorskip("catboost")
     frame = pd.DataFrame({"alpha": [1.0, 2, 3, 4, 5], "beta": [5.0, 4, 3, 2, 1]})

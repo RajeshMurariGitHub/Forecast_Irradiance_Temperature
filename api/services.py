@@ -25,6 +25,29 @@ PRODUCTION_SPLIT = "prospective"
 PRODUCTION_MODEL = "catboost"
 PRODUCTION_PERIOD = ("2026-05-01", "2026-05-31")
 
+# Query params flow into filesystem paths (model_artifact_path, importance CSVs),
+# so every identifier is checked against a fixed allow-list before use.
+KNOWN_MODELS = frozenset(
+    {
+        "persistence", "ridge", "random_forest", "extra_trees",
+        "gradient_boost", "xgboost", "lightgbm", "catboost",
+    }
+)
+MAX_FORECAST_WINDOW = pd.Timedelta(days=366)
+
+
+def validate_identifiers(
+    target: str | None = None, model_name: str | None = None, split_name: str | None = None
+) -> None:
+    """Reject unknown target/model/split values (prevents path traversal)."""
+    config = load_config()
+    if target is not None and target not in config.get("forecast", {}).get("targets", []):
+        raise ValueError(f"Unknown target: {target!r}")
+    if model_name is not None and model_name not in KNOWN_MODELS:
+        raise ValueError(f"Unknown model: {model_name!r}")
+    if split_name is not None and split_name not in config.get("data_split", {}):
+        raise ValueError(f"Unknown split: {split_name!r}")
+
 
 def get_split_bounds(split_name: str, config: dict) -> tuple[pd.Timestamp, pd.Timestamp]:
     split_cfg = config["data_split"][split_name]
@@ -124,8 +147,10 @@ def resolve_forecast_model(
 
     Returns ``(effective_model_name, loaded_model)``.
     """
+    validate_identifiers(target=target, split_name=split_name)
     candidates: list[str] = []
     if model_name:
+        validate_identifiers(model_name=model_name)
         candidates.append(model_name)
     else:
         chosen = best_model_name(target, horizon_hours)
@@ -165,6 +190,7 @@ def find_result(target: str, horizon_hours: int, model_name: str, split_name: st
 def load_feature_importance(
     target: str, horizon_hours: int, model_name: str
 ) -> pd.DataFrame | None:
+    validate_identifiers(target=target, model_name=model_name)
     if horizon_hours % 24:
         return None
     csv_path = MODELS_DIR / f"importance_{target}_{horizon_hours // 24}d_{model_name}.csv"
@@ -201,8 +227,19 @@ def ingest_history_window(
     indexed by the target hour ``t``; ``actual`` is NaN where the outcome has not
     been observed yet.
     """
+    try:
+        start_ts, end_ts = pd.Timestamp(period_start), pd.Timestamp(period_end)
+    except ValueError as exc:
+        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}") from exc
+    if pd.isna(start_ts) or pd.isna(end_ts) or start_ts > end_ts:
+        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}")
+    if end_ts - start_ts > MAX_FORECAST_WINDOW:
+        raise ValueError(f"Forecast window exceeds {MAX_FORECAST_WINDOW.days} days.")
+
     frame = load_forecast_frame()
-    target_index = pd.date_range(start=f"{period_start} 00:00", end=f"{period_end} 23:00", freq="h")
+    target_index = pd.date_range(
+        start=start_ts.normalize(), end=end_ts.normalize() + pd.Timedelta(hours=23), freq="h"
+    )
     origin_index = target_index - pd.Timedelta(hours=horizon_hours)
 
     known = origin_index.isin(frame.index)
