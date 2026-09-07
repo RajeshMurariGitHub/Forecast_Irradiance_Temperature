@@ -29,13 +29,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -84,9 +79,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.8553264484617,
-      "rmse": 45.314356264833386,
-      "r2": 0.9782763209488377
+      "mae": 26.930333699570603,
+      "rmse": 45.39647807524493,
+      "r2": 0.9781975112941167
     },
     "model_path": "models\\GHI_1d_ridge_validation.joblib"
   },
@@ -120,13 +115,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -175,9 +165,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 20.186223991937343,
-      "rmse": 43.51222203295886,
-      "r2": 0.9799698467493316
+      "mae": 20.176828089336304,
+      "rmse": 43.16866606256318,
+      "r2": 0.980284899010347
     },
     "model_path": "models\\GHI_1d_random_forest_validation.joblib"
   },
@@ -211,13 +201,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -266,9 +251,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 20.28395095101227,
-      "rmse": 43.39349095421869,
-      "r2": 0.980079009504624
+      "mae": 20.094524493639284,
+      "rmse": 42.950661280473405,
+      "r2": 0.9804835214891262
     },
     "model_path": "models\\GHI_1d_extra_trees_validation.joblib"
   },
@@ -302,13 +287,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -357,9 +337,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 22.018162385947512,
-      "rmse": 45.320707481231814,
-      "r2": 0.978270230982346
+      "mae": 22.08675797929419,
+      "rmse": 45.134202013638024,
+      "r2": 0.9784487092984306
     },
     "model_path": "models\\GHI_1d_gradient_boost_validation.joblib"
   },
@@ -393,13 +373,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -448,9 +423,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 21.397214111304415,
-      "rmse": 44.27319990491723,
-      "r2": 0.9792631124362683
+      "mae": 21.441246887224914,
+      "rmse": 44.48494734430941,
+      "r2": 0.9790642795835112
     },
     "model_path": "models\\GHI_1d_xgboost_validation.joblib"
   },
@@ -484,13 +459,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -539,9 +509,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 22.023815950539113,
-      "rmse": 45.570060868500015,
-      "r2": 0.9780304599047239
+      "mae": 22.146560661910893,
+      "rmse": 45.472657892457676,
+      "r2": 0.978124276397453
     },
     "model_path": "models\\GHI_1d_lightgbm_validation.joblib"
   },
@@ -575,13 +545,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -630,9 +595,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 31.18015466523005,
-      "rmse": 52.15486849538802,
-      "r2": 0.9713585103163801
+      "mae": 31.28450822452915,
+      "rmse": 52.42975996702236,
+      "r2": 0.9710557945664987
     },
     "model_path": "models\\GHI_2d_ridge_validation.joblib"
   },
@@ -666,13 +631,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -721,9 +681,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 24.246664044257503,
-      "rmse": 49.35612932209668,
-      "r2": 0.9743499580301488
+      "mae": 24.126654449713214,
+      "rmse": 49.066534709238546,
+      "r2": 0.9746500756460447
     },
     "model_path": "models\\GHI_2d_random_forest_validation.joblib"
   },
@@ -757,13 +717,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -812,9 +767,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 24.626849273046602,
-      "rmse": 49.7562545913637,
-      "r2": 0.9739323875444735
+      "mae": 24.377079837522167,
+      "rmse": 49.4860826939794,
+      "r2": 0.9742147084574542
     },
     "model_path": "models\\GHI_2d_extra_trees_validation.joblib"
   },
@@ -848,13 +803,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -903,9 +853,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.171327280573564,
-      "rmse": 51.179174763892796,
-      "r2": 0.9724201150117538
+      "mae": 26.29415788097801,
+      "rmse": 51.47657541524758,
+      "r2": 0.972098651940608
     },
     "model_path": "models\\GHI_2d_gradient_boost_validation.joblib"
   },
@@ -939,13 +889,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -994,9 +939,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.766047567840072,
-      "rmse": 51.79855188451878,
-      "r2": 0.9717485248091005
+      "mae": 26.491109835831537,
+      "rmse": 51.53753447248845,
+      "r2": 0.9720325307219677
     },
     "model_path": "models\\GHI_2d_xgboost_validation.joblib"
   },
@@ -1030,13 +975,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1085,9 +1025,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.245027658008695,
-      "rmse": 52.795991156473725,
-      "r2": 0.9706500214644359
+      "mae": 26.94811653809431,
+      "rmse": 52.13783032657655,
+      "r2": 0.9713772207010335
     },
     "model_path": "models\\GHI_2d_lightgbm_validation.joblib"
   },
@@ -1121,13 +1061,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1176,9 +1111,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.94450093455794,
-      "rmse": 54.671681314159166,
-      "r2": 0.9686530644622822
+      "mae": 33.0455016092752,
+      "rmse": 54.97902751630302,
+      "r2": 0.9682996294860965
     },
     "model_path": "models\\GHI_3d_ridge_validation.joblib"
   },
@@ -1212,13 +1147,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1267,9 +1197,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 25.924890062378026,
-      "rmse": 52.01849798904475,
-      "r2": 0.9716217345402349
+      "mae": 25.915894799874557,
+      "rmse": 52.0348778595126,
+      "r2": 0.9716038599181377
     },
     "model_path": "models\\GHI_3d_random_forest_validation.joblib"
   },
@@ -1303,13 +1233,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1358,9 +1283,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.389021959622767,
-      "rmse": 52.34764671381524,
-      "r2": 0.9712614695597147
+      "mae": 26.202190831176683,
+      "rmse": 52.11519954641738,
+      "r2": 0.9715161269850552
     },
     "model_path": "models\\GHI_3d_extra_trees_validation.joblib"
   },
@@ -1394,13 +1319,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1449,9 +1369,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.03278069992267,
-      "rmse": 52.41583391453747,
-      "r2": 0.9711865521054129
+      "mae": 27.30075637596504,
+      "rmse": 52.65869871942794,
+      "r2": 0.9709189236541574
     },
     "model_path": "models\\GHI_3d_gradient_boost_validation.joblib"
   },
@@ -1485,13 +1405,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1540,9 +1455,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.699158057368223,
-      "rmse": 54.76316344099738,
-      "r2": 0.9685480710356297
+      "mae": 27.775050162377365,
+      "rmse": 53.69150098857437,
+      "r2": 0.9697669946214671
     },
     "model_path": "models\\GHI_3d_xgboost_validation.joblib"
   },
@@ -1576,13 +1491,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1631,9 +1541,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.34751924709137,
-      "rmse": 54.67382428055428,
-      "r2": 0.9686506070018795
+      "mae": 27.7154468112151,
+      "rmse": 53.5744765979585,
+      "r2": 0.969898640908398
     },
     "model_path": "models\\GHI_3d_lightgbm_validation.joblib"
   },
@@ -1667,13 +1577,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1722,9 +1627,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.74367205567202,
-      "rmse": 56.39739221187851,
-      "r2": 0.9669038282716129
+      "mae": 34.78640763660424,
+      "rmse": 56.78731600109108,
+      "r2": 0.9664446014945308
     },
     "model_path": "models\\GHI_5d_ridge_validation.joblib"
   },
@@ -1758,13 +1663,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1813,9 +1713,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.920573796625494,
-      "rmse": 53.13480398322865,
-      "r2": 0.9706222939404646
+      "mae": 27.002568326113153,
+      "rmse": 53.4991846344655,
+      "r2": 0.9702179874833204
     },
     "model_path": "models\\GHI_5d_random_forest_validation.joblib"
   },
@@ -1849,13 +1749,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1904,9 +1799,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.158343520176974,
-      "rmse": 53.51890569618793,
-      "r2": 0.9701960267314527
+      "mae": 27.072449127016707,
+      "rmse": 53.70161917746267,
+      "r2": 0.9699921778950167
     },
     "model_path": "models\\GHI_5d_extra_trees_validation.joblib"
   },
@@ -1940,13 +1835,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -1995,9 +1885,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.953453184878573,
-      "rmse": 54.69583488149419,
-      "r2": 0.9688707808269034
+      "mae": 28.944048747874394,
+      "rmse": 54.80039452646332,
+      "r2": 0.9687516503227579
     },
     "model_path": "models\\GHI_5d_gradient_boost_validation.joblib"
   },
@@ -2031,13 +1921,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2086,9 +1971,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 29.042920749021473,
-      "rmse": 55.234998436206034,
-      "r2": 0.9682540441680956
+      "mae": 29.06995235745509,
+      "rmse": 55.291473006372065,
+      "r2": 0.9681890941980491
     },
     "model_path": "models\\GHI_5d_xgboost_validation.joblib"
   },
@@ -2122,13 +2007,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2177,9 +2057,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.635795775253133,
-      "rmse": 54.75531982617836,
-      "r2": 0.9688030342859885
+      "mae": 28.6806773958911,
+      "rmse": 54.468202903796495,
+      "r2": 0.9691293475183131
     },
     "model_path": "models\\GHI_5d_lightgbm_validation.joblib"
   },
@@ -2213,13 +2093,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2268,9 +2143,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.06853190278084,
-      "rmse": 57.554708288704916,
-      "r2": 0.9656075070725877
+      "mae": 36.2015522284762,
+      "rmse": 57.99239550940099,
+      "r2": 0.9650824278018993
     },
     "model_path": "models\\GHI_7d_ridge_validation.joblib"
   },
@@ -2304,13 +2179,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2359,9 +2229,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.451031477728893,
-      "rmse": 54.427354635876114,
-      "r2": 0.9692435366046062
+      "mae": 27.43417295831459,
+      "rmse": 54.38356907361164,
+      "r2": 0.9692930024425757
     },
     "model_path": "models\\GHI_7d_random_forest_validation.joblib"
   },
@@ -2395,13 +2265,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2450,9 +2315,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.235214818746755,
-      "rmse": 54.27391010533456,
-      "r2": 0.969416712703623
+      "mae": 27.1825552079358,
+      "rmse": 54.15715124173683,
+      "r2": 0.969548158139429
     },
     "model_path": "models\\GHI_7d_extra_trees_validation.joblib"
   },
@@ -2486,13 +2351,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2541,9 +2401,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.348889233602442,
-      "rmse": 54.55973530155929,
-      "r2": 0.9690937401413077
+      "mae": 28.17991188412077,
+      "rmse": 54.32569432693182,
+      "r2": 0.9693583241606075
     },
     "model_path": "models\\GHI_7d_gradient_boost_validation.joblib"
   },
@@ -2577,13 +2437,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2632,9 +2487,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.43440643920632,
-      "rmse": 54.891368127789235,
-      "r2": 0.9687168805274344
+      "mae": 28.3825894434593,
+      "rmse": 55.05035451220614,
+      "r2": 0.9685354023483657
     },
     "model_path": "models\\GHI_7d_xgboost_validation.joblib"
   },
@@ -2668,13 +2523,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2723,9 +2573,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 29.50181638390741,
-      "rmse": 56.35761294145668,
-      "r2": 0.9670233053742924
+      "mae": 29.177083616062145,
+      "rmse": 56.10230043650037,
+      "r2": 0.9673214120995592
     },
     "model_path": "models\\GHI_7d_lightgbm_validation.joblib"
   },
@@ -2759,13 +2609,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2814,9 +2659,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.34306395815426,
-      "rmse": 58.0828067799563,
-      "r2": 0.965204139451362
+      "mae": 37.26782132733128,
+      "rmse": 58.412793924646834,
+      "r2": 0.9648076433345459
     },
     "model_path": "models\\GHI_10d_ridge_validation.joblib"
   },
@@ -2850,13 +2695,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2905,9 +2745,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 25.723647659279408,
-      "rmse": 52.55606583865356,
-      "r2": 0.9715109421040529
+      "mae": 25.847275470420463,
+      "rmse": 52.63828823457541,
+      "r2": 0.971421731814128
     },
     "model_path": "models\\GHI_10d_random_forest_validation.joblib"
   },
@@ -2941,13 +2781,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -2996,9 +2831,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.374339642285065,
-      "rmse": 53.42816878292965,
-      "r2": 0.9705576161597137
+      "mae": 26.104091763100158,
+      "rmse": 52.768223561840436,
+      "r2": 0.9712804692523386
     },
     "model_path": "models\\GHI_10d_extra_trees_validation.joblib"
   },
@@ -3032,13 +2867,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3087,9 +2917,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.842117609306175,
-      "rmse": 53.878907399568064,
-      "r2": 0.970058748304406
+      "mae": 27.52123292790455,
+      "rmse": 53.54860477572432,
+      "r2": 0.9704247304794003
     },
     "model_path": "models\\GHI_10d_gradient_boost_validation.joblib"
   },
@@ -3123,13 +2953,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3178,9 +3003,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.620285974874488,
-      "rmse": 53.52599778485849,
-      "r2": 0.9704496972069283
+      "mae": 28.057999042349277,
+      "rmse": 54.651781062890755,
+      "r2": 0.9691935942285873
     },
     "model_path": "models\\GHI_10d_xgboost_validation.joblib"
   },
@@ -3214,13 +3039,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3269,9 +3089,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.999380096112095,
-      "rmse": 55.438859454839175,
-      "r2": 0.9682998756627678
+      "mae": 28.17978878985791,
+      "rmse": 54.204965334966644,
+      "r2": 0.969695261990387
     },
     "model_path": "models\\GHI_10d_lightgbm_validation.joblib"
   },
@@ -3305,13 +3125,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3360,9 +3175,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.29346039576519,
-      "rmse": 58.91867916234951,
-      "r2": 0.9646875690464559
+      "mae": 38.30839221169213,
+      "rmse": 59.361119821383966,
+      "r2": 0.9641552313514898
     },
     "model_path": "models\\GHI_14d_ridge_validation.joblib"
   },
@@ -3396,13 +3211,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3451,9 +3261,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.81749826339447,
-      "rmse": 53.74160710405012,
-      "r2": 0.9706206007868287
+      "mae": 26.66300383681981,
+      "rmse": 53.43164739826054,
+      "r2": 0.9709585202996923
     },
     "model_path": "models\\GHI_14d_random_forest_validation.joblib"
   },
@@ -3487,13 +3297,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3542,9 +3347,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.51028486867346,
-      "rmse": 53.41494660267328,
-      "r2": 0.9709766720895195
+      "mae": 26.55236639163355,
+      "rmse": 53.33531314671401,
+      "r2": 0.971063146202459
     },
     "model_path": "models\\GHI_14d_extra_trees_validation.joblib"
   },
@@ -3578,13 +3383,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3633,9 +3433,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.48964321697666,
-      "rmse": 54.33408671212252,
-      "r2": 0.9699692378380651
+      "mae": 28.74434029333859,
+      "rmse": 54.36988829439268,
+      "r2": 0.9699296493188329
     },
     "model_path": "models\\GHI_14d_gradient_boost_validation.joblib"
   },
@@ -3669,13 +3469,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3724,9 +3519,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.87375479176598,
-      "rmse": 53.135109629113366,
-      "r2": 0.9712799776623409
+      "mae": 27.14445660527861,
+      "rmse": 51.65414997661767,
+      "r2": 0.9728586122356873
     },
     "model_path": "models\\GHI_14d_xgboost_validation.joblib"
   },
@@ -3760,13 +3555,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3815,9 +3605,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.881468897279326,
-      "rmse": 52.53534262188655,
-      "r2": 0.9719246777799037
+      "mae": 27.769346447850687,
+      "rmse": 53.01766833270578,
+      "r2": 0.9714067935926582
     },
     "model_path": "models\\GHI_14d_lightgbm_validation.joblib"
   },
@@ -3851,13 +3641,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3906,9 +3691,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 44.0357978127277,
-      "rmse": 64.40893736905137,
-      "r2": 0.9598151724475321
+      "mae": 44.45375002685835,
+      "rmse": 64.85591509500847,
+      "r2": 0.9592554971005564
     },
     "model_path": "models\\GHI_30d_ridge_validation.joblib"
   },
@@ -3942,13 +3727,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -3997,9 +3777,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.690713135359687,
-      "rmse": 55.78416050837693,
-      "r2": 0.9698566411144498
+      "mae": 28.7851546698286,
+      "rmse": 55.92892359970942,
+      "r2": 0.9696999906340626
     },
     "model_path": "models\\GHI_30d_random_forest_validation.joblib"
   },
@@ -4033,13 +3813,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4088,9 +3863,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.222514021182608,
-      "rmse": 54.66733518063566,
-      "r2": 0.9710515277299749
+      "mae": 28.245098254670165,
+      "rmse": 54.64907597101381,
+      "r2": 0.9710708624185194
     },
     "model_path": "models\\GHI_30d_extra_trees_validation.joblib"
   },
@@ -4124,13 +3899,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4179,9 +3949,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.615856857027836,
-      "rmse": 57.436246378261146,
-      "r2": 0.96804477055339
+      "mae": 31.181929728211724,
+      "rmse": 58.46566966768853,
+      "r2": 0.9668890457186788
     },
     "model_path": "models\\GHI_30d_gradient_boost_validation.joblib"
   },
@@ -4215,13 +3985,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4270,9 +4035,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 31.336709825367333,
-      "rmse": 59.07009839270488,
-      "r2": 0.9662008927527901
+      "mae": 29.656900272833457,
+      "rmse": 55.85904787994702,
+      "r2": 0.969775654967503
     },
     "model_path": "models\\GHI_30d_xgboost_validation.joblib"
   },
@@ -4306,13 +4071,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4361,9 +4121,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.79083341851106,
-      "rmse": 57.96023570472359,
-      "r2": 0.9674590575705977
+      "mae": 30.63955755380978,
+      "rmse": 56.953330603982415,
+      "r2": 0.9685798616026121
     },
     "model_path": "models\\GHI_30d_lightgbm_validation.joblib"
   },
@@ -4397,13 +4157,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4452,9 +4207,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9016287763738473,
-      "rmse": 1.1782207806777323,
-      "r2": 0.9739647406842268
+      "mae": 0.9027834497046866,
+      "rmse": 1.1810763031702973,
+      "r2": 0.9738383902416632
     },
     "model_path": "models\\temperature_1d_ridge_validation.joblib"
   },
@@ -4488,13 +4243,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4543,9 +4293,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8844870477260572,
-      "rmse": 1.1506593012421136,
-      "r2": 0.9751685513960038
+      "mae": 0.8874444837297516,
+      "rmse": 1.1530722926300245,
+      "r2": 0.9750642965619344
     },
     "model_path": "models\\temperature_1d_random_forest_validation.joblib"
   },
@@ -4579,13 +4329,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4634,9 +4379,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8737995347213798,
-      "rmse": 1.1497801506571066,
-      "r2": 0.9752064813772171
+      "mae": 0.8783324324764977,
+      "rmse": 1.1537765022915303,
+      "r2": 0.9750338295642605
     },
     "model_path": "models\\temperature_1d_extra_trees_validation.joblib"
   },
@@ -4670,13 +4415,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4725,9 +4465,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9119065315930965,
-      "rmse": 1.1802310197279344,
-      "r2": 0.9738758239995486
+      "mae": 0.9271285583696619,
+      "rmse": 1.197077931424018,
+      "r2": 0.9731246950921617
     },
     "model_path": "models\\temperature_1d_gradient_boost_validation.joblib"
   },
@@ -4761,13 +4501,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4816,9 +4551,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9076388072566826,
-      "rmse": 1.1777556479102163,
-      "r2": 0.9739852927947994
+      "mae": 0.9207956290044704,
+      "rmse": 1.1932791250587036,
+      "r2": 0.9732949965972414
     },
     "model_path": "models\\temperature_1d_xgboost_validation.joblib"
   },
@@ -4852,13 +4587,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4907,9 +4637,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.9061135463735769,
-      "rmse": 1.1752980219243525,
-      "r2": 0.9740937494419638
+      "mae": 0.926280278783229,
+      "rmse": 1.1913942850165828,
+      "r2": 0.9733792935663423
     },
     "model_path": "models\\temperature_1d_lightgbm_validation.joblib"
   },
@@ -4943,13 +4673,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -4998,9 +4723,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1760244265198945,
-      "rmse": 1.4777134374732392,
-      "r2": 0.9590818495063621
+      "mae": 1.1759137841818303,
+      "rmse": 1.4773882237319118,
+      "r2": 0.9590998579783175
     },
     "model_path": "models\\temperature_2d_ridge_validation.joblib"
   },
@@ -5034,13 +4759,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5089,9 +4809,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1583270537368813,
-      "rmse": 1.4708348341672144,
-      "r2": 0.9594619024113127
+      "mae": 1.1543083446432434,
+      "rmse": 1.4657034813942502,
+      "r2": 0.9597442623603283
     },
     "model_path": "models\\temperature_2d_random_forest_validation.joblib"
   },
@@ -5125,13 +4845,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5180,9 +4895,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1352442810004288,
-      "rmse": 1.4445847491554753,
-      "r2": 0.9608959624404193
+      "mae": 1.1245981062998407,
+      "rmse": 1.4340269058667012,
+      "r2": 0.961465462588136
     },
     "model_path": "models\\temperature_2d_extra_trees_validation.joblib"
   },
@@ -5216,13 +4931,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5271,9 +4981,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1984759110630556,
-      "rmse": 1.5211992038596196,
-      "r2": 0.9566381573576445
+      "mae": 1.2122708742851176,
+      "rmse": 1.5408211700653205,
+      "r2": 0.9555122927949575
     },
     "model_path": "models\\temperature_2d_gradient_boost_validation.joblib"
   },
@@ -5307,13 +5017,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5362,9 +5067,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2595508142783816,
-      "rmse": 1.596481465827305,
-      "r2": 0.9522401106217862
+      "mae": 1.2665879355581466,
+      "rmse": 1.5957013923498116,
+      "r2": 0.9522867721355126
     },
     "model_path": "models\\temperature_2d_xgboost_validation.joblib"
   },
@@ -5398,13 +5103,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5453,9 +5153,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2256787475893043,
-      "rmse": 1.5431341316947729,
-      "r2": 0.9553786295337307
+      "mae": 1.2700795302107024,
+      "rmse": 1.591867838094354,
+      "r2": 0.9525157517343819
     },
     "model_path": "models\\temperature_2d_lightgbm_validation.joblib"
   },
@@ -5489,13 +5189,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5544,9 +5239,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3356095266686936,
-      "rmse": 1.6570389951096465,
-      "r2": 0.9484890037241256
+      "mae": 1.3346068460899987,
+      "rmse": 1.6559727002829085,
+      "r2": 0.9485552764392057
     },
     "model_path": "models\\temperature_3d_ridge_validation.joblib"
   },
@@ -5580,13 +5275,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5635,9 +5325,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2708257267519325,
-      "rmse": 1.607949337585348,
-      "r2": 0.951495814707603
+      "mae": 1.2753372276765675,
+      "rmse": 1.6127644679138724,
+      "r2": 0.9512048805767385
     },
     "model_path": "models\\temperature_3d_random_forest_validation.joblib"
   },
@@ -5671,13 +5361,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5726,9 +5411,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2419232199759758,
-      "rmse": 1.5769740354263018,
-      "r2": 0.9533465701348326
+      "mae": 1.2481896706177769,
+      "rmse": 1.5937202022581662,
+      "r2": 0.9523504670870118
     },
     "model_path": "models\\temperature_3d_extra_trees_validation.joblib"
   },
@@ -5762,13 +5447,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5817,9 +5497,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3195888550873949,
-      "rmse": 1.6495476222701895,
-      "r2": 0.9489537070790455
+      "mae": 1.3270236413572283,
+      "rmse": 1.6592456313411559,
+      "r2": 0.948351720637723
     },
     "model_path": "models\\temperature_3d_gradient_boost_validation.joblib"
   },
@@ -5853,13 +5533,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5908,9 +5583,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.372956260113295,
-      "rmse": 1.7356974949924782,
-      "r2": 0.9434825491324025
+      "mae": 1.3599712699906439,
+      "rmse": 1.7181932390064945,
+      "r2": 0.9446167415570145
     },
     "model_path": "models\\temperature_3d_xgboost_validation.joblib"
   },
@@ -5944,13 +5619,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -5999,9 +5669,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3539116882321582,
-      "rmse": 1.7250735906678565,
-      "r2": 0.9441722988266478
+      "mae": 1.35582929295135,
+      "rmse": 1.7078967862380112,
+      "r2": 0.9452785326141657
     },
     "model_path": "models\\temperature_3d_lightgbm_validation.joblib"
   },
@@ -6035,13 +5705,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6090,9 +5755,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5120687418819372,
-      "rmse": 1.8758337909531633,
-      "r2": 0.933772730042958
+      "mae": 1.5029380658877023,
+      "rmse": 1.8675117510305794,
+      "r2": 0.934359054291751
     },
     "model_path": "models\\temperature_5d_ridge_validation.joblib"
   },
@@ -6126,13 +5791,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6181,9 +5841,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3778000494094194,
-      "rmse": 1.7369486277862165,
-      "r2": 0.9432165087784194
+      "mae": 1.383789257013924,
+      "rmse": 1.7464576300340424,
+      "r2": 0.9425930794622006
     },
     "model_path": "models\\temperature_5d_random_forest_validation.joblib"
   },
@@ -6217,13 +5877,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6272,9 +5927,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3519553016762214,
-      "rmse": 1.7303847642955228,
-      "r2": 0.9436448632308834
+      "mae": 1.342053827965512,
+      "rmse": 1.7118110613630462,
+      "r2": 0.9448481862141875
     },
     "model_path": "models\\temperature_5d_extra_trees_validation.joblib"
   },
@@ -6308,13 +5963,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6363,9 +6013,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3777935824318062,
-      "rmse": 1.7324191210751259,
-      "r2": 0.9435122755544747
+      "mae": 1.4140155749174803,
+      "rmse": 1.7831399132764931,
+      "r2": 0.9401562244439705
     },
     "model_path": "models\\temperature_5d_gradient_boost_validation.joblib"
   },
@@ -6399,13 +6049,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6454,9 +6099,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4584938455388166,
-      "rmse": 1.8348478317856605,
-      "r2": 0.9366351736501023
+      "mae": 1.485640633513962,
+      "rmse": 1.8721564251202103,
+      "r2": 0.93403213808046
     },
     "model_path": "models\\temperature_5d_xgboost_validation.joblib"
   },
@@ -6490,13 +6135,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6545,9 +6185,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4831495928805987,
-      "rmse": 1.8663689285542173,
-      "r2": 0.9344393675696792
+      "mae": 1.4208277596448693,
+      "rmse": 1.792765644832237,
+      "r2": 0.9395083841908811
     },
     "model_path": "models\\temperature_5d_lightgbm_validation.joblib"
   },
@@ -6581,13 +6221,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6636,9 +6271,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5567600164862279,
-      "rmse": 1.955600655165804,
-      "r2": 0.9270368232409965
+      "mae": 1.5544707107638884,
+      "rmse": 1.954200261084881,
+      "r2": 0.927141282826182
     },
     "model_path": "models\\temperature_7d_ridge_validation.joblib"
   },
@@ -6672,13 +6307,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6727,9 +6357,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4642609359949084,
-      "rmse": 1.8441756489421124,
-      "r2": 0.9351144556087732
+      "mae": 1.4799756534086899,
+      "rmse": 1.8730261281578395,
+      "r2": 0.9330684229868536
     },
     "model_path": "models\\temperature_7d_random_forest_validation.joblib"
   },
@@ -6763,13 +6393,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6818,9 +6443,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4093253592220538,
-      "rmse": 1.7820370742088925,
-      "r2": 0.9394133616333933
+      "mae": 1.39549814463066,
+      "rmse": 1.771387381143137,
+      "r2": 0.9401353456188919
     },
     "model_path": "models\\temperature_7d_extra_trees_validation.joblib"
   },
@@ -6854,13 +6479,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -6909,9 +6529,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4435243737182795,
-      "rmse": 1.8023792284265217,
-      "r2": 0.938022260281208
+      "mae": 1.4663497223120094,
+      "rmse": 1.8160322800329745,
+      "r2": 0.9370797391968821
     },
     "model_path": "models\\temperature_7d_gradient_boost_validation.joblib"
   },
@@ -6945,13 +6565,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7000,9 +6615,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.45304260377687,
-      "rmse": 1.8412740302674115,
-      "r2": 0.9353184762977464
+      "mae": 1.55728289235658,
+      "rmse": 1.9612720892209976,
+      "r2": 0.9266130088153289
     },
     "model_path": "models\\temperature_7d_xgboost_validation.joblib"
   },
@@ -7036,13 +6651,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7091,9 +6701,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.591115456232091,
-      "rmse": 1.9941540806131177,
-      "r2": 0.9241316202288742
+      "mae": 1.525429551133406,
+      "rmse": 1.9360057312772114,
+      "r2": 0.9284916653899924
     },
     "model_path": "models\\temperature_7d_lightgbm_validation.joblib"
   },
@@ -7127,13 +6737,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7182,9 +6787,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5908428194546125,
-      "rmse": 1.983624551570745,
-      "r2": 0.9225139191065488
+      "mae": 1.5871155576419211,
+      "rmse": 1.9805571811041607,
+      "r2": 0.9227533744503233
     },
     "model_path": "models\\temperature_10d_ridge_validation.joblib"
   },
@@ -7218,13 +6823,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7273,9 +6873,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3012950120418747,
-      "rmse": 1.6340638629132267,
-      "r2": 0.947417310316435
+      "mae": 1.307930857433972,
+      "rmse": 1.6400615443006084,
+      "r2": 0.947030602058033
     },
     "model_path": "models\\temperature_10d_random_forest_validation.joblib"
   },
@@ -7309,13 +6909,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7364,9 +6959,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3136279142484741,
-      "rmse": 1.6243441236196583,
-      "r2": 0.9480409946333985
+      "mae": 1.2914116276206147,
+      "rmse": 1.604006703234318,
+      "r2": 0.949333943456436
     },
     "model_path": "models\\temperature_10d_extra_trees_validation.joblib"
   },
@@ -7400,13 +6995,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7455,9 +7045,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3996109298667185,
-      "rmse": 1.7636444467296348,
-      "r2": 0.9387470772839854
+      "mae": 1.4120244716191837,
+      "rmse": 1.7645040084375818,
+      "r2": 0.9386873560659638
     },
     "model_path": "models\\temperature_10d_gradient_boost_validation.joblib"
   },
@@ -7491,13 +7081,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7546,9 +7131,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3405485184553898,
-      "rmse": 1.6954949690190642,
-      "r2": 0.9433894001695322
+      "mae": 1.4028267336903195,
+      "rmse": 1.742846991451153,
+      "r2": 0.9401831873543152
     },
     "model_path": "models\\temperature_10d_xgboost_validation.joblib"
   },
@@ -7582,13 +7167,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7637,9 +7217,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4257023662582848,
-      "rmse": 1.7891906866905019,
-      "r2": 0.936959738876758
+      "mae": 1.4552428744398935,
+      "rmse": 1.8328997509934406,
+      "r2": 0.9338420301048772
     },
     "model_path": "models\\temperature_10d_lightgbm_validation.joblib"
   },
@@ -7673,13 +7253,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7728,9 +7303,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7693205928245568,
-      "rmse": 2.138399686005083,
-      "r2": 0.9093273518321799
+      "mae": 1.7504962800096688,
+      "rmse": 2.1246738941837484,
+      "r2": 0.9104876210544482
     },
     "model_path": "models\\temperature_14d_ridge_validation.joblib"
   },
@@ -7764,13 +7339,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7819,9 +7389,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3434645927791404,
-      "rmse": 1.688350897753426,
-      "r2": 0.9434771616732397
+      "mae": 1.337191262621436,
+      "rmse": 1.6809948163068429,
+      "r2": 0.9439686244604732
     },
     "model_path": "models\\temperature_14d_random_forest_validation.joblib"
   },
@@ -7855,13 +7425,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -7910,9 +7475,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.269553655889648,
-      "rmse": 1.5767368881637613,
-      "r2": 0.9507033971256045
+      "mae": 1.2566087585985608,
+      "rmse": 1.5695827811968244,
+      "r2": 0.9511497278775619
     },
     "model_path": "models\\temperature_14d_extra_trees_validation.joblib"
   },
@@ -7946,13 +7511,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8001,9 +7561,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3271614300713561,
-      "rmse": 1.6408870394711454,
-      "r2": 0.9466104936390899
+      "mae": 1.3696780829299755,
+      "rmse": 1.6920065297238485,
+      "r2": 0.9432321292098161
     },
     "model_path": "models\\temperature_14d_gradient_boost_validation.joblib"
   },
@@ -8037,13 +7597,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8092,9 +7647,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.433615692141671,
-      "rmse": 1.777146786631681,
-      "r2": 0.9373753751705682
+      "mae": 1.4316545994476702,
+      "rmse": 1.7807847694253651,
+      "r2": 0.9371187160121645
     },
     "model_path": "models\\temperature_14d_xgboost_validation.joblib"
   },
@@ -8128,13 +7683,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8183,9 +7733,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4146069964836856,
-      "rmse": 1.7674547235510205,
-      "r2": 0.9380565870080486
+      "mae": 1.4305850556508435,
+      "rmse": 1.7869193227299904,
+      "r2": 0.9366847354211766
     },
     "model_path": "models\\temperature_14d_lightgbm_validation.joblib"
   },
@@ -8219,13 +7769,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8274,9 +7819,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.1682284777776952,
-      "rmse": 2.6077397149694153,
-      "r2": 0.8537787812474691
+      "mae": 2.1826232810165913,
+      "rmse": 2.6125190688350792,
+      "r2": 0.8532423140933201
     },
     "model_path": "models\\temperature_30d_ridge_validation.joblib"
   },
@@ -8310,13 +7855,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8365,9 +7905,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.516176625930381,
-      "rmse": 1.8837067989828002,
-      "r2": 0.9237028127575748
+      "mae": 1.5052717969895626,
+      "rmse": 1.8709436069327106,
+      "r2": 0.9247332243297348
     },
     "model_path": "models\\temperature_30d_random_forest_validation.joblib"
   },
@@ -8401,13 +7941,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8456,9 +7991,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4073620809114695,
-      "rmse": 1.7307748849602471,
-      "r2": 0.935588548474146
+      "mae": 1.3839768892686792,
+      "rmse": 1.7221766801274787,
+      "r2": 0.9362269298236701
     },
     "model_path": "models\\temperature_30d_extra_trees_validation.joblib"
   },
@@ -8492,13 +8027,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8547,9 +8077,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4482022411221727,
-      "rmse": 1.7547581992163068,
-      "r2": 0.9337910839631254
+      "mae": 1.4453865203073932,
+      "rmse": 1.755208002916558,
+      "r2": 0.9337571364569953
     },
     "model_path": "models\\temperature_30d_gradient_boost_validation.joblib"
   },
@@ -8583,13 +8113,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8638,9 +8163,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4497919301633482,
-      "rmse": 1.8045920948292435,
-      "r2": 0.9299771120856068
+      "mae": 1.4877709457785995,
+      "rmse": 1.8410843894914872,
+      "r2": 0.9271164851941454
     },
     "model_path": "models\\temperature_30d_xgboost_validation.joblib"
   },
@@ -8674,13 +8199,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8729,9 +8249,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4377429942758024,
-      "rmse": 1.7681089068818,
-      "r2": 0.9327797782423469
+      "mae": 1.468299550581259,
+      "rmse": 1.8259636444067406,
+      "r2": 0.9283087472087778
     },
     "model_path": "models\\temperature_30d_lightgbm_validation.joblib"
   },
@@ -8765,13 +8285,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8820,9 +8335,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 33.17093499441315,
-      "rmse": 59.63184936613479,
-      "r2": 0.9555884359368433
+      "mae": 33.00008125889969,
+      "rmse": 59.57238699109382,
+      "r2": 0.9556769624692454
     },
     "model_path": "models\\GHI_1d_ridge_testing.joblib"
   },
@@ -8856,13 +8371,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -8911,9 +8421,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.71008564795372,
-      "rmse": 58.28192787517311,
-      "r2": 0.957576418517581
+      "mae": 26.83496722885589,
+      "rmse": 58.568454472769886,
+      "r2": 0.9571582661192917
     },
     "model_path": "models\\GHI_1d_random_forest_testing.joblib"
   },
@@ -8947,13 +8457,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9002,9 +8507,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.428090256603372,
-      "rmse": 57.83613657009116,
-      "r2": 0.9582229220364661
+      "mae": 26.563839491112805,
+      "rmse": 58.001676402351485,
+      "r2": 0.957983429285998
     },
     "model_path": "models\\GHI_1d_extra_trees_testing.joblib"
   },
@@ -9038,13 +8543,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9093,9 +8593,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.43362706400854,
-      "rmse": 58.15107917031594,
-      "r2": 0.9577666949735109
+      "mae": 27.516972103495785,
+      "rmse": 58.23023170234552,
+      "r2": 0.9576516447230995
     },
     "model_path": "models\\GHI_1d_gradient_boost_testing.joblib"
   },
@@ -9129,13 +8629,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9184,9 +8679,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.81944315002263,
-      "rmse": 59.16311051201598,
-      "r2": 0.9562838900510517
+      "mae": 28.13230098953054,
+      "rmse": 59.394623651092836,
+      "r2": 0.9559410867102555
     },
     "model_path": "models\\GHI_1d_xgboost_testing.joblib"
   },
@@ -9220,13 +8715,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9275,9 +8765,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.88351099521483,
-      "rmse": 59.317091214758456,
-      "r2": 0.9560560387075044
+      "mae": 28.27704410717825,
+      "rmse": 60.14043662184765,
+      "r2": 0.9548276520190985
     },
     "model_path": "models\\GHI_1d_lightgbm_testing.joblib"
   },
@@ -9311,13 +8801,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9366,9 +8851,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.713737232452466,
-      "rmse": 69.54793111778443,
-      "r2": 0.939588014291413
+      "mae": 38.48959641202438,
+      "rmse": 69.42580794225367,
+      "r2": 0.9397999897147319
     },
     "model_path": "models\\GHI_2d_ridge_testing.joblib"
   },
@@ -9402,13 +8887,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9457,9 +8937,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.322524659958646,
-      "rmse": 69.1356114658688,
-      "r2": 0.940302204088931
+      "mae": 32.325179648716464,
+      "rmse": 69.33569614625566,
+      "r2": 0.9399561624887922
     },
     "model_path": "models\\GHI_2d_random_forest_testing.joblib"
   },
@@ -9493,13 +8973,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9548,9 +9023,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 32.43551125090669,
-      "rmse": 69.05577553550685,
-      "r2": 0.9404399992753919
+      "mae": 32.487989897256156,
+      "rmse": 69.25668846599002,
+      "r2": 0.9400929238322406
     },
     "model_path": "models\\GHI_2d_extra_trees_testing.joblib"
   },
@@ -9584,13 +9059,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9639,9 +9109,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 33.26586298184789,
-      "rmse": 69.45130279635502,
-      "r2": 0.9397557677652605
+      "mae": 33.327950912115675,
+      "rmse": 70.2134407521173,
+      "r2": 0.9384263084255307
     },
     "model_path": "models\\GHI_2d_gradient_boost_testing.joblib"
   },
@@ -9675,13 +9145,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9730,9 +9195,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.09346803902421,
-      "rmse": 72.7697595049405,
-      "r2": 0.9338611621301331
+      "mae": 34.67697496526963,
+      "rmse": 71.53896494911768,
+      "r2": 0.9360795262633197
     },
     "model_path": "models\\GHI_2d_xgboost_testing.joblib"
   },
@@ -9766,13 +9231,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9821,9 +9281,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.282878664215005,
-      "rmse": 71.27673155053074,
-      "r2": 0.9365472814653569
+      "mae": 34.43104854401265,
+      "rmse": 72.23490452746472,
+      "r2": 0.9348298250905479
     },
     "model_path": "models\\GHI_2d_lightgbm_testing.joblib"
   },
@@ -9857,13 +9317,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -9912,9 +9367,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 40.779556658455945,
-      "rmse": 72.72667217969013,
-      "r2": 0.9339269143896997
+      "mae": 40.39467804793482,
+      "rmse": 72.54840998584487,
+      "r2": 0.9342504242590935
     },
     "model_path": "models\\GHI_3d_ridge_testing.joblib"
   },
@@ -9948,13 +9403,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10003,9 +9453,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.16744699173997,
-      "rmse": 72.28353137154504,
-      "r2": 0.9347296591234007
+      "mae": 34.15174831356495,
+      "rmse": 72.31590567065334,
+      "r2": 0.9346711795582466
     },
     "model_path": "models\\GHI_3d_random_forest_testing.joblib"
   },
@@ -10039,13 +9489,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10094,9 +9539,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.50065287897948,
-      "rmse": 72.80462640704765,
-      "r2": 0.9337851937077117
+      "mae": 34.6096480863556,
+      "rmse": 72.86060672224292,
+      "r2": 0.933683327906543
     },
     "model_path": "models\\GHI_3d_extra_trees_testing.joblib"
   },
@@ -10130,13 +9575,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10185,9 +9625,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.994727666111174,
-      "rmse": 72.03281099094353,
-      "r2": 0.9351816631558637
+      "mae": 35.294850889095684,
+      "rmse": 72.74773366957866,
+      "r2": 0.9338886395976699
     },
     "model_path": "models\\GHI_3d_gradient_boost_testing.joblib"
   },
@@ -10221,13 +9661,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10276,9 +9711,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.01042348084888,
-      "rmse": 75.29973798677102,
-      "r2": 0.929168883488782
+      "mae": 37.210285044465394,
+      "rmse": 76.31597051630432,
+      "r2": 0.9272441329501273
     },
     "model_path": "models\\GHI_3d_xgboost_testing.joblib"
   },
@@ -10312,13 +9747,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10367,9 +9797,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.27448835850807,
-      "rmse": 75.32622771177358,
-      "r2": 0.9291190393092462
+      "mae": 36.78430967663136,
+      "rmse": 75.86453126224322,
+      "r2": 0.9281023467408582
     },
     "model_path": "models\\GHI_3d_lightgbm_testing.joblib"
   },
@@ -10403,13 +9833,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10458,9 +9883,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 42.48614045921255,
-      "rmse": 74.72333104540805,
-      "r2": 0.9302632616128006
+      "mae": 42.22818824639318,
+      "rmse": 74.5487027481573,
+      "r2": 0.930588830018769
     },
     "model_path": "models\\GHI_5d_ridge_testing.joblib"
   },
@@ -10494,13 +9919,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10549,9 +9969,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.54556013304813,
-      "rmse": 75.14364240146706,
-      "r2": 0.9294765306464563
+      "mae": 35.61959276172688,
+      "rmse": 75.32693361398395,
+      "r2": 0.9291320677798156
     },
     "model_path": "models\\GHI_5d_random_forest_testing.joblib"
   },
@@ -10585,13 +10005,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10640,9 +10055,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.03317298141543,
-      "rmse": 73.7039526623703,
-      "r2": 0.9321529854581314
+      "mae": 35.206370259882966,
+      "rmse": 74.17551278205313,
+      "r2": 0.9312820336500826
     },
     "model_path": "models\\GHI_5d_extra_trees_testing.joblib"
   },
@@ -10676,13 +10091,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10731,9 +10141,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.62409091832799,
-      "rmse": 74.09187422489,
-      "r2": 0.9314369157933835
+      "mae": 36.78975019049176,
+      "rmse": 74.30813656280831,
+      "r2": 0.931036082294252
     },
     "model_path": "models\\GHI_5d_gradient_boost_testing.joblib"
   },
@@ -10767,13 +10177,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10822,9 +10227,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.950583084684396,
-      "rmse": 76.94549649551769,
-      "r2": 0.9260538450622554
+      "mae": 38.137952961517996,
+      "rmse": 77.38351850960963,
+      "r2": 0.9252095530004982
     },
     "model_path": "models\\GHI_5d_xgboost_testing.joblib"
   },
@@ -10858,13 +10263,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -10913,9 +10313,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.95801271028983,
-      "rmse": 76.8528983420813,
-      "r2": 0.9262317153111813
+      "mae": 37.136716813257145,
+      "rmse": 75.97272323521003,
+      "r2": 0.92791173525104
     },
     "model_path": "models\\GHI_5d_lightgbm_testing.joblib"
   },
@@ -10949,13 +10349,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11004,9 +10399,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 43.728829553868295,
-      "rmse": 75.7297983250349,
-      "r2": 0.9284234458797623
+      "mae": 43.47337000484059,
+      "rmse": 75.62055583231911,
+      "r2": 0.928629799564823
     },
     "model_path": "models\\GHI_7d_ridge_testing.joblib"
   },
@@ -11040,13 +10435,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11095,9 +10485,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.01106368346097,
-      "rmse": 75.08029049995899,
-      "r2": 0.9296459546105543
+      "mae": 36.01906234499979,
+      "rmse": 75.2421539450494,
+      "r2": 0.9293422790827505
     },
     "model_path": "models\\GHI_7d_random_forest_testing.joblib"
   },
@@ -11131,13 +10521,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11186,9 +10571,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.14316296636294,
-      "rmse": 75.16264016377787,
-      "r2": 0.9294915383386653
+      "mae": 36.0195486290057,
+      "rmse": 74.95258441160513,
+      "r2": 0.9298850852470701
     },
     "model_path": "models\\GHI_7d_extra_trees_testing.joblib"
   },
@@ -11222,13 +10607,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11277,9 +10657,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.93382880249089,
-      "rmse": 75.9207889098083,
-      "r2": 0.9280619584159613
+      "mae": 37.483185404996114,
+      "rmse": 75.76259453969905,
+      "r2": 0.928361437307514
     },
     "model_path": "models\\GHI_7d_gradient_boost_testing.joblib"
   },
@@ -11313,13 +10693,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11368,9 +10743,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.14244300357419,
-      "rmse": 76.84090415839326,
-      "r2": 0.9263076987542522
+      "mae": 38.670155675346265,
+      "rmse": 77.76241614452637,
+      "r2": 0.9245295954412036
     },
     "model_path": "models\\GHI_7d_xgboost_testing.joblib"
   },
@@ -11404,13 +10779,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11459,9 +10829,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.77588568063357,
-      "rmse": 79.18747968279318,
-      "r2": 0.9217381287754086
+      "mae": 38.78433599239293,
+      "rmse": 77.96889547505353,
+      "r2": 0.92412827645103
     },
     "model_path": "models\\GHI_7d_lightgbm_testing.joblib"
   },
@@ -11495,13 +10865,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11550,9 +10915,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 44.99956381254173,
-      "rmse": 76.72735851004241,
-      "r2": 0.9265309052315035
+      "mae": 44.97162850615063,
+      "rmse": 76.73634183580047,
+      "r2": 0.9265137005352684
     },
     "model_path": "models\\GHI_10d_ridge_testing.joblib"
   },
@@ -11586,13 +10951,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11641,9 +11001,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.355275959847056,
-      "rmse": 75.74707030718436,
-      "r2": 0.9283962322726627
+      "mae": 36.38139286569207,
+      "rmse": 75.90594604197533,
+      "r2": 0.9280955465413147
     },
     "model_path": "models\\GHI_10d_random_forest_testing.joblib"
   },
@@ -11677,13 +11037,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11732,9 +11087,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.77856619269639,
-      "rmse": 76.71590700724367,
-      "r2": 0.9265528340135347
+      "mae": 36.65400666654953,
+      "rmse": 76.63676188581474,
+      "r2": 0.926704301592308
     },
     "model_path": "models\\GHI_10d_extra_trees_testing.joblib"
   },
@@ -11768,13 +11123,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11823,9 +11173,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.655205472758716,
-      "rmse": 77.55322953047111,
-      "r2": 0.9249407932594838
+      "mae": 39.004087339279586,
+      "rmse": 76.5570633839786,
+      "r2": 0.9268566702400121
     },
     "model_path": "models\\GHI_10d_gradient_boost_testing.joblib"
   },
@@ -11859,13 +11209,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -11914,9 +11259,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.91315825775952,
-      "rmse": 78.55095655211555,
-      "r2": 0.9229970876926893
+      "mae": 40.159861628448525,
+      "rmse": 79.71868774401234,
+      "r2": 0.9206906341989025
     },
     "model_path": "models\\GHI_10d_xgboost_testing.joblib"
   },
@@ -11950,13 +11295,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12005,9 +11345,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 40.44100508074582,
-      "rmse": 80.48267469841544,
-      "r2": 0.9191632216906289
+      "mae": 40.89686037218805,
+      "rmse": 81.68002085743727,
+      "r2": 0.9167401019541701
     },
     "model_path": "models\\GHI_10d_lightgbm_testing.joblib"
   },
@@ -12041,13 +11381,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12096,9 +11431,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 44.949338515332016,
-      "rmse": 76.72692738337112,
-      "r2": 0.9267428163798085
+      "mae": 44.723456413233514,
+      "rmse": 76.72494435677494,
+      "r2": 0.9267466030312789
     },
     "model_path": "models\\GHI_14d_ridge_testing.joblib"
   },
@@ -12132,13 +11467,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12187,9 +11517,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.55245779273599,
-      "rmse": 74.51860881143514,
-      "r2": 0.9308990398976664
+      "mae": 35.653873268815815,
+      "rmse": 74.66792924956323,
+      "r2": 0.9306218333422589
     },
     "model_path": "models\\GHI_14d_random_forest_testing.joblib"
   },
@@ -12223,13 +11553,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12278,9 +11603,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.47848830730095,
-      "rmse": 75.77332864033148,
-      "r2": 0.9285524507968935
+      "mae": 36.64279988337565,
+      "rmse": 76.19901306224419,
+      "r2": 0.9277474303385481
     },
     "model_path": "models\\GHI_14d_extra_trees_testing.joblib"
   },
@@ -12314,13 +11639,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12369,9 +11689,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.9335944981399,
-      "rmse": 76.28246379812538,
-      "r2": 0.9275890862461531
+      "mae": 37.85304055924705,
+      "rmse": 75.90438425013788,
+      "r2": 0.928305089361902
     },
     "model_path": "models\\GHI_14d_gradient_boost_testing.joblib"
   },
@@ -12405,13 +11725,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12460,9 +11775,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.33862979722184,
-      "rmse": 78.3187219297802,
-      "r2": 0.923671665158822
+      "mae": 39.324638867561724,
+      "rmse": 77.64090823546853,
+      "r2": 0.9249871236246509
     },
     "model_path": "models\\GHI_14d_xgboost_testing.joblib"
   },
@@ -12496,13 +11811,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12551,9 +11861,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.34215176342678,
-      "rmse": 78.00695620327423,
-      "r2": 0.9242781407073428
+      "mae": 40.18013409359987,
+      "rmse": 78.99801555745348,
+      "r2": 0.9223418628688913
     },
     "model_path": "models\\GHI_14d_lightgbm_testing.joblib"
   },
@@ -12587,13 +11897,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12642,9 +11947,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 48.56434014698847,
-      "rmse": 80.38713045755345,
-      "r2": 0.9195137532518696
+      "mae": 48.16859208232553,
+      "rmse": 80.36920136277006,
+      "r2": 0.9195496516503844
     },
     "model_path": "models\\GHI_30d_ridge_testing.joblib"
   },
@@ -12678,13 +11983,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12733,9 +12033,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.989878198575454,
-      "rmse": 78.01641064438594,
-      "r2": 0.9241910372320474
+      "mae": 37.011640164380324,
+      "rmse": 78.12456149015854,
+      "r2": 0.9239807100406345
     },
     "model_path": "models\\GHI_30d_random_forest_testing.joblib"
   },
@@ -12769,13 +12069,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12824,9 +12119,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 36.8904773209871,
-      "rmse": 77.25091302815316,
-      "r2": 0.9256714149284013
+      "mae": 37.062325193590524,
+      "rmse": 77.6884096091061,
+      "r2": 0.9248271379642616
     },
     "model_path": "models\\GHI_30d_extra_trees_testing.joblib"
   },
@@ -12860,13 +12155,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -12915,9 +12205,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.67456161011765,
-      "rmse": 77.99743302662347,
-      "r2": 0.924227914051339
+      "mae": 38.64366847421218,
+      "rmse": 78.08089248270076,
+      "r2": 0.9240656707515834
     },
     "model_path": "models\\GHI_30d_gradient_boost_testing.joblib"
   },
@@ -12951,13 +12241,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13006,9 +12291,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 41.013749532253655,
-      "rmse": 82.36110352378248,
-      "r2": 0.9155124070311419
+      "mae": 41.674635844828714,
+      "rmse": 83.7488440921392,
+      "r2": 0.9126412790668988
     },
     "model_path": "models\\GHI_30d_xgboost_testing.joblib"
   },
@@ -13042,13 +12327,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13097,9 +12377,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 40.73256466046144,
-      "rmse": 82.08186693125437,
-      "r2": 0.9160843283247941
+      "mae": 40.7183099210522,
+      "rmse": 82.48553461456511,
+      "r2": 0.9152569266082589
     },
     "model_path": "models\\GHI_30d_lightgbm_testing.joblib"
   },
@@ -13133,13 +12413,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13188,9 +12463,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8882693534161726,
-      "rmse": 1.177070624275704,
-      "r2": 0.9624322254177005
+      "mae": 0.889942268713222,
+      "rmse": 1.1788452939463197,
+      "r2": 0.9623188581341245
     },
     "model_path": "models\\temperature_1d_ridge_testing.joblib"
   },
@@ -13224,13 +12499,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13279,9 +12549,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8467267472791579,
-      "rmse": 1.1292066580253133,
-      "r2": 0.9654253902326477
+      "mae": 0.8510268952759409,
+      "rmse": 1.1342238468419772,
+      "r2": 0.9651174701341716
     },
     "model_path": "models\\temperature_1d_random_forest_testing.joblib"
   },
@@ -13315,13 +12585,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13370,9 +12635,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8538378909465926,
-      "rmse": 1.1442058884369144,
-      "r2": 0.9645007822134539
+      "mae": 0.8582061681422706,
+      "rmse": 1.1491992410970466,
+      "r2": 0.9641902665975386
     },
     "model_path": "models\\temperature_1d_extra_trees_testing.joblib"
   },
@@ -13406,13 +12671,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13461,9 +12721,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.874032534514374,
-      "rmse": 1.165887362841473,
-      "r2": 0.9631426915915298
+      "mae": 0.8733734715988432,
+      "rmse": 1.1682543226089195,
+      "r2": 0.9629928858296991
     },
     "model_path": "models\\temperature_1d_gradient_boost_testing.joblib"
   },
@@ -13497,13 +12757,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13552,9 +12807,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8887369465260277,
-      "rmse": 1.179159690343644,
-      "r2": 0.9622987564378713
+      "mae": 0.8879728269839026,
+      "rmse": 1.1768312627708724,
+      "r2": 0.9624475029457702
     },
     "model_path": "models\\temperature_1d_xgboost_testing.joblib"
   },
@@ -13588,13 +12843,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13643,9 +12893,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8786533885369188,
-      "rmse": 1.1710147619398954,
-      "r2": 0.9628177928172906
+      "mae": 0.8915724375633787,
+      "rmse": 1.1826565480476,
+      "r2": 0.9620748149852058
     },
     "model_path": "models\\temperature_1d_lightgbm_testing.joblib"
   },
@@ -13679,13 +12929,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13734,9 +12979,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1519555809170103,
-      "rmse": 1.539020702664585,
-      "r2": 0.9356371825044651
+      "mae": 1.1509982711263709,
+      "rmse": 1.538736934240821,
+      "r2": 0.9356609150656257
     },
     "model_path": "models\\temperature_2d_ridge_testing.joblib"
   },
@@ -13770,13 +13015,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13825,9 +13065,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1474485612389245,
-      "rmse": 1.5707536269360411,
-      "r2": 0.9329556374831661
+      "mae": 1.1497923850494898,
+      "rmse": 1.5754211523430355,
+      "r2": 0.9325565981930002
     },
     "model_path": "models\\temperature_2d_random_forest_testing.joblib"
   },
@@ -13861,13 +13101,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -13916,9 +13151,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1449184382395534,
-      "rmse": 1.5382231854509765,
-      "r2": 0.935703870568004
+      "mae": 1.1481212688892153,
+      "rmse": 1.5384911001401462,
+      "r2": 0.9356814715067712
     },
     "model_path": "models\\temperature_2d_extra_trees_testing.joblib"
   },
@@ -13952,13 +13187,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14007,9 +13237,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.1654201404646354,
-      "rmse": 1.555334623759633,
-      "r2": 0.9342654334698247
+      "mae": 1.1635620419536474,
+      "rmse": 1.5687127558723626,
+      "r2": 0.9331297450027687
     },
     "model_path": "models\\temperature_2d_gradient_boost_testing.joblib"
   },
@@ -14043,13 +13273,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14098,9 +13323,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2103198403147408,
-      "rmse": 1.6118132756972732,
-      "r2": 0.9294047337768013
+      "mae": 1.2187980026668972,
+      "rmse": 1.6404649030640626,
+      "r2": 0.9268726206610343
     },
     "model_path": "models\\temperature_2d_xgboost_testing.joblib"
   },
@@ -14134,13 +13359,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14189,9 +13409,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2067446782935187,
-      "rmse": 1.6136538983778386,
-      "r2": 0.9292434080914037
+      "mae": 1.2391338895474147,
+      "rmse": 1.664064333505442,
+      "r2": 0.9247534923988917
     },
     "model_path": "models\\temperature_2d_lightgbm_testing.joblib"
   },
@@ -14225,13 +13445,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14280,9 +13495,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3021608440030878,
-      "rmse": 1.737445578688692,
-      "r2": 0.9177252222480776
+      "mae": 1.3020255484012864,
+      "rmse": 1.736900688321169,
+      "r2": 0.9177768194947757
     },
     "model_path": "models\\temperature_3d_ridge_testing.joblib"
   },
@@ -14316,13 +13531,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14371,9 +13581,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.29745788860734,
-      "rmse": 1.7666673127161274,
-      "r2": 0.9149344244594528
+      "mae": 1.3044560070968823,
+      "rmse": 1.7836826833932873,
+      "r2": 0.9132879428653387
     },
     "model_path": "models\\temperature_3d_random_forest_testing.joblib"
   },
@@ -14407,13 +13617,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14462,9 +13667,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3077973767851463,
-      "rmse": 1.7456924465453765,
-      "r2": 0.9169423263502149
+      "mae": 1.3155868901373267,
+      "rmse": 1.7637480029044905,
+      "r2": 0.915215323517421
     },
     "model_path": "models\\temperature_3d_extra_trees_testing.joblib"
   },
@@ -14498,13 +13703,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14553,9 +13753,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3172907662772966,
-      "rmse": 1.7691754521589043,
-      "r2": 0.914692717631236
+      "mae": 1.3235351372474862,
+      "rmse": 1.775410661698914,
+      "r2": 0.914090351032746
     },
     "model_path": "models\\temperature_3d_gradient_boost_testing.joblib"
   },
@@ -14589,13 +13789,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14644,9 +13839,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3755872002973961,
-      "rmse": 1.8471400185310594,
-      "r2": 0.907008354593026
+      "mae": 1.382263120033025,
+      "rmse": 1.847376161015661,
+      "r2": 0.906984576556023
     },
     "model_path": "models\\temperature_3d_xgboost_testing.joblib"
   },
@@ -14680,13 +13875,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14735,9 +13925,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3820259858505068,
-      "rmse": 1.8502976221307859,
-      "r2": 0.9066901526963835
+      "mae": 1.3838556720161073,
+      "rmse": 1.8505133671791183,
+      "r2": 0.9066683915365324
     },
     "model_path": "models\\temperature_3d_lightgbm_testing.joblib"
   },
@@ -14771,13 +13961,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14826,9 +14011,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5059805245121425,
-      "rmse": 1.9901872185595755,
-      "r2": 0.8916282862636341
+      "mae": 1.502091129626129,
+      "rmse": 1.9844493197874167,
+      "r2": 0.892252277339244
     },
     "model_path": "models\\temperature_5d_ridge_testing.joblib"
   },
@@ -14862,13 +14047,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -14917,9 +14097,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5538493889545475,
-      "rmse": 2.0999495866812485,
-      "r2": 0.8793448640964071
+      "mae": 1.556194085854863,
+      "rmse": 2.1020407278836504,
+      "r2": 0.8791044463722161
     },
     "model_path": "models\\temperature_5d_random_forest_testing.joblib"
   },
@@ -14953,13 +14133,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15008,9 +14183,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.537091792904797,
-      "rmse": 2.0508411052737334,
-      "r2": 0.8849220537665845
+      "mae": 1.544446500987385,
+      "rmse": 2.0631823790341524,
+      "r2": 0.8835328855823141
     },
     "model_path": "models\\temperature_5d_extra_trees_testing.joblib"
   },
@@ -15044,13 +14219,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15099,9 +14269,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.55538886536144,
-      "rmse": 2.0775116965548786,
-      "r2": 0.8819094811521347
+      "mae": 1.5676642851158489,
+      "rmse": 2.0949956374919037,
+      "r2": 0.8799134628689811
     },
     "model_path": "models\\temperature_5d_gradient_boost_testing.joblib"
   },
@@ -15135,13 +14305,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15190,9 +14355,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6329812656464402,
-      "rmse": 2.1992620281008084,
-      "r2": 0.8676627738653339
+      "mae": 1.644217773274139,
+      "rmse": 2.203540121921215,
+      "r2": 0.8671474176120791
     },
     "model_path": "models\\temperature_5d_xgboost_testing.joblib"
   },
@@ -15226,13 +14391,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15281,9 +14441,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6484497646817748,
-      "rmse": 2.217866280614182,
-      "r2": 0.8654143389747869
+      "mae": 1.6354670092125618,
+      "rmse": 2.178386480709307,
+      "r2": 0.8701631585838205
     },
     "model_path": "models\\temperature_5d_lightgbm_testing.joblib"
   },
@@ -15317,13 +14477,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15372,9 +14527,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6089135293090895,
-      "rmse": 2.1387947399679605,
-      "r2": 0.8744976047949033
+      "mae": 1.6058244637132728,
+      "rmse": 2.135885503355879,
+      "r2": 0.8748387949396295
     },
     "model_path": "models\\temperature_7d_ridge_testing.joblib"
   },
@@ -15408,13 +14563,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15463,9 +14613,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6942232842800675,
-      "rmse": 2.318852568930618,
-      "r2": 0.8524768848865264
+      "mae": 1.713168392833696,
+      "rmse": 2.352745715555986,
+      "r2": 0.8481328712451373
     },
     "model_path": "models\\temperature_7d_random_forest_testing.joblib"
   },
@@ -15499,13 +14649,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15554,9 +14699,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6635346286158805,
-      "rmse": 2.229557240779831,
-      "r2": 0.8636198847396339
+      "mae": 1.6602461975164842,
+      "rmse": 2.2309465925248033,
+      "r2": 0.8634498608577623
     },
     "model_path": "models\\temperature_7d_extra_trees_testing.joblib"
   },
@@ -15590,13 +14735,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15645,9 +14785,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6509638520321863,
-      "rmse": 2.2260460853291133,
-      "r2": 0.8640490952781106
+      "mae": 1.6391617060226278,
+      "rmse": 2.199147591259044,
+      "r2": 0.8673147784568389
     },
     "model_path": "models\\temperature_7d_gradient_boost_testing.joblib"
   },
@@ -15681,13 +14821,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15736,9 +14871,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7223400679202943,
-      "rmse": 2.312524744811535,
-      "r2": 0.853280926197784
+      "mae": 1.7299807154577316,
+      "rmse": 2.300159342802168,
+      "r2": 0.8548457871422854
     },
     "model_path": "models\\temperature_7d_xgboost_testing.joblib"
   },
@@ -15772,13 +14907,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15827,9 +14957,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7473541965825257,
-      "rmse": 2.348231334321001,
-      "r2": 0.8487151087306513
+      "mae": 1.7529736670518128,
+      "rmse": 2.3467746970264853,
+      "r2": 0.8489027383421198
     },
     "model_path": "models\\temperature_7d_lightgbm_testing.joblib"
   },
@@ -15863,13 +14993,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -15918,9 +15043,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.659507843992698,
-      "rmse": 2.2264893963165027,
-      "r2": 0.8628999580311196
+      "mae": 1.6550513238757902,
+      "rmse": 2.2210954402440035,
+      "r2": 0.8635634382383864
     },
     "model_path": "models\\temperature_10d_ridge_testing.joblib"
   },
@@ -15954,13 +15079,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16009,9 +15129,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.758307229892648,
-      "rmse": 2.424745894972394,
-      "r2": 0.8373969112767409
+      "mae": 1.7652960120414758,
+      "rmse": 2.4413559636074513,
+      "r2": 0.8351615436969528
     },
     "model_path": "models\\temperature_10d_random_forest_testing.joblib"
   },
@@ -16045,13 +15165,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16100,9 +15215,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.708019524616389,
-      "rmse": 2.3200272293979256,
-      "r2": 0.851138466133329
+      "mae": 1.699667645865449,
+      "rmse": 2.306369429592237,
+      "r2": 0.8528859771959021
     },
     "model_path": "models\\temperature_10d_extra_trees_testing.joblib"
   },
@@ -16136,13 +15251,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16191,9 +15301,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.73145174479842,
-      "rmse": 2.3616015804308454,
-      "r2": 0.8457555355270596
+      "mae": 1.7038089463541606,
+      "rmse": 2.3450063227421016,
+      "r2": 0.8479157075925057
     },
     "model_path": "models\\temperature_10d_gradient_boost_testing.joblib"
   },
@@ -16227,13 +15337,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16282,9 +15387,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7681457698222056,
-      "rmse": 2.404980297025473,
-      "r2": 0.8400370624372451
+      "mae": 1.7419560056023755,
+      "rmse": 2.3697902112578086,
+      "r2": 0.844684024784311
     },
     "model_path": "models\\temperature_10d_xgboost_testing.joblib"
   },
@@ -16318,13 +15423,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16373,9 +15473,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7367861415373513,
-      "rmse": 2.3753193438852276,
-      "r2": 0.843958420936928
+      "mae": 1.746334537029183,
+      "rmse": 2.3938898407398925,
+      "r2": 0.8415089842370744
     },
     "model_path": "models\\temperature_10d_lightgbm_testing.joblib"
   },
@@ -16409,13 +15509,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16464,9 +15559,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7568825798119498,
-      "rmse": 2.3729086017039918,
-      "r2": 0.8441145917444922
+      "mae": 1.751214922144815,
+      "rmse": 2.3596511843741874,
+      "r2": 0.845851586391828
     },
     "model_path": "models\\temperature_14d_ridge_testing.joblib"
   },
@@ -16500,13 +15595,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16555,9 +15645,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6998414339607555,
-      "rmse": 2.357231232250063,
-      "r2": 0.8461675996238702
+      "mae": 1.70474712654164,
+      "rmse": 2.3592161979511066,
+      "r2": 0.845908413678131
     },
     "model_path": "models\\temperature_14d_random_forest_testing.joblib"
   },
@@ -16591,13 +15681,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16646,9 +15731,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6971218365105034,
-      "rmse": 2.3229290119762678,
-      "r2": 0.8506121353145275
+      "mae": 1.6788197837189125,
+      "rmse": 2.295931186939561,
+      "r2": 0.8540644234792083
     },
     "model_path": "models\\temperature_14d_extra_trees_testing.joblib"
   },
@@ -16682,13 +15767,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16737,9 +15817,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.68215856578183,
-      "rmse": 2.3195523523526833,
-      "r2": 0.8510461264883873
+      "mae": 1.6786320323553083,
+      "rmse": 2.307263325246682,
+      "r2": 0.8526202657245948
     },
     "model_path": "models\\temperature_14d_gradient_boost_testing.joblib"
   },
@@ -16773,13 +15853,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16828,9 +15903,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7157297023318545,
-      "rmse": 2.340373345384579,
-      "r2": 0.8483600159904283
+      "mae": 1.7135089062648168,
+      "rmse": 2.3379428836832483,
+      "r2": 0.848674806622649
     },
     "model_path": "models\\temperature_14d_xgboost_testing.joblib"
   },
@@ -16864,13 +15939,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -16919,9 +15989,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.732849667625546,
-      "rmse": 2.3631176002792884,
-      "r2": 0.8453983541507294
+      "mae": 1.74276312362184,
+      "rmse": 2.374342026640532,
+      "r2": 0.8439262005674839
     },
     "model_path": "models\\temperature_14d_lightgbm_testing.joblib"
   },
@@ -16955,13 +16025,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17010,9 +16075,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.9931089811917366,
-      "rmse": 2.6269190804759854,
-      "r2": 0.8072334687270394
+      "mae": 1.9821012531154854,
+      "rmse": 2.6073665636318126,
+      "r2": 0.8100923645518326
     },
     "model_path": "models\\temperature_30d_ridge_testing.joblib"
   },
@@ -17046,13 +16111,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17101,9 +16161,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.781022681068732,
-      "rmse": 2.41438478338636,
-      "r2": 0.8371637046971557
+      "mae": 1.7785387678618494,
+      "rmse": 2.411047299536455,
+      "r2": 0.8376135815235087
     },
     "model_path": "models\\temperature_30d_random_forest_testing.joblib"
   },
@@ -17137,13 +16197,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17192,9 +16247,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7767591667923839,
-      "rmse": 2.409477746631171,
-      "r2": 0.8378249345861313
+      "mae": 1.774556483773492,
+      "rmse": 2.4047370001649497,
+      "r2": 0.838462478980291
     },
     "model_path": "models\\temperature_30d_extra_trees_testing.joblib"
   },
@@ -17228,13 +16283,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17283,9 +16333,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7751589904696579,
-      "rmse": 2.405169911465888,
-      "r2": 0.8384043123591175
+      "mae": 1.772958036802526,
+      "rmse": 2.408396588090777,
+      "r2": 0.8379704413205001
     },
     "model_path": "models\\temperature_30d_gradient_boost_testing.joblib"
   },
@@ -17319,13 +16369,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17374,9 +16419,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.8251460073243326,
-      "rmse": 2.460666012688667,
-      "r2": 0.8308610680007933
+      "mae": 1.7963961825489405,
+      "rmse": 2.411657125056904,
+      "r2": 0.8375314264320974
     },
     "model_path": "models\\temperature_30d_xgboost_testing.joblib"
   },
@@ -17410,13 +16455,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -17465,9 +16505,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7570486040102584,
-      "rmse": 2.383687842103092,
-      "r2": 0.8412780445587345
+      "mae": 1.7741347982277507,
+      "rmse": 2.398316384400698,
+      "r2": 0.8393239334664907
     },
     "model_path": "models\\temperature_30d_lightgbm_testing.joblib"
   },
@@ -17675,13 +16715,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -18105,13 +17140,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -18622,13 +17652,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -19139,13 +18164,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -20892,10 +19912,13 @@
   {
     "target": "GHI",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-14T23:00:00",
     "horizon_days": 14,
     "horizon_hours": 336,
     "model": "xgboost",
-    "rows": 385,
+    "rows": 1,
     "features": [
       "temperature",
       "dew_point",
@@ -20919,6 +19942,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -20967,9 +19992,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 34.93917872505161,
-      "rmse": 81.87613923555998,
-      "r2": 0.9351925296075926
+      "mae": 2.0076141357421875,
+      "rmse": 2.0076141357421875,
+      "r2": null
     },
     "model_path": "models\\GHI_14d_xgboost_prospective.joblib"
   },
@@ -21261,13 +20286,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -21661,10 +20681,13 @@
   {
     "target": "temperature",
     "split": "prospective",
+    "evaluation_mode": "fixed_origin",
+    "forecast_origin": "2026-04-30T23:00:00",
+    "target_timestamp": "2026-05-01T23:00:00",
     "horizon_days": 1,
     "horizon_hours": 24,
     "model": "random_forest",
-    "rows": 697,
+    "rows": 1,
     "features": [
       "dew_point",
       "humidity",
@@ -21688,6 +20711,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
+      "om_ghi",
+      "om_dhi",
       "hour",
       "day",
       "month",
@@ -21736,9 +20761,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3682342467019886,
-      "rmse": 1.7623303127267513,
-      "r2": 0.8847432219259136
+      "mae": 0.6830352997307401,
+      "rmse": 0.6830352997307401,
+      "r2": null
     },
     "model_path": "models\\temperature_1d_random_forest_prospective.joblib"
   },
@@ -22289,13 +21314,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -22344,8 +21364,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.7488314032035746,
-      "rmse": 2.7488314032035746,
+      "mae": 2.933924797589068,
+      "rmse": 2.933924797589068,
       "r2": null
     },
     "model_path": "models\\temperature_2d_extra_trees_prospective.joblib"
@@ -22803,13 +21823,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -22858,8 +21873,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.19154932654495127,
-      "rmse": 0.19154932654495127,
+      "mae": 0.624768323164492,
+      "rmse": 0.624768323164492,
       "r2": null
     },
     "model_path": "models\\temperature_3d_extra_trees_prospective.joblib"
@@ -23317,13 +22332,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -23372,8 +22382,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2978339205786682,
-      "rmse": 1.2978339205786682,
+      "mae": 1.31864691472585,
+      "rmse": 1.31864691472585,
       "r2": null
     },
     "model_path": "models\\temperature_5d_extra_trees_prospective.joblib"
@@ -23831,13 +22841,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -23886,8 +22891,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.17081502680826688,
-      "rmse": 0.17081502680826688,
+      "mae": 0.29151718838636853,
+      "rmse": 0.29151718838636853,
       "r2": null
     },
     "model_path": "models\\temperature_7d_extra_trees_prospective.joblib"
@@ -24345,13 +23350,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -24400,8 +23400,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2131408633561591,
-      "rmse": 1.2131408633561591,
+      "mae": 0.9087861363636236,
+      "rmse": 0.9087861363636236,
       "r2": null
     },
     "model_path": "models\\temperature_10d_extra_trees_prospective.joblib"
@@ -24859,13 +23859,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -24914,8 +23909,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 3.0423736413586404,
-      "rmse": 3.0423736413586404,
+      "mae": 3.1095476952246806,
+      "rmse": 3.1095476952246806,
       "r2": null
     },
     "model_path": "models\\temperature_14d_extra_trees_prospective.joblib"
@@ -25373,13 +24368,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -25428,8 +24418,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.14335084334737047,
-      "rmse": 0.14335084334737047,
+      "mae": 0.17308297725191935,
+      "rmse": 0.17308297725191935,
       "r2": null
     },
     "model_path": "models\\temperature_30d_extra_trees_prospective.joblib"
@@ -25716,13 +24706,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -25771,9 +24756,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 21.650355953346207,
-      "rmse": 43.52204353240421,
-      "r2": 0.9799608033894579
+      "mae": 21.97975640440009,
+      "rmse": 43.81975104127512,
+      "r2": 0.9796857141213277
     },
     "model_path": "models\\GHI_1d_catboost_validation.joblib"
   },
@@ -25807,13 +24792,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -25862,9 +24842,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 26.559212536626752,
-      "rmse": 50.43575892426946,
-      "r2": 0.9732155326942858
+      "mae": 26.29051556015996,
+      "rmse": 49.992284304008486,
+      "r2": 0.973684486067849
     },
     "model_path": "models\\GHI_2d_catboost_validation.joblib"
   },
@@ -25898,13 +24878,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -25953,9 +24928,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.366839586449668,
-      "rmse": 52.88473732749343,
-      "r2": 0.9706687255099432
+      "mae": 28.356160089281726,
+      "rmse": 52.41774548383712,
+      "r2": 0.9711844504539598
     },
     "model_path": "models\\GHI_3d_catboost_validation.joblib"
   },
@@ -25989,13 +24964,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26044,9 +25014,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 29.16790549109898,
-      "rmse": 53.1415113139884,
-      "r2": 0.9706148766390531
+      "mae": 29.612618853068874,
+      "rmse": 54.222185154375445,
+      "r2": 0.9694075860649466
     },
     "model_path": "models\\GHI_5d_catboost_validation.joblib"
   },
@@ -26080,13 +25050,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26135,9 +25100,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.4348818649149,
-      "rmse": 53.23682033649956,
-      "r2": 0.970574343588221
+      "mae": 28.30560254705224,
+      "rmse": 52.609778720235,
+      "r2": 0.9712634324281354
     },
     "model_path": "models\\GHI_7d_catboost_validation.joblib"
   },
@@ -26171,13 +25136,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26226,9 +25186,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.79246355866085,
-      "rmse": 52.2493691725489,
-      "r2": 0.9718424739500057
+      "mae": 28.15227983659409,
+      "rmse": 52.62895780208117,
+      "r2": 0.9714318622335874
     },
     "model_path": "models\\GHI_10d_catboost_validation.joblib"
   },
@@ -26262,13 +25222,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26317,9 +25272,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 27.502420085357784,
-      "rmse": 51.408304394657854,
-      "r2": 0.9731163538238417
+      "mae": 27.633638557195695,
+      "rmse": 51.70773078810033,
+      "r2": 0.9728022755490128
     },
     "model_path": "models\\GHI_14d_catboost_validation.joblib"
   },
@@ -26353,13 +25308,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26408,9 +25358,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 30.873172127154316,
-      "rmse": 56.481168336430855,
-      "r2": 0.9690986691382585
+      "mae": 30.19630338704516,
+      "rmse": 55.90477046390782,
+      "r2": 0.9697261553506279
     },
     "model_path": "models\\GHI_30d_catboost_validation.joblib"
   },
@@ -26444,13 +25394,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26499,9 +25444,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.8979778356176641,
-      "rmse": 1.162130693334961,
-      "r2": 0.9746709737338799
+      "mae": 0.9149900759800854,
+      "rmse": 1.1824632492332519,
+      "r2": 0.9737769106467059
     },
     "model_path": "models\\temperature_1d_catboost_validation.joblib"
   },
@@ -26535,13 +25480,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26590,9 +25530,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.2482110168848775,
-      "rmse": 1.590752988921407,
-      "r2": 0.952582238708253
+      "mae": 1.2203563710625844,
+      "rmse": 1.5465463211175166,
+      "r2": 0.9551810771620752
     },
     "model_path": "models\\temperature_2d_catboost_validation.joblib"
   },
@@ -26626,13 +25566,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26681,9 +25616,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4019930829947267,
-      "rmse": 1.7744223822059317,
-      "r2": 0.9409325114254503
+      "mae": 1.4016946417427274,
+      "rmse": 1.769583486463824,
+      "r2": 0.9412542292989632
     },
     "model_path": "models\\temperature_3d_catboost_validation.joblib"
   },
@@ -26717,13 +25652,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26772,9 +25702,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4565389271777403,
-      "rmse": 1.8055987001552203,
-      "r2": 0.9386392569856795
+      "mae": 1.4257389757997148,
+      "rmse": 1.770129245538806,
+      "r2": 0.9410263378009461
     },
     "model_path": "models\\temperature_5d_catboost_validation.joblib"
   },
@@ -26808,13 +25738,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26863,9 +25788,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.5932554299604187,
-      "rmse": 2.0038580605341787,
-      "r2": 0.9233914401637732
+      "mae": 1.617641502386605,
+      "rmse": 2.0338624071143294,
+      "r2": 0.9210801003030373
     },
     "model_path": "models\\temperature_7d_catboost_validation.joblib"
   },
@@ -26899,13 +25824,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -26954,9 +25874,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4660037142907245,
-      "rmse": 1.8045573518640918,
-      "r2": 0.9358722320318354
+      "mae": 1.5088272148620638,
+      "rmse": 1.8625141280638207,
+      "r2": 0.9316869151873198
     },
     "model_path": "models\\temperature_10d_catboost_validation.joblib"
   },
@@ -26990,13 +25910,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27045,9 +25960,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.4594985185785005,
-      "rmse": 1.8090979354987062,
-      "r2": 0.9351032882760157
+      "mae": 1.4765431635631436,
+      "rmse": 1.8277124499811368,
+      "r2": 0.9337609223874895
     },
     "model_path": "models\\temperature_14d_catboost_validation.joblib"
   },
@@ -27081,13 +25996,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27136,9 +26046,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6221499855327233,
-      "rmse": 1.999849705699382,
-      "r2": 0.9140043202110115
+      "mae": 1.6445596878188373,
+      "rmse": 2.020932321339205,
+      "r2": 0.9121816128893218
     },
     "model_path": "models\\temperature_30d_catboost_validation.joblib"
   },
@@ -27172,13 +26082,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27227,9 +26132,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 28.13535113344673,
-      "rmse": 57.796330456534555,
-      "r2": 0.9582804089617125
+      "mae": 28.364434693126853,
+      "rmse": 58.16944342027585,
+      "r2": 0.9577400160039479
     },
     "model_path": "models\\GHI_1d_catboost_testing.joblib"
   },
@@ -27263,13 +26168,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27318,9 +26218,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 35.386586962698324,
-      "rmse": 71.14384725252408,
-      "r2": 0.9367836562212033
+      "mae": 35.46582825287729,
+      "rmse": 71.50970439924374,
+      "r2": 0.9361318045066604
     },
     "model_path": "models\\GHI_2d_catboost_testing.joblib"
   },
@@ -27354,13 +26254,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27409,9 +26304,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 37.85201058478344,
-      "rmse": 74.8769481836498,
-      "r2": 0.9299620496521848
+      "mae": 37.815493153568994,
+      "rmse": 75.59208804873435,
+      "r2": 0.9286178143856804
     },
     "model_path": "models\\GHI_3d_catboost_testing.joblib"
   },
@@ -27445,13 +26340,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27500,9 +26390,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 38.27249821849743,
-      "rmse": 75.38198373493192,
-      "r2": 0.9290284471061852
+      "mae": 38.79959689084133,
+      "rmse": 75.35057265161893,
+      "r2": 0.9290875813657473
     },
     "model_path": "models\\GHI_5d_catboost_testing.joblib"
   },
@@ -27536,13 +26426,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27591,9 +26476,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 39.77527073561057,
-      "rmse": 77.89174866249886,
-      "r2": 0.9242783456760966
+      "mae": 39.93567959942859,
+      "rmse": 78.63695500673064,
+      "r2": 0.9228225255531739
     },
     "model_path": "models\\GHI_7d_catboost_testing.joblib"
   },
@@ -27627,13 +26512,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27682,9 +26562,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 42.17377439582217,
-      "rmse": 80.51687509647896,
-      "r2": 0.9190945053510329
+      "mae": 41.62343352849663,
+      "rmse": 79.68923476661637,
+      "r2": 0.9207492268705193
     },
     "model_path": "models\\GHI_10d_catboost_testing.joblib"
   },
@@ -27718,13 +26598,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27773,9 +26648,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 41.288468783464815,
-      "rmse": 79.14296673742406,
-      "r2": 0.9220566160617986
+      "mae": 40.08742123288878,
+      "rmse": 77.61092026408518,
+      "r2": 0.9250450582784734
     },
     "model_path": "models\\GHI_14d_catboost_testing.joblib"
   },
@@ -27809,13 +26684,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27864,9 +26734,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 42.40716429452109,
-      "rmse": 82.87958877167989,
-      "r2": 0.9144453146145632
+      "mae": 41.64926415445796,
+      "rmse": 82.33890874967788,
+      "r2": 0.9155579365419673
     },
     "model_path": "models\\GHI_30d_catboost_testing.joblib"
   },
@@ -27900,13 +26770,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -27955,9 +26820,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 0.881869016401191,
-      "rmse": 1.1636035001617218,
-      "r2": 0.9632869500961219
+      "mae": 0.8995794046757232,
+      "rmse": 1.1842471295525379,
+      "r2": 0.9619727335095585
     },
     "model_path": "models\\temperature_1d_catboost_testing.joblib"
   },
@@ -27991,13 +26856,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28046,9 +26906,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.214175710125565,
-      "rmse": 1.6240600393287037,
-      "r2": 0.9283278744603424
+      "mae": 1.2085562314346727,
+      "rmse": 1.6180685883419523,
+      "r2": 0.9288557218463557
     },
     "model_path": "models\\temperature_2d_catboost_testing.joblib"
   },
@@ -28082,13 +26942,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28137,9 +26992,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.3712239889748692,
-      "rmse": 1.8139730427524454,
-      "r2": 0.9103178616521397
+      "mae": 1.3671605319646252,
+      "rmse": 1.8068899396866251,
+      "r2": 0.911016866116525
     },
     "model_path": "models\\temperature_3d_catboost_testing.joblib"
   },
@@ -28173,13 +27028,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28228,9 +27078,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6230627123351364,
-      "rmse": 2.146551196370481,
-      "r2": 0.8739303411043613
+      "mae": 1.594084778426158,
+      "rmse": 2.109778676774853,
+      "r2": 0.8782127362970598
     },
     "model_path": "models\\temperature_5d_catboost_testing.joblib"
   },
@@ -28264,13 +27114,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28319,9 +27164,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.6902737291493128,
-      "rmse": 2.2340847702665942,
-      "r2": 0.8630654321151052
+      "mae": 1.740316479629147,
+      "rmse": 2.303507757629307,
+      "r2": 0.854422868365414
     },
     "model_path": "models\\temperature_7d_catboost_testing.joblib"
   },
@@ -28355,13 +27200,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28410,9 +27250,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7246164782590159,
-      "rmse": 2.3172954053902926,
-      "r2": 0.85148882761568
+      "mae": 1.7451265092220287,
+      "rmse": 2.360100393993707,
+      "r2": 0.8459515686818642
     },
     "model_path": "models\\temperature_10d_catboost_testing.joblib"
   },
@@ -28446,13 +27286,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28501,9 +27336,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.744205037965197,
-      "rmse": 2.3722846693641046,
-      "r2": 0.8441965579529118
+      "mae": 1.706711428597985,
+      "rmse": 2.317870491960138,
+      "r2": 0.8512620550459576
     },
     "model_path": "models\\temperature_14d_catboost_testing.joblib"
   },
@@ -28537,13 +27372,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28592,9 +27422,9 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 1.7873046866523892,
-      "rmse": 2.416591759864194,
-      "r2": 0.8368658730277828
+      "mae": 1.7667550065817272,
+      "rmse": 2.3873610468108604,
+      "r2": 0.8407884943482815
     },
     "model_path": "models\\temperature_30d_catboost_testing.joblib"
   },
@@ -28718,13 +27548,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28773,8 +27598,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 2.6760161471367496,
-      "rmse": 2.6760161471367496,
+      "mae": 9.300975940860496,
+      "rmse": 9.300975940860496,
       "r2": null
     },
     "model_path": "models\\GHI_7d_catboost_prospective.joblib"
@@ -28812,13 +27637,8 @@
       "clearness_index_kt",
       "diffuse_fraction_kd",
       "attenuation_factor",
-      "om_cloud_low",
-      "om_cloud_mid",
-      "om_cloud_high",
       "om_ghi",
-      "om_dni",
       "om_dhi",
-      "om_ghi_ratio",
       "hour",
       "day",
       "month",
@@ -28867,8 +27687,8 @@
       "humidity_rolling24h_std"
     ],
     "metrics": {
-      "mae": 4.6368121498338155,
-      "rmse": 4.6368121498338155,
+      "mae": 4.4195836729919336,
+      "rmse": 4.4195836729919336,
       "r2": null
     },
     "model_path": "models\\GHI_10d_catboost_prospective.joblib"
