@@ -392,12 +392,16 @@ def clean_and_freeze_data(
     return df
 
 
-def add_open_meteo_features(df: pd.DataFrame, openmeteo_path: Path) -> pd.DataFrame:
-    """Merge Open-Meteo (ERA5) cross-source features aligned to ``df``'s index.
+# Open-Meteo (ERA5) radiation as an independent second opinion. Shifted -1 h to
+# match NASA POWER's hour-labeling (see scripts/compare_sources.py). The cloud
+# layers and a cross-source ratio were tried too but ranked #40-70 of 75 in the
+# retrain -- the trees already have NASA cloud_cover + clear-sky -- so only the
+# GHI/DHI channels are kept.
+OPEN_METEO_FEATURE_MAP = {"GHI": "om_ghi", "DHI": "om_dhi"}
 
-    Radiation channels are shifted -1 h to match NASA POWER's hour-labeling
-    (see scripts/compare_sources.py); cloud layers keep their native timestamp.
-    """
+
+def add_open_meteo_features(df: pd.DataFrame, openmeteo_path: Path) -> pd.DataFrame:
+    """Merge the Open-Meteo radiation second opinion, aligned to ``df``'s index."""
     if not openmeteo_path.exists():
         logger.warning(
             "Open-Meteo file missing; skipping cross-source features: %s", openmeteo_path
@@ -409,20 +413,9 @@ def add_open_meteo_features(df: pd.DataFrame, openmeteo_path: Path) -> pd.DataFr
     other = other.sort_index()
     other = other[~other.index.duplicated(keep="last")].reindex(df.index)
 
-    for src, dst in (("cloud_cover_low", "om_cloud_low"),
-                     ("cloud_cover_mid", "om_cloud_mid"),
-                     ("cloud_cover_high", "om_cloud_high")):
-        if src in other.columns:
-            df[dst] = other[src]
-
-    for src, dst in (("GHI", "om_ghi"), ("DNI", "om_dni"), ("DHI", "om_dhi")):
+    for src, dst in OPEN_METEO_FEATURE_MAP.items():
         if src in other.columns:
             df[dst] = other[src].shift(-1)
-
-    if "om_ghi" in df.columns and "GHI" in df.columns:
-        daytime = df["GHI"] > 5
-        ratio = df["GHI"] / df["om_ghi"].where(df["om_ghi"] > 5)
-        df["om_ghi_ratio"] = ratio.where(daytime).clip(0, 3)
 
     merged = sum(c.startswith("om_") for c in df.columns)
     logger.info("Merged %d Open-Meteo cross-source features", merged)

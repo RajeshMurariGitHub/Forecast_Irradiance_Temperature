@@ -32,8 +32,8 @@ data:
     archive_url: "https://archive-api.open-meteo.com/v1/archive"
     raw_filename: "hyderabad_openmeteo_hourly.csv"
     comparison_filename: "source_comparison.json"
-    # Merge om_cloud_low/mid/high, om_ghi/dni/dhi (-1h aligned) and om_ghi_ratio
-    # into the forecast dataset when the Open-Meteo file is present.
+    # Merge om_ghi / om_dhi (ERA5 radiation, -1h aligned) into the forecast
+    # dataset when the Open-Meteo file is present.
     merge_features: true
 
   # Date ranges for data collection

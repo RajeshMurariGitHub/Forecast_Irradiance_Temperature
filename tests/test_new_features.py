@@ -300,24 +300,22 @@ def test_parse_open_meteo_response_maps_and_keeps_extra_cloud_layers():
     assert "shortwave_radiation" in OPEN_METEO_HOURLY and OPEN_METEO_HOURLY["shortwave_radiation"] == "GHI"
 
 
-def test_add_open_meteo_features_shifts_radiation_and_builds_ratio(tmp_path):
+def test_add_open_meteo_features_shifts_radiation_minus_one_hour(tmp_path):
     idx = pd.date_range("2025-06-15 00:00", periods=6, freq="h")
     nasa = pd.DataFrame({"GHI": [0.0, 0.0, 50.0, 100.0, 200.0, 300.0]}, index=idx)
 
     om_path = tmp_path / "om.csv"
     pd.DataFrame(
-        {"GHI": [0.0, 10.0, 60.0, 120.0, 240.0, 360.0], "cloud_cover_low": [90, 80, 70, 60, 50, 40]},
+        {"GHI": [0.0, 10.0, 60.0, 120.0, 240.0, 360.0], "DHI": [0.0, 5.0, 20.0, 40.0, 60.0, 80.0]},
         index=idx,
     ).to_csv(om_path)
 
     out = add_open_meteo_features(nasa.copy(), om_path)
 
-    # radiation shifted -1h: om_ghi[t] == raw om GHI[t+1]
+    # radiation shifted -1h: om_ghi[t] == raw om GHI[t+1]; last row -> NaN
     assert out["om_ghi"].tolist()[:5] == [10.0, 60.0, 120.0, 240.0, 360.0]
-    assert out["om_cloud_low"].tolist() == [90, 80, 70, 60, 50, 40]  # cloud not shifted
-    # ratio = NASA GHI / shifted om_ghi, daytime only. At 03:00 that is 100 / 240.
-    assert out.loc[idx[3], "om_ghi_ratio"] == pytest.approx(100.0 / 240.0, rel=1e-6)
-    assert pd.isna(out.loc[idx[0], "om_ghi_ratio"])  # night
+    assert out["om_dhi"].tolist()[:5] == [5.0, 20.0, 40.0, 60.0, 80.0]
+    assert set(c for c in out.columns if c.startswith("om_")) == {"om_ghi", "om_dhi"}
 
 
 def test_add_open_meteo_features_no_file_is_a_noop(tmp_path):
