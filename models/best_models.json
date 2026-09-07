@@ -1,145 +1,145 @@
 {
   "selection_metric": "rmse",
   "split": "validation",
-  "generated_at": "2026-09-07T06:36:46+00:00",
+  "generated_at": "2026-09-07T09:44:29+00:00",
   "best_per_horizon": {
     "GHI": {
       "1": {
         "model": "extra_trees",
-        "rmse": 43.5755,
-        "mae": 20.4446,
-        "r2": 0.9799,
+        "rmse": 43.3935,
+        "mae": 20.284,
+        "r2": 0.9801,
         "model_path": "models\\GHI_1d_extra_trees_validation.joblib"
       },
       "2": {
-        "model": "extra_trees",
-        "rmse": 49.3411,
-        "mae": 24.3958,
-        "r2": 0.9744,
-        "model_path": "models\\GHI_2d_extra_trees_validation.joblib"
+        "model": "random_forest",
+        "rmse": 49.3561,
+        "mae": 24.2467,
+        "r2": 0.9743,
+        "model_path": "models\\GHI_2d_random_forest_validation.joblib"
       },
       "3": {
-        "model": "extra_trees",
-        "rmse": 52.3766,
-        "mae": 26.3982,
-        "r2": 0.9712,
-        "model_path": "models\\GHI_3d_extra_trees_validation.joblib"
+        "model": "random_forest",
+        "rmse": 52.0185,
+        "mae": 25.9249,
+        "r2": 0.9716,
+        "model_path": "models\\GHI_3d_random_forest_validation.joblib"
       },
       "5": {
         "model": "random_forest",
-        "rmse": 53.6261,
-        "mae": 27.0714,
-        "r2": 0.9701,
+        "rmse": 53.1348,
+        "mae": 26.9206,
+        "r2": 0.9706,
         "model_path": "models\\GHI_5d_random_forest_validation.joblib"
       },
       "7": {
         "model": "catboost",
-        "rmse": 52.6663,
-        "mae": 28.2568,
-        "r2": 0.9712,
+        "rmse": 53.2368,
+        "mae": 28.4349,
+        "r2": 0.9706,
         "model_path": "models\\GHI_7d_catboost_validation.joblib"
       },
       "10": {
         "model": "catboost",
-        "rmse": 52.0458,
-        "mae": 27.6366,
-        "r2": 0.9721,
+        "rmse": 52.2494,
+        "mae": 27.7925,
+        "r2": 0.9718,
         "model_path": "models\\GHI_10d_catboost_validation.joblib"
       },
       "14": {
         "model": "catboost",
-        "rmse": 51.4373,
-        "mae": 26.8562,
+        "rmse": 51.4083,
+        "mae": 27.5024,
         "r2": 0.9731,
         "model_path": "models\\GHI_14d_catboost_validation.joblib"
       },
       "30": {
         "model": "extra_trees",
-        "rmse": 54.3378,
-        "mae": 28.0838,
-        "r2": 0.9714,
+        "rmse": 54.6673,
+        "mae": 28.2225,
+        "r2": 0.9711,
         "model_path": "models\\GHI_30d_extra_trees_validation.joblib"
       }
     },
     "temperature": {
       "1": {
         "model": "extra_trees",
-        "rmse": 1.1468,
-        "mae": 0.8719,
-        "r2": 0.9753,
+        "rmse": 1.1498,
+        "mae": 0.8738,
+        "r2": 0.9752,
         "model_path": "models\\temperature_1d_extra_trees_validation.joblib"
       },
       "2": {
         "model": "extra_trees",
-        "rmse": 1.4273,
-        "mae": 1.1195,
-        "r2": 0.9618,
+        "rmse": 1.4446,
+        "mae": 1.1352,
+        "r2": 0.9609,
         "model_path": "models\\temperature_2d_extra_trees_validation.joblib"
       },
       "3": {
         "model": "extra_trees",
-        "rmse": 1.5949,
-        "mae": 1.2548,
-        "r2": 0.9523,
+        "rmse": 1.577,
+        "mae": 1.2419,
+        "r2": 0.9533,
         "model_path": "models\\temperature_3d_extra_trees_validation.joblib"
       },
       "5": {
         "model": "extra_trees",
-        "rmse": 1.6985,
-        "mae": 1.3292,
-        "r2": 0.9457,
+        "rmse": 1.7304,
+        "mae": 1.352,
+        "r2": 0.9436,
         "model_path": "models\\temperature_5d_extra_trees_validation.joblib"
       },
       "7": {
         "model": "extra_trees",
-        "rmse": 1.771,
-        "mae": 1.3935,
-        "r2": 0.9402,
+        "rmse": 1.782,
+        "mae": 1.4093,
+        "r2": 0.9394,
         "model_path": "models\\temperature_7d_extra_trees_validation.joblib"
       },
       "10": {
         "model": "extra_trees",
-        "rmse": 1.6169,
-        "mae": 1.3109,
-        "r2": 0.9485,
+        "rmse": 1.6243,
+        "mae": 1.3136,
+        "r2": 0.948,
         "model_path": "models\\temperature_10d_extra_trees_validation.joblib"
       },
       "14": {
         "model": "extra_trees",
-        "rmse": 1.553,
-        "mae": 1.2524,
-        "r2": 0.9522,
+        "rmse": 1.5767,
+        "mae": 1.2696,
+        "r2": 0.9507,
         "model_path": "models\\temperature_14d_extra_trees_validation.joblib"
       },
       "30": {
         "model": "extra_trees",
-        "rmse": 1.7328,
-        "mae": 1.3936,
-        "r2": 0.9354,
+        "rmse": 1.7308,
+        "mae": 1.4074,
+        "r2": 0.9356,
         "model_path": "models\\temperature_30d_extra_trees_validation.joblib"
       }
     }
   },
   "best_overall": {
     "GHI": {
-      "model": "extra_trees",
-      "mean_rmse": 51.7795,
-      "mean_mae": 25.8139,
+      "model": "catboost",
+      "mean_rmse": 51.67,
+      "mean_mae": 27.5434,
       "model_paths": [
-        "models\\GHI_10d_extra_trees_validation.joblib",
-        "models\\GHI_14d_extra_trees_validation.joblib",
-        "models\\GHI_1d_extra_trees_validation.joblib",
-        "models\\GHI_2d_extra_trees_validation.joblib",
-        "models\\GHI_30d_extra_trees_validation.joblib",
-        "models\\GHI_3d_extra_trees_validation.joblib",
-        "models\\GHI_5d_extra_trees_validation.joblib",
-        "models\\GHI_7d_extra_trees_validation.joblib"
+        "models\\GHI_10d_catboost_validation.joblib",
+        "models\\GHI_14d_catboost_validation.joblib",
+        "models\\GHI_1d_catboost_validation.joblib",
+        "models\\GHI_2d_catboost_validation.joblib",
+        "models\\GHI_30d_catboost_validation.joblib",
+        "models\\GHI_3d_catboost_validation.joblib",
+        "models\\GHI_5d_catboost_validation.joblib",
+        "models\\GHI_7d_catboost_validation.joblib"
       ]
     },
     "temperature": {
       "model": "extra_trees",
-      "mean_rmse": 1.5676,
-      "mean_mae": 1.2407,
+      "mean_rmse": 1.577,
+      "mean_mae": 1.2503,
       "model_paths": [
         "models\\temperature_10d_extra_trees_validation.joblib",
         "models\\temperature_14d_extra_trees_validation.joblib",
