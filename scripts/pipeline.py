@@ -27,6 +27,17 @@ def load_config(config_path: str = "config/config.yaml") -> dict:
         return yaml.safe_load(fh)
 
 
+def local_offset_hours(longitude: float) -> int:
+    """Whole-hour local-time offset from UTC for a longitude (NASA POWER LST convention)."""
+    return int(round(longitude / 15))
+
+
+def local_tz_name(longitude: float) -> str:
+    """Fixed-offset tz string for pvlib, e.g. ``Etc/GMT-5`` == UTC+5 for Hyderabad."""
+    offset = local_offset_hours(longitude)
+    return f"Etc/GMT{'+' if offset < 0 else '-'}{abs(offset)}"
+
+
 def build_nasa_power_params(config: dict, start_date: str, end_date: str) -> dict:
     location = config["location"]
     start = pd.Timestamp(start_date).strftime("%Y%m%d")
@@ -41,6 +52,9 @@ def build_nasa_power_params(config: dict, start_date: str, end_date: str) -> dic
             "T2M,T2MDEW,RH2M,CLOUD_AMT,WS10M,PRECTOTCORR,PS,"
             "ALLSKY_SFC_SW_DWN,ALLSKY_SFC_SW_DNI,ALLSKY_SFC_SW_DIFF"
         ),
+        # Request UTC explicitly, then shift to whole-hour local time locally, so
+        # timestamps and pvlib solar geometry stay mutually consistent.
+        "time-standard": "UTC",
         "format": "JSON",
     }
 
@@ -144,6 +158,12 @@ def fetch_nasa_power_data(
 
     df = pd.concat(chunked_frames).sort_index()
     df = df[~df.index.duplicated(keep="last")]
+
+    # NASA POWER timestamps were requested as UTC; shift to whole-hour local time.
+    offset = local_offset_hours(location["longitude"])
+    df.index = df.index + pd.Timedelta(hours=offset)
+    df.index.name = "timestamp"
+    logger.info("Shifted timestamps to local time (UTC%+d)", offset)
 
     if "GHI_W_m2" not in df.columns and "GHI_energy" in df.columns:
         df["GHI"] = df["GHI_energy"]
@@ -310,12 +330,15 @@ def build_forecast_dataset(
         df["temperature"] = df["T2M"]
 
     location = config["location"]
+    # The stored index is whole-hour local time; tell pvlib which fixed offset
+    # that is so solar geometry lines up with the observed irradiance.
+    solar_tz = local_tz_name(location["longitude"])
     if "solar_elevation" not in df.columns:
         solar = SolarGeometry(
             latitude=location["latitude"],
             longitude=location["longitude"],
             elevation=location.get("elevation", 0),
-            timezone=location.get("timezone", "UTC"),
+            timezone=solar_tz,
         )
         df = solar.add_solar_features(df)
 
@@ -324,7 +347,7 @@ def build_forecast_dataset(
             latitude=location["latitude"],
             longitude=location["longitude"],
             elevation=location.get("elevation", 0),
-            timezone=location.get("timezone", "UTC"),
+            timezone=solar_tz,
         )
         df = clear_sky.add_clearsky_features(df, ghi_col="GHI")
 

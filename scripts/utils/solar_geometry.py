@@ -68,11 +68,13 @@ class SolarGeometry:
         pd.DataFrame
             DataFrame with columns: elevation, azimuth, zenith
         """
-        logger.info("Calculating solar position for %s timestamps", len(times))
+        logger.info("Calculating solar position for %d timestamps", len(times))
 
-        # Use pvlib's solar position calculation
+        # pvlib assumes a tz-naive index is UTC; localize to the caller's tz so
+        # solar position matches the actual local clock of the observations.
+        times_aware = times if times.tz is not None else times.tz_localize(self.timezone)
         solar_pos = solarposition.get_solarposition(
-            times,
+            times_aware,
             self.latitude,
             self.longitude,
             self.elevation,
@@ -80,11 +82,11 @@ class SolarGeometry:
             temperature=25,
         )
 
-        # Extract key columns
+        # Return with the caller's original (naive) index; align by position.
         result = pd.DataFrame(index=times)
-        result["solar_elevation"] = solar_pos["elevation"]
-        result["solar_azimuth"] = solar_pos["azimuth"]
-        result["solar_zenith"] = solar_pos["apparent_zenith"]
+        result["solar_elevation"] = solar_pos["elevation"].to_numpy()
+        result["solar_azimuth"] = solar_pos["azimuth"].to_numpy()
+        result["solar_zenith"] = solar_pos["apparent_zenith"].to_numpy()
 
         return result
 

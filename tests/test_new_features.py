@@ -18,6 +18,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from api import services  # noqa: E402
 from scripts import analyze_models, model_diagnostics  # noqa: E402
+from scripts.pipeline import local_offset_hours, local_tz_name  # noqa: E402
+from scripts.utils.solar_geometry import SolarGeometry  # noqa: E402
 from scripts.train_models import (  # noqa: E402
     evaluate_model,
     get_split_bounds,
@@ -248,6 +250,27 @@ def test_extract_feature_importance_returns_empty_for_persistence_dict(tmp_path)
     joblib.dump({"type": "persistence", "target": "GHI", "lag_hours": 24}, path)
 
     assert model_diagnostics.extract_feature_importance(path) == {}
+
+
+# --------------------------------------------------------------------------- #
+# Local-time handling (scripts/pipeline.py + scripts/utils/solar_geometry.py)
+# --------------------------------------------------------------------------- #
+def test_local_offset_and_tz_for_hyderabad():
+    assert local_offset_hours(78.4867) == 5
+    assert local_tz_name(78.4867) == "Etc/GMT-5"  # Etc/GMT-5 == UTC+5
+    assert local_tz_name(-75.0) == "Etc/GMT+5"    # western hemisphere, UTC-5
+
+
+def test_solar_position_is_localized_not_treated_as_utc():
+    """Solar noon (max elevation) must fall near local midday, not ~5h off."""
+    geo = SolarGeometry(latitude=17.385, longitude=78.487, elevation=500, timezone="Etc/GMT-5")
+    times = pd.date_range("2025-06-15 00:00", periods=24, freq="h")  # tz-naive local
+
+    elevation = geo.calculate_solar_position(times)["solar_elevation"]
+
+    peak_hour = int(elevation.to_numpy().argmax())
+    assert 11 <= peak_hour <= 13
+    assert elevation.iloc[2] < 0  # 02:00 local is night
 
 
 # --------------------------------------------------------------------------- #

@@ -79,8 +79,11 @@ class ClearSkyModel:
             "Calculating clear-sky irradiance (%s model) for %d timestamps", self.model, len(times)
         )
 
+        # pvlib assumes a tz-naive index is UTC; localize so the clear-sky curve
+        # lines up with the actual local clock of the observations.
+        times_aware = times if times.tz is not None else times.tz_localize(self.timezone)
         solar_pos = solarposition.get_solarposition(
-            times,
+            times_aware,
             latitude=self.latitude,
             longitude=self.longitude,
             altitude=self.elevation,
@@ -94,18 +97,22 @@ class ClearSkyModel:
                 longitude=self.longitude,
                 altitude=self.elevation,
                 tz=self.timezone,
-            ).get_airmass(times=times)["airmass_absolute"].to_numpy()
+            ).get_airmass(times=times_aware)["airmass_absolute"].to_numpy()
             cs = clearsky.ineichen(zenith, airmass, linke_turbidity, altitude=self.elevation)
         elif self.model == "haurwitz":
             cs = clearsky.haurwitz(zenith)
         else:
             raise ValueError(f"Unknown model: {self.model}")
 
-        # Ensure night values are 0
+        def _column(name: str) -> np.ndarray:
+            # pvlib returns a dict of ndarrays for array input, a DataFrame for Series.
+            values = np.asarray(cs[name]) if name in cs else np.zeros(len(times))
+            return np.clip(values, 0.0, None)
+
         result = pd.DataFrame(index=times)
-        result['clear_sky_ghi'] = pd.Series(cs['ghi'], index=times).clip(lower=0)
-        result['clear_sky_dni'] = pd.Series(cs.get('dni', 0), index=times).clip(lower=0)
-        result['clear_sky_dhi'] = pd.Series(cs.get('dhi', 0), index=times).clip(lower=0)
+        result["clear_sky_ghi"] = _column("ghi")
+        result["clear_sky_dni"] = _column("dni")
+        result["clear_sky_dhi"] = _column("dhi")
 
         return result
 
