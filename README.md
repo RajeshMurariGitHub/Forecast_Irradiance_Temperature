@@ -106,33 +106,22 @@ Forecast_Irradiance_Temperature/
 - File: `scripts/pipeline.py`
 
 ### Phase 2: Data Cleaning & Quality Assurance 🔄
-- Check missing values, duplicates, continuity
-- Validate physical ranges
-- Retain nighttime GHI = 0
-- Create data quality report
-- File: `notebooks/02_data_cleaning_qa.ipynb`
+- `-999` NASA POWER sentinels → NaN, hourly continuity, pressure kPa → hPa,
+  short-gap time interpolation
+- Physical-range checks and a `data/processed/data_quality_report.json`
+- Exploratory notebook: `notebooks/02_data_cleaning_qa.ipynb`
+- Code: `scripts/pipeline.py` (`--stage clean`)
 
-### Phase 3: Exploratory Data Analysis (EDA) 📊
-- **Temporal structure:** hourly, daily, monthly, yearly, seasonal patterns
-- **Target distributions:** GHI and temperature distributions (daytime, nighttime, seasonal)
-- **Weather relationships:** GHI ↔ cloud cover, humidity, temperature, DNI, DHI
-- **Solar geometry analysis:** elevation, zenith, azimuth, sunrise/sunset
-- **Clear-sky analysis:** actual vs clear-sky irradiance
-- File: `notebooks/03_eda.ipynb`
-
-### Phase 4: Feature Engineering 🔧
-- Temporal features (hour, day, month, season, weekday)
-- Lag features (1h, 3h, 6h, 12h, 24h, 48h, 7-day)
-- Rolling statistics (mean, std, min, max)
-- Solar geometry (elevation, zenith, azimuth)
-- Clear-sky irradiance and clearness indices
-- File: `notebooks/04_feature_engineering.ipynb`
-
-### Phase 5: Forecast Dataset Building 📦
-- Create train/test/validation/prospective splits
-- Apply information availability rules
-- Prevent data leakage
-- File: `notebooks/05_forecast_dataset.ipynb`
+### Phase 3-5: Feature Engineering & Forecast Dataset 🔧📦
+- Solar geometry (elevation, zenith, azimuth, airmass, sunrise/sunset — computed
+  at the correct local time), Ineichen clear-sky GHI/DNI/DHI + clearness indices
+- Temporal features + cyclical encodings, lag features (1/6/12/24 h), rolling
+  mean/std (6/12/24 h)
+- Open-Meteo `om_ghi` / `om_dhi` radiation second-opinion (−1 h aligned)
+- Direct-horizon targets with split-bounded forecast origins (no leakage across
+  training / testing / validation / prospective)
+- Output: `data/processed/forecast_dataset.csv` (57,696 rows × 71 columns)
+- Code: `scripts/pipeline.py` (`--stage features`), `scripts/utils/`
 
 ### Phase 6: Model Development & Training 🤖
 - Persistence baseline (t-24 h) + Ridge, Random Forest, Extra Trees,
@@ -301,11 +290,11 @@ model = joblib.load(best["best_per_horizon"]["GHI"]["7"]["model_path"])  # CatBo
 
 ## 👤 Author Notes
 
-- **Location:** Hyderabad (17.385°N, 78.487°E)
-- **Data Period:** 2020-01-01 → 2026-05-31 (ongoing)
-- **Frequency:** Hourly
-- **Data Source:** NASA POWER API
+- **Location:** Hyderabad (17.385°N, 78.487°E), UTC+5 whole-hour local grid
+- **Data Period:** 2020-01-01 → 2026-08-01, hourly
+- **Data Sources:** NASA POWER (satellite, targets + cross-check), Open-Meteo ERA5 (features)
+- **Docs:** [QUICKSTART.md](QUICKSTART.md) · [SETUP_GUIDE.md](SETUP_GUIDE.md) · [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
 
 ---
 
-**Last Updated:** 2026-08-31
+**Last Updated:** 2026-09-08

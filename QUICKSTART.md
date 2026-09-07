@@ -424,5 +424,6 @@ models/                → *.joblib artifacts, training_results.json,
 
 For more information, see:
 - [README.md](README.md) - Full documentation
-- [SETUP_SUMMARY.md](SETUP_SUMMARY.md) - Detailed setup information
+- [SETUP_GUIDE.md](SETUP_GUIDE.md) - Environment setup
+- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Command cheat-sheet
 - [config/config.yaml](config/config.yaml) - All configuration parameters
