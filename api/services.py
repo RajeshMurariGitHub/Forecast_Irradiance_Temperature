@@ -233,6 +233,19 @@ def _prospective_feature_cols(target: str, horizon_hours: int) -> list[str]:
     )
 
 
+def validate_period(period_start: str, period_end: str) -> "tuple[pd.Timestamp, pd.Timestamp]":
+    """Parse and bound-check a forecast period (raises ``ValueError`` on bad input)."""
+    try:
+        start_ts, end_ts = pd.Timestamp(period_start), pd.Timestamp(period_end)
+    except ValueError as exc:
+        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}") from exc
+    if pd.isna(start_ts) or pd.isna(end_ts) or start_ts > end_ts:
+        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}")
+    if end_ts - start_ts > MAX_FORECAST_WINDOW:
+        raise ValueError(f"Forecast window exceeds {MAX_FORECAST_WINDOW.days} days.")
+    return start_ts, end_ts
+
+
 def ingest_history_window(
     target: str,
     horizon_hours: int,
@@ -247,14 +260,7 @@ def ingest_history_window(
     indexed by the target hour ``t``; ``actual`` is NaN where the outcome has not
     been observed yet.
     """
-    try:
-        start_ts, end_ts = pd.Timestamp(period_start), pd.Timestamp(period_end)
-    except ValueError as exc:
-        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}") from exc
-    if pd.isna(start_ts) or pd.isna(end_ts) or start_ts > end_ts:
-        raise ValueError(f"Invalid period bounds: {period_start!r}..{period_end!r}")
-    if end_ts - start_ts > MAX_FORECAST_WINDOW:
-        raise ValueError(f"Forecast window exceeds {MAX_FORECAST_WINDOW.days} days.")
+    start_ts, end_ts = validate_period(period_start, period_end)
 
     frame = load_forecast_frame()
     target_index = pd.date_range(
@@ -294,6 +300,7 @@ def production_forecast(
     through :func:`resolve_forecast_model` (report best, then Random Forest). The
     feature contract is read from the fitted model, not from run metadata.
     """
+    validate_period(period_start, period_end)  # reject bad input before loading a model
     effective_model, model = resolve_forecast_model(
         target, horizon_hours, PRODUCTION_SPLIT, model_name
     )

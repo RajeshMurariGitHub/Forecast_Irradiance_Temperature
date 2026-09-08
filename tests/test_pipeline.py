@@ -59,10 +59,13 @@ def test_model_artifact_path_uses_day_horizons_consistently():
 
 def test_api_load_model_uses_the_training_artifact_name(monkeypatch):
     expected = model_artifact_path(services.MODELS_DIR, "GHI", 1, "ridge", "validation")
+    # No trained artifacts on a fresh checkout: stub the existence check + loader.
+    monkeypatch.setattr(services.Path, "exists", lambda self: True)
     monkeypatch.setattr(services.joblib, "load", lambda path: path)
     services.load_model.cache_clear()
 
     assert services.load_model("GHI", 24, "ridge", "validation") == expected
+    services.load_model.cache_clear()
 
 
 def test_api_config_exposes_horizons_in_hours_for_dashboard_requests():
