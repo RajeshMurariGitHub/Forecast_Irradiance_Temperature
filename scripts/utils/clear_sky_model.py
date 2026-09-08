@@ -87,7 +87,7 @@ class ClearSkyModel:
             latitude=self.latitude,
             longitude=self.longitude,
             altitude=self.elevation,
-            method="nrel_numba",
+            method="nrel_numpy",
         )
         zenith = solar_pos["apparent_zenith"].to_numpy()
 

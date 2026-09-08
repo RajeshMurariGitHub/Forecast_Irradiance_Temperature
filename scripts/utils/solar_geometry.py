@@ -78,7 +78,7 @@ class SolarGeometry:
             self.latitude,
             self.longitude,
             self.elevation,
-            method="nrel_numba",
+            method="nrel_numpy",
             temperature=25,
         )
 

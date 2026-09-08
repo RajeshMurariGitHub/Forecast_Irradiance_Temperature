@@ -37,4 +37,24 @@ jobs:
         run: pyright --project pyrightconfig.json
 
       - name: Tests (pytest)
-        run: pytest -q --cov=scripts --cov=api --cov-report=term-missing
+        run: |
+          set -o pipefail
+          python -m pytest -q -rf --tb=short --no-header \
+            --cov=scripts --cov=api --cov-report=term-missing 2>&1 | tee pytest-output.txt
+
+      - name: Publish pytest output
+        if: always()
+        run: |
+          {
+            echo '## pytest'
+            echo '```'
+            tail -c 15000 pytest-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload pytest log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-output
+          path: pytest-output.txt
