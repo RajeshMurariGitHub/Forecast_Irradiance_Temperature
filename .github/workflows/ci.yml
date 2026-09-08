@@ -39,11 +39,11 @@ jobs:
       - name: Tests (pytest)
         run: |
           set -o pipefail
-          python -m pytest -q -rf --tb=short --no-header \
+          python -m pytest -q -rA --tb=short --no-header \
             --cov=scripts --cov=api --cov-report=term-missing 2>&1 | tee pytest-output.txt
 
-      - name: Publish pytest output
-        if: always()
+      - name: Surface pytest failures as annotations
+        if: failure()
         run: |
           {
             echo '## pytest'
@@ -51,10 +51,5 @@ jobs:
             tail -c 15000 pytest-output.txt
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Upload pytest log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pytest-output
-          path: pytest-output.txt
+          grep -E '^(FAILED|ERROR|E |tests/|_{5,} )' pytest-output.txt | head -60 \
+            | while IFS= read -r line; do echo "::error::${line}"; done
